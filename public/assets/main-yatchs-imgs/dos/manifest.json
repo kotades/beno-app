@@ -1,0 +1,129 @@
+{
+  "yacht": {
+    "name": "Dos",
+    "slug": "dos",
+    "id": "V8BZo8",
+    "folder": "dos"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_dos_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8BZo8/09qVr2X9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_dos_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8BZo8/19qVr2X9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_dos_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8BZo8/29qVr2X9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_dos_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8BZo8/39qVr2X9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_dos_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8BZo8/49qVr2X9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_dos_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_dos_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8BZo8/59qVr2X9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_dos_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_dos_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_dos_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_dos_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_dos_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_dos_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_dos_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_dos_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_dos_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_dos_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_dos_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Dos 40 ft Luxury yacht rental Dubai at AED 400/Hour",
+    "h1": "Dos",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/dos/V8BZo8"
+}

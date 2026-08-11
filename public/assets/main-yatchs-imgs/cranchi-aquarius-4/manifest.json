@@ -1,0 +1,153 @@
+{
+  "yacht": {
+    "name": "Cranchi (Aquarius 4)",
+    "slug": "cranchi-%28aquarius-4%29",
+    "id": "Y8yomD",
+    "folder": "cranchi-aquarius-4"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_cranchi-aquarius-4_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/1dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_cranchi-aquarius-4_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/0dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_cranchi-aquarius-4_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/2dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_cranchi-aquarius-4_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/3dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_cranchi-aquarius-4_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/4dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_cranchi-aquarius-4_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_cranchi-aquarius-4_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/5dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_cranchi-aquarius-4_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/6dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_cranchi-aquarius-4_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/7dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_cranchi-aquarius-4_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/8dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_cranchi-aquarius-4_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/9dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_cranchi-aquarius-4_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Y8yomD/10dLoPZJW-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_cranchi-aquarius-4_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_cranchi-aquarius-4_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_cranchi-aquarius-4_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_cranchi-aquarius-4_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_cranchi-aquarius-4_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_cranchi-aquarius-4_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_cranchi-aquarius-4_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_cranchi-aquarius-4_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_cranchi-aquarius-4_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_cranchi-aquarius-4_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Cranchi (Aquarius 4) 45 ft Luxury yacht rental Dubai at AED 525/Hour",
+    "h1": "Cranchi (Aquarius 4)",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/cranchi-%28aquarius-4%29/Y8yomD"
+}

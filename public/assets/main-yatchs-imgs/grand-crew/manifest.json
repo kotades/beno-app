@@ -1,0 +1,135 @@
+{
+  "yacht": {
+    "name": "Grand Crew",
+    "slug": "grand-crew",
+    "id": "VmwJ2k",
+    "folder": "grand-crew"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_grand-crew_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/VmwJ2k/9c1d1c0c-f4e6-49a6-bfc6-92ba5e7ab8f6-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_grand-crew_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/VmwJ2k/e9141a44-5e8b-4771-9059-8deaf73ce4de-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_grand-crew_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/VmwJ2k/5bad109c-7b72-48fb-aac0-6bb0ad1072cf-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_grand-crew_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/VmwJ2k/35e89ef4-46e6-4b3d-8aea-e5f99be153ff-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_grand-crew_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/VmwJ2k/ef7b40b2-a5b7-4b20-aa06-14934a894e48-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_grand-crew_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_grand-crew_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/VmwJ2k/8362deb6-9f6d-412b-9e21-acd57a8cda59-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_grand-crew_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_grand-crew_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_grand-crew_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_grand-crew_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_grand-crew_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_grand-crew_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_grand-crew_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_grand-crew_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_grand-crew_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_grand-crew_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_grand-crew_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_grand-crew_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Grand Crew 50 ft Luxury yacht rental Dubai at AED 790/Hour",
+    "h1": "Grand Crew",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/grand-crew/VmwJ2k"
+}

@@ -1,0 +1,129 @@
+{
+  "yacht": {
+    "name": "Aries",
+    "slug": "aries",
+    "id": "Mk6Ez8",
+    "folder": "aries"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_aries_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Mk6Ez8/0RObYEV4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_aries_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Mk6Ez8/1RObYEV4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_aries_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Mk6Ez8/2RObYEV4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_aries_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Mk6Ez8/3RObYEV4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_aries_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Mk6Ez8/4RObYEV4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_aries_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_aries_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Mk6Ez8/5RObYEV4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_aries_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_aries_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_aries_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_aries_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_aries_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_aries_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_aries_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_aries_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_aries_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_aries_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_aries_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Aries 64 ft Luxury yacht rental Dubai at AED 2000/Hour",
+    "h1": "Aries",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/aries/Mk6Ez8"
+}

@@ -1,0 +1,153 @@
+{
+  "yacht": {
+    "name": "Freedom",
+    "slug": "freedom",
+    "id": "xkgrG8",
+    "folder": "freedom"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_freedom_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/0LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_freedom_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/1LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_freedom_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/2LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_freedom_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/3LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_freedom_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/4LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_freedom_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_freedom_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/5LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_freedom_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/6LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_freedom_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/7LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_freedom_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/8LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_freedom_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkgrG8/9LQrV5ZP-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_freedom_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_freedom_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_freedom_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_freedom_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_freedom_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_freedom_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_freedom_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_freedom_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_freedom_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_freedom_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_freedom_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Freedom 80 ft Luxury yacht rental Dubai at AED 3150/Hour",
+    "h1": "Freedom",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/freedom/xkgrG8"
+}

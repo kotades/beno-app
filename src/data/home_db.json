@@ -1,0 +1,1581 @@
+{
+  "schema_version": "1.0",
+  "source": "beno.com",
+  "sections": [
+    {
+      "id": "section_0",
+      "tag": "header",
+      "classes": "top-0 flex flex-col justify-center w-full lg:h-[80px] lg:max-h-[80px] transition-colors duration-[250ms] ease-in-out border-b px-2xl lg:px-20 4xl:px-24 max-w-[1920px] m-auto bg-transparent border-b-transparent",
+      "assets": [],
+      "headings": [
+        {
+          "tag": "H3",
+          "text": ""
+        },
+        {
+          "tag": "H3",
+          "text": ""
+        }
+      ],
+      "paragraphs": [
+        "Helicopters",
+        "Private Jets",
+        "Supercar Rally",
+        "Limited Offers",
+        "Manage Booking",
+        "Exclusive offers",
+        "Buy vs Rent Calculator"
+      ],
+      "links": [
+        {
+          "text": "Yachts",
+          "href": "/yachts"
+        },
+        {
+          "text": "Cars",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Helicopters",
+          "href": "/aerials"
+        },
+        {
+          "text": "Buggies",
+          "href": "/buggies"
+        },
+        {
+          "text": "Watersport",
+          "href": "/water-activities"
+        },
+        {
+          "text": "Private Jets",
+          "href": "/private-jet"
+        },
+        {
+          "text": "Supercar Rally",
+          "href": "/UAE-supercar-experience"
+        },
+        {
+          "text": "Yachts",
+          "href": "/yachts"
+        },
+        {
+          "text": "Cars",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Helicopters",
+          "href": "/aerials"
+        },
+        {
+          "text": "Buggies",
+          "href": "/buggies"
+        },
+        {
+          "text": "Watersport",
+          "href": "/water-activities"
+        },
+        {
+          "text": "Private Jets",
+          "href": "/private-jet"
+        },
+        {
+          "text": "Supercar Rally",
+          "href": "/UAE-supercar-experience"
+        }
+      ]
+    },
+    {
+      "id": "section_1",
+      "tag": "section",
+      "classes": "3xl:w-[1900px] 4xl:w-[1920px] 4xl:px-20 m-auto relative",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.webp",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.webp",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.mp4",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_3.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_4.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_5.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_6.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_7.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_8.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_9.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_10.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_1_asset_11.mp4",
+          "alt": "",
+          "text": ""
+        }
+      ],
+      "headings": [],
+      "paragraphs": [
+        "Rent Luxury Vehicles Worldwide",
+        "Yachts • Cars • Buggies • Helicopters • Water Sports",
+        "Cars N Cigars"
+      ],
+      "links": []
+    },
+    {
+      "id": "section_2",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Arya.webp",
+          "alt": "Arya",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Cali.webp",
+          "alt": "Cali",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Jude.webp",
+          "alt": "Jude",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Julia.webp",
+          "alt": "Julia",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Luxury Yacht Rental Worldwide"
+        }
+      ],
+      "paragraphs": [
+        "10 Guests\n|",
+        "27 Guests\n|",
+        "21 Guests\n|"
+      ],
+      "links": [
+        {
+          "text": "View All",
+          "href": "/yachts"
+        },
+        {
+          "text": "Premium\n10 Guests\n|\n2 Cabins\n|\n42 Length\n5/5\nArya\nAED 1,000\nAED 2,000\n/ hour\n50 % off",
+          "href": "/yachts/arya/W3jv3Y"
+        },
+        {
+          "text": "Premium\n10 Guests\n|\n3 Cabins\n|\n45 Length\n5/5\nCali\nAED 750\nAED 1,500\n/ hour\n50 % off",
+          "href": "/yachts/cali/dk4bl3"
+        },
+        {
+          "text": "Premium\n27 Guests\n|\n3 Cabins\n|\n74 Length\n5/5\nJude\nAED 2,500\nAED 5,000\n/ hour\n50 % off",
+          "href": "/yachts/jude/Zmo18r"
+        },
+        {
+          "text": "Premium\n21 Guests\n|\n3 Cabins\n|\n64 Length\n5/5\nJulia\nAED 1,500\nAED 3,000\n/ hour\n50 % off",
+          "href": "/yachts/julia/PkQ6mq"
+        },
+        {
+          "text": "View All",
+          "href": "/yachts"
+        }
+      ]
+    },
+    {
+      "id": "section_3",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.webp",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_3_asset_1.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_3_asset_2.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_3_asset_3.mp4",
+          "alt": "",
+          "text": ""
+        }
+      ],
+      "headings": [],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "Luxury Yachts\nDocked In Style At Exclusive Global Marinas",
+          "href": "/yachts"
+        }
+      ]
+    },
+    {
+      "id": "section_4",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 pb-[72px] sm:pb-[120px] px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Chevrolet_Corvette_Stingray_C8.webp",
+          "alt": "Chevrolet Corvette Stingray C8",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Ferrari_296_GTS_.webp",
+          "alt": "Ferrari 296 GTS ",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Ferrari_F8_Spider_.webp",
+          "alt": "Ferrari F8 Spider ",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Lamborghini_Huracan_EVO_Spyder.webp",
+          "alt": "Lamborghini Huracan EVO Spyder",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Supercar Rental Worldwide"
+        }
+      ],
+      "paragraphs": [
+        "/ day (200 km)"
+      ],
+      "links": [
+        {
+          "text": "View All",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "2 Seats\n|\n2 Doors\n|\n1 Bags\nChevrolet Corvette Stingray C8\nAED 899\nAED 1,300\n/ day (200 km)\n30 % off",
+          "href": "/luxury-car-rental/chevrolet-corvette-stingray-c8/P8p1Ok"
+        },
+        {
+          "text": "2 Seats\n|\n2 Doors\n|\n1 Bags\nFerrari 296 GTS\nAED 2,999\nAED 5,500\n/ day (200 km)\n45 % off",
+          "href": "/luxury-car-rental/ferrari-296-gts-/xkXjB3"
+        },
+        {
+          "text": "2 Seats\n|\n2 Doors\n|\n1 Bags\nFerrari F8 Spider\nAED 2,499\nAED 4,200\n/ day (200 km)\n40 % off",
+          "href": "/luxury-car-rental/ferrari-f8-spider-/NkYjjm"
+        },
+        {
+          "text": "2 Seats\n|\n2 Doors\n|\n1 Bags\nLamborghini Huracan EVO Spyder\nAED 2,199\nAED 3,200\n/ day (200 km)\n31 % off",
+          "href": "/luxury-car-rental/lamborghini-huracan-evo-spyder/zmdbL8"
+        },
+        {
+          "text": "View All",
+          "href": "/rent-a-car"
+        }
+      ]
+    },
+    {
+      "id": "section_5",
+      "tag": "section",
+      "classes": "pb-[72px] sm:pb-[120px] px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Audi_logo.svg",
+          "alt": "Audi logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Audi_logo.svg",
+          "alt": "Audi logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Bentley_logo.webp",
+          "alt": "Bentley logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Bentley_logo.webp",
+          "alt": "Bentley logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BMW_logo.svg",
+          "alt": "BMW logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BMW_logo.svg",
+          "alt": "BMW logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Cadillac_logo.svg",
+          "alt": "Cadillac logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Cadillac_logo.svg",
+          "alt": "Cadillac logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Dodge_logo.webp",
+          "alt": "Dodge logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Dodge_logo.webp",
+          "alt": "Dodge logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Ferrari_logo.webp",
+          "alt": "Ferrari logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Ferrari_logo.webp",
+          "alt": "Ferrari logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Ford_logo.webp",
+          "alt": "Ford logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Ford_logo.webp",
+          "alt": "Ford logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/GMC_logo.webp",
+          "alt": "GMC logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/GMC_logo.webp",
+          "alt": "GMC logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Lamborghini_logo.webp",
+          "alt": "Lamborghini logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Lamborghini_logo.webp",
+          "alt": "Lamborghini logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Mazda_logo.webp",
+          "alt": "Mazda logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Mazda_logo.webp",
+          "alt": "Mazda logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Mclaren_logo.webp",
+          "alt": "Mclaren logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Mclaren_logo.webp",
+          "alt": "Mclaren logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Mercedes_logo.svg",
+          "alt": "Mercedes logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Mercedes_logo.svg",
+          "alt": "Mercedes logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Peugeot_logo.webp",
+          "alt": "Peugeot logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Peugeot_logo.webp",
+          "alt": "Peugeot logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Porsche_logo.webp",
+          "alt": "Porsche logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Porsche_logo.webp",
+          "alt": "Porsche logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Rolls_Royce_logo.svg",
+          "alt": "Rolls-Royce logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Rolls_Royce_logo.svg",
+          "alt": "Rolls-Royce logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Tesla_logo.webp",
+          "alt": "Tesla logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Tesla_logo.webp",
+          "alt": "Tesla logo",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H2",
+          "text": "Popular Worldwide Luxury Car Brands"
+        }
+      ],
+      "paragraphs": [
+        "Lamborghini",
+        "Rolls-Royce"
+      ],
+      "links": [
+        {
+          "text": "Audi",
+          "href": "/brands/audi"
+        },
+        {
+          "text": "Bentley",
+          "href": "/brands/bentley"
+        },
+        {
+          "text": "BMW",
+          "href": "/brands/bmw"
+        },
+        {
+          "text": "Cadillac",
+          "href": "/brands/cadillac"
+        },
+        {
+          "text": "Dodge",
+          "href": "/brands/dodge"
+        },
+        {
+          "text": "Ferrari",
+          "href": "/brands/ferrari"
+        },
+        {
+          "text": "Ford",
+          "href": "/brands/ford"
+        },
+        {
+          "text": "GMC",
+          "href": "/brands/gmc"
+        },
+        {
+          "text": "Lamborghini",
+          "href": "/brands/lamborghini"
+        },
+        {
+          "text": "Mazda",
+          "href": "/brands/mazda"
+        },
+        {
+          "text": "Mclaren",
+          "href": "/brands/mclaren"
+        },
+        {
+          "text": "Mercedes",
+          "href": "/brands/mercedes"
+        },
+        {
+          "text": "Peugeot",
+          "href": "/brands/peugeot"
+        },
+        {
+          "text": "Porsche",
+          "href": "/brands/porsche"
+        },
+        {
+          "text": "Rolls-Royce",
+          "href": "/brands/rolls-royce"
+        },
+        {
+          "text": "Tesla",
+          "href": "/brands/tesla"
+        }
+      ]
+    },
+    {
+      "id": "section_6",
+      "tag": "section",
+      "classes": "pt-[72px] sm:pt-[120px] bg-beno-neutral-60 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.webp",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_6_asset_1.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_6_asset_2.mp4",
+          "alt": "",
+          "text": ""
+        }
+      ],
+      "headings": [],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "The JBR Kiosk\nRent Your Next Thrill & Adventure",
+          "href": "https://www.beno.com/rent-a-car?vendors=BEN"
+        }
+      ]
+    },
+    {
+      "id": "section_7",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 bg-beno-neutral-60 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Audi_A6_Full_Option.webp",
+          "alt": "Audi A6 Full Option",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Cadillac_Escalade_Black.webp",
+          "alt": "Cadillac Escalade Black",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Cadillac_Escalade_White.webp",
+          "alt": "Cadillac Escalade White",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Chevrolet_Tahoe_Black.webp",
+          "alt": "Chevrolet Tahoe Black",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Luxury Car Rental Worldwide"
+        }
+      ],
+      "paragraphs": [
+        "/ day (250 km)"
+      ],
+      "links": [
+        {
+          "text": "View All",
+          "href": "/luxury-car-rental"
+        },
+        {
+          "text": "5 Seats\n|\n4 Doors\n|\n2 Bags\nAudi A6 Full Option\nAED 249 / day (250 km)",
+          "href": "/luxury-car-rental/audi-a6-full-option/L8Jqo3"
+        },
+        {
+          "text": "7 Seats\n|\n4 Doors\n|\n4 Bags\nCadillac Escalade Black\nAED 699\nAED 999\n/ day (250 km)\n30 % off",
+          "href": "/luxury-car-rental/cadillac-escalade-black/NkYd78"
+        },
+        {
+          "text": "7 Seats\n|\n4 Doors\n|\n4 Bags\nCadillac Escalade White\nAED 799\nAED 1,199\n/ day (250 km)\n33 % off",
+          "href": "/luxury-car-rental/cadillac-escalade-white/Vmwolm"
+        },
+        {
+          "text": "7 Seats\n|\n4 Doors\n|\n4 Bags\nChevrolet Tahoe Black\nAED 599 / day (250 km)",
+          "href": "/luxury-car-rental/chevrolet-tahoe-black/Wmnoy3"
+        },
+        {
+          "text": "View All",
+          "href": "/luxury-car-rental"
+        }
+      ]
+    },
+    {
+      "id": "section_8",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 bg-beno-neutral-60 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.webp",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image.webp",
+          "alt": "Main Image",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_8_asset_2.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_8_asset_3.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_8_asset_4.mp4",
+          "alt": "",
+          "text": ""
+        },
+        {
+          "type": "video",
+          "src": "/assets/home-imgs/section_8_asset_5.mp4",
+          "alt": "",
+          "text": ""
+        }
+      ],
+      "headings": [],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "Supercars\nYour Dream Drive Awaits!",
+          "href": "https://beno.com/rent-a-car?vendors=BEN"
+        },
+        {
+          "text": "SUV Cars\nConquer The Off-Road",
+          "href": "https://www.beno.com/rent-a-car?carType=suv"
+        }
+      ]
+    },
+    {
+      "id": "section_9",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 bg-beno-neutral-60 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/CFMoto_450cc_Quad_Bike.webp",
+          "alt": "CFMoto 450cc Quad Bike",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Polaris_RZR_XP_1000cc__2_seate.webp",
+          "alt": "Polaris RZR XP 1000cc (2 seater)",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Polaris_RZR_XP_1000cc__4_seate.webp",
+          "alt": "Polaris-RZR XP 1000cc (4 seater)",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/KTM_Dirt_Bike_Adventure__Thril.webp",
+          "alt": "KTM Dirt Bike Adventure: Thrill in the Desert",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Buggy & Off-Road Rental Worldwide"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "View All",
+          "href": "/buggies"
+        },
+        {
+          "text": "1 Seater\nCFMoto 450cc Quad Bike\nAED 195\nAED 390\n/ hour\n50 % off",
+          "href": "/buggies/cfmoto-450cc-quad-bike/V8L4g8"
+        },
+        {
+          "text": "2 Seater\nPolaris RZR XP 1000cc (2 seater)\nAED 423\nAED 845\n/ hour\n50 % off",
+          "href": "/buggies/polaris-rzr-xp-1000cc-%282-seater%29/WmqE2m"
+        },
+        {
+          "text": "4 Seater\nPolaris-RZR XP 1000cc (4 seater)\nAED 450\nAED 900\n/ hour\n50 % off",
+          "href": "/buggies/polaris-rzr-xp-1000cc-%284-seater%29/dk4bz3"
+        },
+        {
+          "text": "1 Seater\nKTM Dirt Bike Adventure: Thrill in the Desert\nAED 451\nAED 715\n/ hour\n37 % off",
+          "href": "/buggies/ktm-dirt-bike-adventure:-thrill-in-the-desert/P8p2Zm"
+        },
+        {
+          "text": "View All",
+          "href": "/buggies"
+        }
+      ]
+    },
+    {
+      "id": "section_11",
+      "tag": "section",
+      "classes": "pt-[100px] sm:pt-[120px] px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_The_Sustainable_City_be.webp",
+          "alt": "BENO X The Sustainable City beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Mandarin_Oriental_beno_.webp",
+          "alt": "BENO X Mandarin Oriental beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Right_Jet_beno_partner_.webp",
+          "alt": "BENO X Right Jet beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Omniyat_beno_partner_lo.webp",
+          "alt": "BENO X Omniyat beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_B\u00e2oli_Global_beno_partne.webp",
+          "alt": "BENO X B\u00e2oli Global beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Al_Habtoor_Palace_beno_.webp",
+          "alt": "BENO X Al Habtoor Palace beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_DoubleTree_by_Hilton_be.webp",
+          "alt": "BENO X DoubleTree by Hilton beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Emirates_Palace_beno_pa.webp",
+          "alt": "BENO X Emirates Palace beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_J1_Beach_beno_partner_l.webp",
+          "alt": "BENO X J1 Beach beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_JA_Resorts___Hotels_ben.webp",
+          "alt": "BENO X JA Resorts & Hotels beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Vida_Hotels___Resorts_b.webp",
+          "alt": "BENO X Vida Hotels & Resorts beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_W_Global___The_Palm_beno.webp",
+          "alt": "BENO X W Global \u2013 The Palm beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Address_Hotels___Resort.webp",
+          "alt": "BENO X Address Hotels + Resorts beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Jumeirah_Group_beno_par.webp",
+          "alt": "Beno x Jumeirah Group beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_D_MARIN_beno_partner_lo.webp",
+          "alt": "Beno x D MARIN beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_DUBAI_WORLD_TRADE_CENTR.webp",
+          "alt": "BENO X DUBAI WORLD TRADE CENTRE beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Global_Economy_and_Touri.webp",
+          "alt": "Beno x Global Economy and Tourism beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_EET_Destination_Managem.webp",
+          "alt": "Beno x EET Destination Management beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Leisure_Marine_Associat.webp",
+          "alt": "Beno x Leisure Marine Association beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Preferred_Hotels___Reso.webp",
+          "alt": "Beno x Preferred Hotels & Resorts beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Palazzo_Versace_Global_b.webp",
+          "alt": "Beno x Palazzo Versace Global beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Global_Police_beno_partn.webp",
+          "alt": "Beno x Global Police beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_The_Sustainable_City_be.webp",
+          "alt": "BENO X The Sustainable City beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Mandarin_Oriental_beno_.webp",
+          "alt": "BENO X Mandarin Oriental beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Right_Jet_beno_partner_.webp",
+          "alt": "BENO X Right Jet beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Omniyat_beno_partner_lo.webp",
+          "alt": "BENO X Omniyat beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_B\u00e2oli_Global_beno_partne.webp",
+          "alt": "BENO X B\u00e2oli Global beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Al_Habtoor_Palace_beno_.webp",
+          "alt": "BENO X Al Habtoor Palace beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_DoubleTree_by_Hilton_be.webp",
+          "alt": "BENO X DoubleTree by Hilton beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Emirates_Palace_beno_pa.webp",
+          "alt": "BENO X Emirates Palace beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_J1_Beach_beno_partner_l.webp",
+          "alt": "BENO X J1 Beach beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_JA_Resorts___Hotels_ben.webp",
+          "alt": "BENO X JA Resorts & Hotels beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Vida_Hotels___Resorts_b.webp",
+          "alt": "BENO X Vida Hotels & Resorts beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_W_Global___The_Palm_beno.webp",
+          "alt": "BENO X W Global \u2013 The Palm beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_Address_Hotels___Resort.webp",
+          "alt": "BENO X Address Hotels + Resorts beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Jumeirah_Group_beno_par.webp",
+          "alt": "Beno x Jumeirah Group beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_D_MARIN_beno_partner_lo.webp",
+          "alt": "Beno x D MARIN beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/BENO_X_DUBAI_WORLD_TRADE_CENTR.webp",
+          "alt": "BENO X DUBAI WORLD TRADE CENTRE beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Global_Economy_and_Touri.webp",
+          "alt": "Beno x Global Economy and Tourism beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_EET_Destination_Managem.webp",
+          "alt": "Beno x EET Destination Management beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Leisure_Marine_Associat.webp",
+          "alt": "Beno x Leisure Marine Association beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Preferred_Hotels___Reso.webp",
+          "alt": "Beno x Preferred Hotels & Resorts beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Palazzo_Versace_Global_b.webp",
+          "alt": "Beno x Palazzo Versace Global beno partner logo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Beno_x_Global_Police_beno_partn.webp",
+          "alt": "Beno x Global Police beno partner logo",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H2",
+          "text": "Our Partners"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "See All Partners",
+          "href": "/partners"
+        }
+      ]
+    },
+    {
+      "id": "section_12",
+      "tag": "section",
+      "classes": "pt-[100px] sm:pt-[120px]",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/user_profile_photo.webp",
+          "alt": "user profile photo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/user_profile_photo.webp",
+          "alt": "user profile photo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/user_profile_photo.webp",
+          "alt": "user profile photo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/user_profile_photo.webp",
+          "alt": "user profile photo",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/user_profile_photo.webp",
+          "alt": "user profile photo",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H2",
+          "text": "What people say about us?"
+        },
+        {
+          "tag": "H3",
+          "text": "Reviews (210)"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "Read all review on Google maps",
+          "href": "https://maps.google.com/?cid=16851551814778100041"
+        }
+      ]
+    },
+    {
+      "id": "section_13",
+      "tag": "section",
+      "classes": "px-2xl py-5xl lg:px-20 lg:py-20",
+      "assets": [],
+      "headings": [
+        {
+          "tag": "H2",
+          "text": "EcoVadis Bronze Medal \u2014 Top 35%"
+        }
+      ],
+      "paragraphs": [
+        "Sustainability Recognition",
+        "BENO is committed to responsible luxury \u2014 recognized for environmental awareness, ethical practices, and transparent governance."
+      ],
+      "links": []
+    },
+    {
+      "id": "section_14",
+      "tag": "section",
+      "classes": "pt-[100px] sm:pt-[120px] px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [],
+      "headings": [
+        {
+          "tag": "H3",
+          "text": "Quick Links"
+        },
+        {
+          "tag": "H4",
+          "text": "Sea rental"
+        },
+        {
+          "tag": "H4",
+          "text": "Land rental"
+        },
+        {
+          "tag": "H4",
+          "text": "Top Brands for Rent"
+        }
+      ],
+      "paragraphs": [
+        "Worldwide Superyacht Charters",
+        "Rent Exclusive Worldwide Superyachts",
+        "Worldwide Supercar Rental",
+        "Worldwide Dune Buggy & Off-Road Safaris",
+        "Mercedes Luxury Rental Worldwide",
+        "Rolls-Royce Ultra-Luxury Rental Worldwide",
+        "Bentley Rental Worldwide",
+        "Worldwide Exotic Convertible Rental"
+      ],
+      "links": [
+        {
+          "text": "Worldwide Private Yacht Charters",
+          "href": "/yacht-rental"
+        },
+        {
+          "text": "Worldwide Superyacht Charters",
+          "href": "/yacht-rental"
+        },
+        {
+          "text": "Rent Exclusive Worldwide Superyachts",
+          "href": "/yacht-rental"
+        },
+        {
+          "text": "Worldwide Supercar Rental",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Worldwide Dune Buggy & Off-Road Safaris",
+          "href": "/buggies"
+        },
+        {
+          "text": "Mercedes Luxury Rental Worldwide",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Rolls-Royce Ultra-Luxury Rental Worldwide",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Bentley Rental Worldwide",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Worldwide Exotic Convertible Rental",
+          "href": "/rent-a-car"
+        }
+      ]
+    },
+    {
+      "id": "section_15",
+      "tag": "section",
+      "classes": "pt-16 sm:pt-20 px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image_Is_Yacht_Rental_Saf.webp",
+          "alt": "Main Image Worldwide Superyacht Chartering Guide 2026",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image_Is_Yacht_Rental_Saf.webp",
+          "alt": "Main Image Worldwide Superyacht Chartering Guide 2026",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image_Monthly_vs_Daily_Ca.webp",
+          "alt": "Main Image Monthly vs Daily Supercar Rental Worldwide",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Main_Image_Monthly_vs_Daily_Ca.webp",
+          "alt": "Main Image Monthly vs Daily Supercar Rental Worldwide",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H3",
+          "text": "To Stay Informed"
+        }
+      ],
+      "paragraphs": [],
+      "links": [
+        {
+          "text": "View All",
+          "href": "/blogs"
+        },
+        {
+          "text": "Yachts Charter  Aug 08, 2026  The Ultimate Guide to Worldwide Superyacht Chartering 2026",
+          "href": "/blogs"
+        },
+        {
+          "text": "Yachts Charter\nAug 08, 2026\nThe Ultimate Guide to Worldwide Superyacht Chartering 2026",
+          "href": "/blogs"
+        },
+        {
+          "text": "Car Rentals  Jul 26, 2026  International Tourist Driving License Guide for Supercar Rentals",
+          "href": "/blogs"
+        },
+        {
+          "text": "Car Rentals\nJul 26, 2026\nInternational Tourist Driving License Guide for Supercar Rentals",
+          "href": "/blogs"
+        },
+        {
+          "text": "View All",
+          "href": "/blogs"
+        }
+      ]
+    },
+    {
+      "id": "section_16",
+      "tag": "section",
+      "classes": "mt-[60px] mb-[100px] 2xl:mb-[120px] md:max-w-[640px] xl:max-w-[800px] mx-auto px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [],
+      "headings": [
+        {
+          "tag": "H3",
+          "text": "Frequently Asked Questions"
+        },
+        {
+          "tag": "H3",
+          "text": "What is Beno?"
+        },
+        {
+          "tag": "H3",
+          "text": "What services does Beno offer worldwide?"
+        },
+        {
+          "tag": "H3",
+          "text": "Does Beno have a mobile app?"
+        },
+        {
+          "tag": "H3",
+          "text": "What payment methods does Beno accept?"
+        },
+        {
+          "tag": "H3",
+          "text": "Does Beno offer 24/7 customer support?"
+        },
+        {
+          "tag": "H3",
+          "text": "Can I book a Beno yacht for a corporate event or private celebration?"
+        },
+        {
+          "tag": "H3",
+          "text": "What is the cancellation policy for Beno bookings?"
+        }
+      ],
+      "paragraphs": [
+        "Beno is the premier worldwide luxury experience platform headquartered in Miami, FL. It offers supercar rentals, yacht charters, private jet bookings, helicopter tours, dune buggy adventures, and water sports, all bookable online or via the Beno app.",
+        "Beno offers six luxury experience categories worldwide: supercar rental, yacht charter, private jet charter, helicopter tours, dune buggy desert adventures, and water sports. Every service is bookable instantly via the Beno website or mobile app.",
+        "Yes. The Beno app is available free on the Apple App Store and Google Play Store. It lets you browse, compare, and book any experience from supercar rental to yacht charter, 24/7 from your phone.",
+        "Beno accepts cash, Visa, Mastercard, credit/debit cards, crypto and Apple Pay for all bookings. Payment is processed securely at checkout. No hidden charges apply across any service.",
+        "Yes. Beno provides round-the-clock customer support, 365 days a year. Reach the team via the Beno website, mobile app, or direct contact channels. Support covers all bookings, from yacht charters to private jet enquiries.",
+        "Yes, Beno offers luxury yacht charters for corporate events, weddings, birthday parties, bachelor celebrations, and private gatherings worldwide. For private parties, you can hire a Beno chef and enjoy live food preparation on board. Yachts are also ideal for business meetings and exclusive social events.",
+        "Before 48 hours no charge full refund. 24-48 hours 50% less than 24 hours 100%"
+      ],
+      "links": []
+    },
+    {
+      "id": "section_17",
+      "tag": "section",
+      "classes": "mt-[60px] mb-[100px] 2xl:mb-[120px] px-2xl sm:px-4xl lg:px-10 xl:px-20",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/null.webp",
+          "alt": "null",
+          "text": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H2",
+          "text": "Best Rental Services Worldwide"
+        }
+      ],
+      "paragraphs": [
+        "Discover the Ultimate Rental Experience Worldwide! Beno is your premier platform for supercar rentals, mega yachts, private jets, helicopter charters, dune buggies, and watersports across Miami, New York, Los Angeles, London, Monaco, and Paris. Our extensive fleet boasts over 2,000 premium vehicles and vessels with transparent pricing and flexible daily, weekly, or monthly reservations."
+      ],
+      "links": []
+    },
+    {
+      "id": "section_18",
+      "tag": "footer",
+      "classes": "",
+      "assets": [
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Play_Store_image.webp",
+          "alt": "Play Store image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/App_Store_image.webp",
+          "alt": "App Store image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Huawei_Store_image.webp",
+          "alt": "Huawei Store image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Play_Store_image.webp",
+          "alt": "Play Store image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/App_Store_image.webp",
+          "alt": "App Store image",
+          "text": ""
+        },
+        {
+          "type": "image",
+          "src": "/assets/home-imgs/Huawei_Store_image.webp",
+          "alt": "Huawei Store image",
+          "text": ""
+        }
+      ],
+      "headings": [],
+      "paragraphs": [
+        "Download the app now!",
+        "Copyright \u00a9 2026 Beno Technologies FZ L.L.C.",
+        "All Rights Reserved."
+      ],
+      "links": [
+        {
+          "text": "Contact Us",
+          "href": "/contact"
+        },
+        {
+          "text": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "href": "/ar"
+        },
+        {
+          "text": "English",
+          "href": "/"
+        },
+        {
+          "text": "Espa\u00f1ol",
+          "href": "/es"
+        },
+        {
+          "text": "Fran\u00e7ais",
+          "href": "/fr"
+        },
+        {
+          "text": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+          "href": "/ru"
+        },
+        {
+          "text": "Yachts Rental",
+          "href": "/yachts"
+        },
+        {
+          "text": "Cars Rental",
+          "href": "/rent-a-car"
+        },
+        {
+          "text": "Helicopters Rental",
+          "href": "/aerials"
+        },
+        {
+          "text": "Buggies Rental",
+          "href": "/buggies"
+        },
+        {
+          "text": "Watersport Rental",
+          "href": "/water-activities"
+        },
+        {
+          "text": "Private Jets Rental",
+          "href": "/private-jet"
+        },
+        {
+          "text": "Manage Booking",
+          "href": "/booking/retrieve"
+        },
+        {
+          "text": "About Us",
+          "href": "/about"
+        },
+        {
+          "text": "The Blog",
+          "href": "/blogs"
+        },
+        {
+          "text": "FAQs",
+          "href": "/help"
+        },
+        {
+          "text": "+97145415000",
+          "href": "tel:+97145415000"
+        },
+        {
+          "text": "info@beno.com",
+          "href": "mailto:info@beno.com"
+        },
+        {
+          "text": "Contact Us",
+          "href": "/contact"
+        },
+        {
+          "text": "Help",
+          "href": "/help"
+        },
+        {
+          "text": "Marsa Al Arab office",
+          "href": "https://maps.app.goo.gl/ZiZG4cfe7G79EqGZ7"
+        },
+        {
+          "text": "JBR branch",
+          "href": "https://maps.app.goo.gl/c2CySMTHWfukdrvJ6"
+        },
+        {
+          "text": "Sitemap",
+          "href": "/sitemap"
+        },
+        {
+          "text": "Terms & Conditions",
+          "href": "/t&c"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "/privacy"
+        }
+      ]
+    },
+    {
+      "id": "section_19",
+      "tag": "header",
+      "classes": "grid grid-cols-[1fr_auto_1fr] px-2xl justify-center items-center py-2xl border-b border-beno-neutral-20",
+      "assets": [],
+      "headings": [
+        {
+          "tag": "H3",
+          "text": "Help & Support"
+        }
+      ],
+      "paragraphs": [],
+      "links": []
+    },
+    {
+      "id": "section_20",
+      "tag": "div",
+      "classes": "ml-auto",
+      "assets": [],
+      "headings": [],
+      "paragraphs": [
+        "Chat with us"
+      ],
+      "links": []
+    }
+  ]
+}

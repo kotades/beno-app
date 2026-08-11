@@ -1,0 +1,225 @@
+{
+  "yacht": {
+    "name": "Arya",
+    "slug": "arya",
+    "id": "W3jv3Y",
+    "folder": "arya"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_arya_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/3651019f-066e-4946-914f-30e488833c99-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_arya_2.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_routes_bf3c694fdc.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_arya_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/0c31a9c5-2d06-4fe9-93ec-4fcb187df4dd-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_arya_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/f378dd83-2f6d-4fdd-bee0-5071719ca5f8-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_arya_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/8e1fca56-fd93-403c-8ad0-15bc842983a9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_arya_6.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/b13deeb4-ce9f-4dfd-8f41-214250629484-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_arya_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/ae25baef-6f5d-4c02-be08-e28dc4a3d097-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_arya_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/8cbcfc6b-7d97-4933-ab21-a4848101d601-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_arya_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/5667ebcd-a39e-4115-a695-d2bf9338c9b1-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_arya_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/57601f9a-f2d9-4d29-88e9-14af873f50cd-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_arya_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/bc6b4fab-9a41-453b-86ce-dd135adcd2fb-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_arya_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/a4945d56-7d5b-4338-a5b6-1157c3eeae54-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_arya_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/2589845b-2a73-4ecd-afe6-512df69d638e-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_arya_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/4f5ed6c0-39c9-433b-9d53-fb6a0b3dcdd2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_arya_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/8d77f608-e15e-407b-9322-cf3af66f9e40-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_arya_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/W3jv3Y/49a930f2-49a4-4e3d-9d85-c5796a767a11-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_arya_17.webp",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/Arya_08667fcfac.webp",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_arya_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_arya_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_arya_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_arya_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_arya_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_arya_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_arya_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_arya_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_arya_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_arya_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 28,
+      "file": "28_arya_28.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 29,
+      "file": "29_arya_29.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/jp_059296e2fe.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 30,
+      "file": "30_arya_30.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/kr_912d04fcf9.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 31,
+      "file": "31_arya_31.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/cn_aac86ea247.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 32,
+      "file": "32_arya_32.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/es_e8da9537e2.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 33,
+      "file": "33_arya_33.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/tr_7f2a577132.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 34,
+      "file": "34_arya_video34.webm",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/BENO_Website_Arya_ec65e5748c.webm",
+      "type": "video"
+    }
+  ],
+  "meta": {
+    "title": "Arya 42 ft Luxury yacht rental Dubai at AED 2000/Hour",
+    "h1": "Arya",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/arya/W3jv3Y"
+}

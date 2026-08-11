@@ -1,0 +1,189 @@
+{
+  "yacht": {
+    "name": "Candy",
+    "slug": "candy",
+    "id": "WmnMOk",
+    "folder": "candy"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_candy_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/00993118-aa0c-4965-ba73-152397fb315c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_candy_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/bb542498-7bf5-4f70-a715-fd3ecfa0fb08-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_candy_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/4d6cc2f8-8909-45aa-a363-f24254f163cc-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_candy_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/a4449c21-97a1-4757-b30f-bfd626aecc96-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_candy_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/3d86dfe4-91a8-48ee-9c9e-4a6a63c6fa6a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_candy_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_candy_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/d529de65-aa8f-4831-8c27-f12f039d079f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_candy_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/995efd07-a792-4af6-a6d9-5195fdda3529-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_candy_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/0da62db8-7b18-4094-9d33-23a6db7a4cc1-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_candy_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/aec70fb1-045a-41b8-8a37-09033331576e-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_candy_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/6bef9fdd-a445-4596-a294-a2ca99ca1ea8-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_candy_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/58a869ab-8bc0-44ab-a3f5-9fd3a1511244-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_candy_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/8bcf1c00-4a28-4aae-879b-062ccab87598-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_candy_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/80169036-8bf1-4d49-9656-b01be58ad365-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_candy_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/fb2f85b7-b970-40c8-a46e-3daee355d2d0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_candy_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmnMOk/ebe247e4-e22b-4f3b-bac7-1c378f34a847-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_candy_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_candy_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_candy_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_candy_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_candy_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_candy_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_candy_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_candy_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_candy_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_candy_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_candy_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 28,
+      "file": "28_candy_28.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Candy 50 ft Luxury yacht rental Dubai at AED 790/Hour",
+    "h1": "Candy",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/candy/WmnMOk"
+}

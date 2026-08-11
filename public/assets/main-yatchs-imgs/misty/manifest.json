@@ -1,0 +1,141 @@
+{
+  "yacht": {
+    "name": "Misty",
+    "slug": "misty",
+    "id": "M3N4Ok",
+    "folder": "misty"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_misty_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/04OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_misty_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/14OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_misty_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/24OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_misty_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/34OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_misty_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/44OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_misty_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_misty_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/54OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_misty_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/64OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_misty_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/M3N4Ok/74OlXGRK-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_misty_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_misty_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_misty_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_misty_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_misty_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_misty_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_misty_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_misty_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_misty_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_misty_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_misty_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Misty 50 ft Luxury yacht rental Dubai at AED 1200/Hour",
+    "h1": "Misty",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/misty/M3N4Ok"
+}

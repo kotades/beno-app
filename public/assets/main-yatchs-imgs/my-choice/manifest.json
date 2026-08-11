@@ -1,0 +1,147 @@
+{
+  "yacht": {
+    "name": "My Choice",
+    "slug": "my-choice",
+    "id": "xkXEGm",
+    "folder": "my-choice"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_my-choice_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/8da1fbbe-839e-4e61-a213-f2c79c847835-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_my-choice_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/fb5215f9-596b-48eb-aa4a-d22040f05b99-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_my-choice_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/adade3c5-58b3-46e1-815f-ac6cc1c6f5a0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_my-choice_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/a794a21f-c1ac-444f-a7d1-6eb58ed70444-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_my-choice_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/45106b8e-c861-47e1-a8fe-6458cc411cf0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_my-choice_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_my-choice_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/c61e0673-9bd1-4d37-aee0-e6a2c9396075-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_my-choice_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/xkXEGm/58e0d7c2-0452-4a4d-9958-9c3de91ce908-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_my-choice_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_my-choice_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_my-choice_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_my-choice_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_my-choice_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_my-choice_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_my-choice_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_my-choice_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_my-choice_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_my-choice_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_my-choice_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_my-choice_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_my-choice_21.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "My Choice 55 ft Luxury yacht rental Dubai at AED 850/Hour",
+    "h1": "My Choice",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/my-choice/xkXEGm"
+}

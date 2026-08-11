@@ -1,0 +1,123 @@
+{
+  "yacht": {
+    "name": "Riverside",
+    "slug": "riverside",
+    "id": "V8L4P8",
+    "folder": "riverside"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_riverside_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8L4P8/267001b9-209b-4420-91c8-c256ff6afe17-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_riverside_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8L4P8/ddd42555-3190-4ed6-b488-fc5a9ca30fa7-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_riverside_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8L4P8/1fb8953e-c1a7-4462-bdd1-74a43c30e9ed-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_riverside_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8L4P8/59e5a783-a100-4d1f-9774-71f9cfcb41fd-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_riverside_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8L4P8/a797aea2-bf6c-4ba2-81d0-4cdd77a92798-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_riverside_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_riverside_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8L4P8/8fb47e16-cd9a-4050-9609-7d0046ec617b-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_riverside_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_riverside_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_riverside_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_riverside_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_riverside_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_riverside_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_riverside_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_riverside_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_riverside_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_riverside_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Riverside 40 ft Luxury yacht rental Dubai at AED 815/Hour",
+    "h1": "Riverside",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/riverside/V8L4P8"
+}

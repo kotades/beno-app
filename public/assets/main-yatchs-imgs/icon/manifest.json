@@ -1,0 +1,153 @@
+{
+  "yacht": {
+    "name": "Icon",
+    "slug": "icon",
+    "id": "WmqB23",
+    "folder": "icon"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_icon_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/cc9e8a12-9743-4f65-9322-1930bc7adfc4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_icon_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/42rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_icon_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/12rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_icon_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/22rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_icon_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/32rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_icon_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_icon_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/62rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_icon_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/82rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_icon_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/WmqB23/112rQjAop-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_icon_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_icon_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_icon_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_icon_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_icon_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_icon_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_icon_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_icon_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_icon_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_icon_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_icon_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_icon_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_icon_22.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Icon 110 ft Luxury yacht rental Dubai at AED 4750/Hour",
+    "h1": "Icon",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/icon/WmqB23"
+}

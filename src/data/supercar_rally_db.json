@@ -1,0 +1,111 @@
+{
+  "packages": [
+    {
+      "id": "jebel-jais-mountain-rally",
+      "name": "Jebel Jais Mountain Pass Supercar Rally",
+      "distance": "350 KM",
+      "duration": "Full Day (8 Hours)",
+      "cars_count": "5 Supercars Rotation",
+      "price": 12500,
+      "price_display": "AED 12,500 / driver",
+      "location": "Ras Al Khaimah - Jebel Jais Peak",
+      "image": "/assets/beno.com-supercar-rally-resources/04_supercar_rally_4.webp",
+      "highlights": [
+        "Drive 5 Supercars in 1 Day (Ferrari 296 GTS, Lamborghini Huracan, Porsche GT3 RS, McLaren 720S, Corvette C8)",
+        "350 KM of Mountain Twisties & High-Speed Highway Convoy",
+        "5-Star Gourmet Summit Lunch at 1484 by Puro (UAE's Highest Restaurant)",
+        "Lead Pace Car Escort with Walkie-Talkie Radio Communications",
+        "4K Drone & GoPro Video Recording Package Included"
+      ]
+    },
+    {
+      "id": "hatta-dam-coastal-run",
+      "name": "Hatta Dam & Scenic Mountain Lakes Convoy",
+      "distance": "240 KM",
+      "duration": "Half Day (6 Hours)",
+      "cars_count": "4 Supercars Rotation",
+      "price": 9800,
+      "price_display": "AED 9,800 / driver",
+      "location": "Hajar Mountains & Hatta Kayak Lake",
+      "image": "/assets/beno.com-supercar-rally-resources/08_supercar_rally_8.webp",
+      "highlights": [
+        "Rotate between 4 Italian & British Supercars",
+        "Scenic Winding Canyon Pass & Lake Viewpoints",
+        "Luxury Hatta Fort Resort Lunch",
+        "Full GoPro Action Camera Filming Package"
+      ]
+    },
+    {
+      "id": "dubai-skyline-night-rally",
+      "name": "Dubai Marina & City Lights Supercar Night Run",
+      "distance": "120 KM",
+      "duration": "Evening (4 Hours)",
+      "cars_count": "5 Supercars Rotation",
+      "price": 7500,
+      "price_display": "AED 7,500 / driver",
+      "location": "Dubai Marina & Downtown Boulevard",
+      "image": "/assets/beno.com-supercar-rally-resources/03_supercar_rally_3.webp",
+      "highlights": [
+        "Nighttime City Lights Tunnel Blast & Marina Convoy",
+        "Stop at Meydan Bridge & Dubai Frame for Photography",
+        "VIP Lounge Cocktails & Espresso Bar",
+        "Professional Lead Instructor Escort"
+      ]
+    },
+    {
+      "id": "yas-marina-circuit-tour",
+      "name": "Abu Dhabi Yas Island & Grand Prix Coastal Rally",
+      "distance": "300 KM",
+      "duration": "Full Day (7 Hours)",
+      "cars_count": "5 Supercars Rotation",
+      "price": 14000,
+      "price_display": "AED 14,000 / driver",
+      "location": "Abu Dhabi Yas Island & Coastal Highway",
+      "image": "/assets/beno.com-supercar-rally-resources/09_supercar_rally_9.png",
+      "highlights": [
+        "E11 Highway Convoy to Abu Dhabi Yas Island",
+        "Exclusive Access & Photo Session at Yas Marina Circuit",
+        "W Abu Dhabi Hotel Fine Dining Lunch",
+        "Full Insurance & Pit Crew Escort"
+      ]
+    }
+  ],
+  "fleet": [
+    {
+      "id": "ferrari-296-gts",
+      "name": "Ferrari 296 GTS",
+      "engine": "3.0L Twin-Turbo V6 Hybrid",
+      "power": "830 HP",
+      "zero_to_hundred": "2.9 seconds",
+      "top_speed": "330 km/h",
+      "image": "/assets/beno.com-supercar-rally-resources/04_supercar_rally_4.webp"
+    },
+    {
+      "id": "lamborghini-huracan-evo",
+      "name": "Lamborghini Huracán EVO Spyder",
+      "engine": "5.2L Naturally Aspirated V10",
+      "power": "640 HP",
+      "zero_to_hundred": "3.1 seconds",
+      "top_speed": "325 km/h",
+      "image": "/assets/beno.com-supercar-rally-resources/08_supercar_rally_8.webp"
+    },
+    {
+      "id": "porsche-911-gt3-rs",
+      "name": "Porsche 911 GT3 RS",
+      "engine": "4.0L High-Revving Flat-6",
+      "power": "525 HP",
+      "zero_to_hundred": "3.2 seconds",
+      "top_speed": "296 km/h",
+      "image": "/assets/beno.com-supercar-rally-resources/03_supercar_rally_3.webp"
+    },
+    {
+      "id": "mclaren-720s",
+      "name": "McLaren 720S Spider",
+      "engine": "4.0L Twin-Turbo V8",
+      "power": "720 HP",
+      "zero_to_hundred": "2.8 seconds",
+      "top_speed": "341 km/h",
+      "image": "/assets/beno.com-supercar-rally-resources/09_supercar_rally_9.png"
+    }
+  ]
+}

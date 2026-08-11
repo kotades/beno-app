@@ -1,0 +1,159 @@
+{
+  "yacht": {
+    "name": "Mr & Mrs Smith",
+    "slug": "mr-%26-mrs-smith",
+    "id": "9kVBlk",
+    "folder": "mr-mrs-smith"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_mr-mrs-smith_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/0xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_mr-mrs-smith_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/1xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_mr-mrs-smith_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/2xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_mr-mrs-smith_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/3xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_mr-mrs-smith_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/4xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_mr-mrs-smith_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_mr-mrs-smith_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/5xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_mr-mrs-smith_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/6xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_mr-mrs-smith_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/7xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_mr-mrs-smith_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/8xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_mr-mrs-smith_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/9kVBlk/9xEDMOQa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_mr-mrs-smith_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_mr-mrs-smith_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_mr-mrs-smith_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_mr-mrs-smith_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_mr-mrs-smith_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_mr-mrs-smith_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_mr-mrs-smith_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_mr-mrs-smith_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_mr-mrs-smith_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_mr-mrs-smith_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_mr-mrs-smith_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_mr-mrs-smith_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Mr & Mrs Smith 98 ft Luxury yacht rental Dubai at AED 3500/Hour",
+    "h1": "Mr & Mrs Smith",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/mr-%26-mrs-smith/9kVBlk"
+}

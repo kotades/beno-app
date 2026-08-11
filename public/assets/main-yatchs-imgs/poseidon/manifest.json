@@ -1,0 +1,183 @@
+{
+  "yacht": {
+    "name": "Poseidon",
+    "slug": "poseidon",
+    "id": "dk4bz3",
+    "folder": "poseidon"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_poseidon_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/333eecaf-7747-47be-81c6-6580de2b703f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_poseidon_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/ad10968a-1a0c-4f6e-8883-dcc8710386ab-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_poseidon_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/bf7acb17-04ce-4492-81a2-4d492134bae4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_poseidon_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/f7aed081-cfd2-410b-9d88-fe887655bc63-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_poseidon_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/47f7b8c0-0c58-48a6-80ae-ba2828939260-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_poseidon_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_poseidon_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/a39d9c61-d4e8-486a-a184-7c5df41376ce-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_poseidon_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/7a0d2f29-9719-490a-9993-3030b550203c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_poseidon_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/bdca77d5-97bf-4e30-be6c-d49f198efe80-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_poseidon_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/01e14056-ce60-42ab-8249-31625c161e10-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_poseidon_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/ddebfced-f52b-4731-88dc-6c13b4e1731a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_poseidon_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/5c04ed88-8f99-4f91-8dc1-bf32fb268c9a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_poseidon_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/2ff49581-7db5-4e50-bb65-b543d9a1d8b1-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_poseidon_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/57cf83fe-c2e3-4fd0-9c5e-93d239dbdc1d-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_poseidon_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/ef5e8e99-87d2-48e2-872d-9555dac83d2c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_poseidon_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/dk4bz3/74354e7f-c6aa-4754-8903-1be0580524d1-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_poseidon_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_poseidon_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_poseidon_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_poseidon_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_poseidon_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_poseidon_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_poseidon_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_poseidon_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_poseidon_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_poseidon_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_poseidon_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Poseidon 118 ft Luxury yacht rental Dubai at AED 6000/Hour",
+    "h1": "Poseidon",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/poseidon/dk4bz3"
+}

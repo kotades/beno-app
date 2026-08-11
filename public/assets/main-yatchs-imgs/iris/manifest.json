@@ -1,0 +1,165 @@
+{
+  "yacht": {
+    "name": "Iris",
+    "slug": "iris",
+    "id": "V8LYgk",
+    "folder": "iris"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_iris_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/0MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_iris_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/1MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_iris_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/2MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_iris_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/3MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_iris_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/4MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_iris_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_iris_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/5MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_iris_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/6MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_iris_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/7MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_iris_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/8MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_iris_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/9MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_iris_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/10MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_iris_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8LYgk/11MM726q2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_iris_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_iris_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_iris_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_iris_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_iris_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_iris_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_iris_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_iris_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_iris_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_iris_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_iris_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Iris 62 ft Luxury yacht rental Dubai at AED 2000/Hour",
+    "h1": "Iris",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/iris/V8LYgk"
+}

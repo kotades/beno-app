@@ -1,0 +1,135 @@
+{
+  "yacht": {
+    "name": "Daphne",
+    "slug": "daphne",
+    "id": "Zmoz1k",
+    "folder": "daphne"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_daphne_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/7d327d5a-235a-4477-b5c8-0a481398b377-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_daphne_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/74f7f3f3-289d-4fd2-b295-9ddba6ebfb87-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_daphne_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/d5c5b562-63c8-4ae6-a9d1-429ecb0447c0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_daphne_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/e244bf7a-df21-4d86-98e9-829f18851aa5-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_daphne_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/0bd04625-e941-420e-ac96-e2c0e4f0a7fd-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_daphne_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_daphne_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/9a00bd82-eb4f-4169-a2d5-6d2dcd1bf785-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_daphne_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmoz1k/d7037922-463f-4a4b-b092-2e4a43f792ba-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_daphne_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_daphne_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_daphne_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_daphne_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_daphne_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_daphne_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_daphne_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_daphne_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_daphne_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_daphne_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_daphne_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Daphne 53 ft Luxury yacht rental Dubai at AED 1200/Hour",
+    "h1": "Daphne",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/daphne/Zmoz1k"
+}

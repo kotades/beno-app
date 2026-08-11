@@ -1,0 +1,237 @@
+{
+  "yacht": {
+    "name": "Sol",
+    "slug": "sol",
+    "id": "x31vg8",
+    "folder": "sol"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_sol_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/571cb395-dd3e-49fc-92ad-61e8f16f1336-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_sol_2.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_sol_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/5c206688-a567-4361-96d0-90f4d908b4f3-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_sol_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/416b8dc5-cad1-443b-a46c-b140350b50e9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_sol_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/5956a692-eea4-4bd7-b9b0-1faf169d197f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_sol_6.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/42b7a8cc-c272-492a-b91d-847f8994c3b2-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_sol_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/619541cb-7e23-49d9-8254-28544fea8d72-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_sol_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/cad73daa-1779-4323-a94f-5003c5f54fef-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_sol_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/05c291bd-85d8-44be-abb9-93bc81055a46-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_sol_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/9a85151b-cb67-40d3-b4d9-3de6d70fa894-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_sol_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/f1967352-0e72-4219-9282-9c8b24d55a8c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_sol_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/9ddb0606-70e9-4263-81c0-00ea4d691720-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_sol_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/dd23e429-d1ad-43b5-a9f0-5c1d1df1600b-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_sol_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/cfca3e78-8d94-43f1-a488-ac06e019728c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_sol_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/3d927daf-7548-40c9-832b-e4211c610349-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_sol_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x31vg8/f8578b6e-16c1-4fd6-88ae-67ab95bc5286-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_sol_17.webp",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/Sol_e10fc254d5.webp",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_sol_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_sol_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_sol_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_sol_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_sol_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_sol_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_sol_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_sol_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_sol_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_sol_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 28,
+      "file": "28_sol_28.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 29,
+      "file": "29_sol_29.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 30,
+      "file": "30_sol_30.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 31,
+      "file": "31_sol_31.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/jp_059296e2fe.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 32,
+      "file": "32_sol_32.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/kr_912d04fcf9.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 33,
+      "file": "33_sol_33.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/cn_aac86ea247.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 34,
+      "file": "34_sol_34.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/es_e8da9537e2.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 35,
+      "file": "35_sol_35.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/tr_7f2a577132.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 36,
+      "file": "36_sol_video36.webm",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/BENO_Website_Sol_cce51492c8.webm",
+      "type": "video"
+    }
+  ],
+  "meta": {
+    "title": "Sol 63 ft Luxury yacht rental Dubai at AED 3500/Hour",
+    "h1": "Sol",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/sol/x31vg8"
+}

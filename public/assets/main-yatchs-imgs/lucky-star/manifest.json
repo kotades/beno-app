@@ -1,0 +1,165 @@
+{
+  "yacht": {
+    "name": "Lucky Star",
+    "slug": "lucky-star",
+    "id": "zkWgek",
+    "folder": "lucky-star"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_lucky-star_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/5c735623-3cce-490f-bcf4-757b4e50493e-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_lucky-star_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/5ad06a22-181c-4c57-9b01-513030defe10-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_lucky-star_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/b8400ac0-3950-419c-98d0-542ebe9a0fee-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_lucky-star_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/234c695b-3289-4d29-8e7d-b19c2ed25252-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_lucky-star_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/d522ee7f-fdce-46c0-83e5-8ec6c3aa1c7b-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_lucky-star_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_lucky-star_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/9f70cd5b-ae88-4003-b031-c2b8dbb77d93-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_lucky-star_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/d998e599-8771-4d86-87bd-0c8cfb6d1df9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_lucky-star_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/507ebb06-0c76-4787-b1d1-fa6b22bee8c4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_lucky-star_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/48e253bc-70b3-48d3-852f-2f10baa943e3-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_lucky-star_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zkWgek/84f21248-c657-4f5d-8969-9db83d0e0364-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_lucky-star_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_lucky-star_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_lucky-star_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_lucky-star_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_lucky-star_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_lucky-star_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_lucky-star_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_lucky-star_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_lucky-star_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_lucky-star_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_lucky-star_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_lucky-star_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_lucky-star_24.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Lucky Star 62 ft Luxury yacht rental Dubai at AED 1500/Hour",
+    "h1": "Lucky Star",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/lucky-star/zkWgek"
+}

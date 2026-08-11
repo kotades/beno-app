@@ -1,0 +1,123 @@
+{
+  "yacht": {
+    "name": "Magnum",
+    "slug": "magnum",
+    "id": "x30o9m",
+    "folder": "magnum"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_magnum_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/0LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_magnum_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/1LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_magnum_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/2LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_magnum_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/3LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_magnum_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/4LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_magnum_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_magnum_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/5LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_magnum_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/x30o9m/6LQwbb4P-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_magnum_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_magnum_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_magnum_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_magnum_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_magnum_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_magnum_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_magnum_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_magnum_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_magnum_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Magnum 52 ft Luxury yacht rental Dubai at AED 1100/Hour",
+    "h1": "Magnum",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/magnum/x30o9m"
+}

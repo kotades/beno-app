@@ -1,0 +1,147 @@
+{
+  "yacht": {
+    "name": "Monica",
+    "slug": "monica",
+    "id": "zmdvv8",
+    "folder": "monica"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_monica_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/1efc70cb-590a-43e9-b038-6335e13b5a28-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_monica_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/4811e20a-e8d9-4f14-aee6-59740c590681-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_monica_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/f02679e9-a037-4763-8c91-c55df905eb10-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_monica_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/d70b88fa-90ce-481c-96ab-afd13431d00b-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_monica_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/698165e9-9d01-4dff-88bd-d6199bbc07b8-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_monica_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_monica_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/1a698909-a369-4375-b05f-f27121109795-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_monica_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/4b00180c-c824-4d9c-89d1-15c578534753-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_monica_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/zmdvv8/390cd54f-e548-4350-bc0b-4537fae98308-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_monica_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_monica_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_monica_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_monica_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_monica_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_monica_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_monica_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_monica_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_monica_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_monica_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_monica_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_monica_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Monica 50 ft Luxury yacht rental Dubai at AED 790/Hour",
+    "h1": "Monica",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/monica/zmdvv8"
+}

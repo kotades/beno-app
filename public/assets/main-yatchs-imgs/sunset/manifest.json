@@ -1,0 +1,231 @@
+{
+  "yacht": {
+    "name": "Sunset",
+    "slug": "sunset",
+    "id": "L8Rq53",
+    "folder": "sunset"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_sunset_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/f4b3408b-cba0-414d-a1ed-f5c6d14a1d48-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_sunset_2.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_harbour_087f2f1737.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_sunset_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/0af36e52-fc7f-40cb-8e5a-0756c5d9222e-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_sunset_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/f37bef20-d4a6-4272-982e-84ee6f0bf3ff-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_sunset_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/50ba8e8f-1ebe-4fc3-82cb-ecae989df3df-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_sunset_6.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/00a7e1da-b61c-4101-97c2-57d91dbce9f4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_sunset_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/da3c8810-5b25-4c31-a05e-691a0f149620-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_sunset_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/079f826d-9b9a-4a0e-b9b4-b3ef9501388f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_sunset_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/81cdd87c-ebfa-4fa5-94c1-4e290f311563-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_sunset_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/312e62a4-b998-4d88-9831-ed66d696b1aa-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_sunset_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/82ae4e8c-ce49-4f05-b65b-d97b6addf7f4-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_sunset_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/3906583d-17cc-4cf1-ab89-b9a33a67b37a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_sunset_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/f15b7498-25a1-4457-874b-5065151cf5fc-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_sunset_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/904beed1-08d5-4d3a-8b65-5fd303ed523c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_sunset_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/ef5ed5d7-3ba0-45f7-b6d5-47528928ba74-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_sunset_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/L8Rq53/f6694e1d-3655-4824-9abb-1472c8a92b19-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_sunset_17.webp",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/Journey_6666e9ca48.webp",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_sunset_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_sunset_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_sunset_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_sunset_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_sunset_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_sunset_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_sunset_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_sunset_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_sunset_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_sunset_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 28,
+      "file": "28_sunset_28.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 29,
+      "file": "29_sunset_29.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 30,
+      "file": "30_sunset_30.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/kr_912d04fcf9.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 31,
+      "file": "31_sunset_31.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/cn_aac86ea247.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 32,
+      "file": "32_sunset_32.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/pt_94ee80ad1a.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 33,
+      "file": "33_sunset_33.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/es_e8da9537e2.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 34,
+      "file": "34_sunset_34.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/tr_7f2a577132.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 35,
+      "file": "35_sunset_video35.webm",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/BENO_Website_Sunset_Journey_fa41ba8e38.webm",
+      "type": "video"
+    }
+  ],
+  "meta": {
+    "title": "Sunset 56 ft Luxury yacht rental Dubai at AED 2500/Hour",
+    "h1": "Sunset",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/sunset/L8Rq53"
+}

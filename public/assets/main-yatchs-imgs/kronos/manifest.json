@@ -1,0 +1,183 @@
+{
+  "yacht": {
+    "name": "Kronos",
+    "slug": "kronos",
+    "id": "b3xOam",
+    "folder": "kronos"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_kronos_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/3f3658ad-1c07-47f1-82d6-889f80d088df-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_kronos_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/c0f10f42-67c7-467a-a562-51b84f3e84a1-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_kronos_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/1610eb21-db8f-4f62-bb90-2217c8f19ddb-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_kronos_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/061bf1f1-dc1c-45c3-85b8-c8a909fe81fc-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_kronos_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/01648491-7a24-42f9-9488-1281d83840ed-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_kronos_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/marasi_drive_60d296b6ce.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_kronos_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/0c9e9e03-987d-4876-a400-b6429732ee8b-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_kronos_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/561f83c2-b168-40fc-9f29-8c8550233571-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_kronos_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/08f94aab-abf7-4566-86e0-0b84ab22d13f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_kronos_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/aa7355d7-0d40-4112-af81-a1f04e9db91a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_kronos_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/52654e19-7016-4109-9377-670ae7090b41-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_kronos_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/f0cb03c9-738b-4b89-8406-df1fe4a28ba0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_kronos_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/4392d055-7f12-4ca1-8d94-e75ad24c4091-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_kronos_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/168cbc2a-5cd9-431f-b731-724952f61dc9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_kronos_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/4e9e9a39-9d40-4672-9503-ba9506378c3a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_kronos_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/b3xOam/0e57fdc9-4b98-404e-b3cf-9fb5613e3850-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_kronos_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_kronos_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_kronos_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_kronos_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_kronos_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_kronos_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_kronos_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_kronos_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_kronos_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_kronos_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_kronos_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Kronos 85 ft Luxury yacht rental Dubai at AED 3800/Hour",
+    "h1": "Kronos",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/kronos/b3xOam"
+}

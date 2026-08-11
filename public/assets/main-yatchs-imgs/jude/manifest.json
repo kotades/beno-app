@@ -1,0 +1,237 @@
+{
+  "yacht": {
+    "name": "Jude",
+    "slug": "jude",
+    "id": "Zmo18r",
+    "folder": "jude"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_jude_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/51ecac71-8a32-4a30-b0c1-3f73aa5018a7-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_jude_2.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_routes_bf3c694fdc.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_jude_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/57ff0daf-72e8-451e-abee-470dc7990a29-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_jude_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/5345009b-b338-4f73-afbe-3a9151624736-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_jude_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/c8412f0e-cd98-4c27-a45f-184b939aaf2a-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_jude_6.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/391b29d1-1494-4224-ac52-988ac2737c46-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_jude_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/09231ec0-5fbb-40cf-b7b4-82ec5849422f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_jude_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/a1bd6cb5-f46e-4281-9cd9-144e86886f42-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_jude_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/32ccec61-190d-4e85-b7df-659da8143ce9-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_jude_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/6f220586-fba9-4a6b-bd6d-a4557fea47fc-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_jude_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/49d6c75a-3f87-4985-9474-34837b9264dc-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_jude_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/aa46b092-e746-46fd-b560-5d9833aedfcc-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_jude_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/25b8de38-455e-4249-97ed-8d587c580f2b-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_jude_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/2516f534-5b3e-4c4b-8d73-20aaa21a32fd-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_jude_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/7553e7d9-abcb-49dc-8b71-8d364b6949c0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_jude_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/Zmo18r/fb94b983-04c4-4363-9cc4-d6c81c90ae97-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_jude_17.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/Screenshot_2025_12_05_at_11_05_11_AM_f23470e974.png",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_jude_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_jude_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_jude_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_jude_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_jude_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_jude_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_jude_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_jude_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_jude_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_jude_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 28,
+      "file": "28_jude_28.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 29,
+      "file": "29_jude_29.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 30,
+      "file": "30_jude_30.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 31,
+      "file": "31_jude_31.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/jp_059296e2fe.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 32,
+      "file": "32_jude_32.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/kr_912d04fcf9.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 33,
+      "file": "33_jude_33.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/cn_aac86ea247.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 34,
+      "file": "34_jude_34.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/es_e8da9537e2.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 35,
+      "file": "35_jude_35.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/tr_7f2a577132.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 36,
+      "file": "36_jude_video36.mp4",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/JUDE_REFITTED_v2_95daa0a1c8.mp4",
+      "type": "video"
+    }
+  ],
+  "meta": {
+    "title": "Jude 74 ft Luxury yacht rental Dubai at AED 5000/Hour",
+    "h1": "Jude",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/jude/Zmo18r"
+}

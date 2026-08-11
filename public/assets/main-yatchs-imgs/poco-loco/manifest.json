@@ -1,0 +1,189 @@
+{
+  "yacht": {
+    "name": "Poco Loco",
+    "slug": "poco-loco",
+    "id": "B3zVy3",
+    "folder": "poco-loco"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_poco-loco_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/4f871ef5-5f5c-47b1-ae7b-c7d7bb01f0a0-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_poco-loco_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/8414c2be-b447-4069-b8f4-4151e1830ae8-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_poco-loco_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/dbe92cd5-e45a-4e05-9803-d56e4fae857e-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_poco-loco_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/f8543472-3b7b-4278-8f3c-410cda7229f3-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_poco-loco_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/b6384380-add2-417b-bc40-f989bf0d1e9d-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_poco-loco_6.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/59ea0d22-860e-4f9a-96b6-d2ff2796a88c-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_poco-loco_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/a05c2239-c29e-4f8b-980b-80a8dcb63671-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_poco-loco_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/8e4ca69a-0a3a-4032-8ca2-1aeb4f1dde7d-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_poco-loco_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/9f72b195-3ba2-448c-84a7-c7301eeb00b6-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_poco-loco_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/bf86dbf4-8377-4808-b815-7b7e3949fdf6-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_poco-loco_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/54c9f098-98a8-458c-b8b3-1a3e0eced933-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_poco-loco_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/f878fb7f-907a-4c97-9c50-eeec960c1c5f-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_poco-loco_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/c6505ada-801f-4476-9043-5967ba76f456-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_poco-loco_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/460767fd-16dc-4384-92ef-7c0b2f56f2fb-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_poco-loco_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/B3zVy3/49376dd4-aa79-4051-9616-1480ed628626-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_poco-loco_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_poco-loco_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_poco-loco_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 19,
+      "file": "19_poco-loco_19.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 20,
+      "file": "20_poco-loco_20.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 21,
+      "file": "21_poco-loco_21.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 22,
+      "file": "22_poco-loco_22.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 23,
+      "file": "23_poco-loco_23.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 24,
+      "file": "24_poco-loco_24.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_underwater_lighting.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 25,
+      "file": "25_poco-loco_25.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sound_system.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 26,
+      "file": "26_poco-loco_26.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 27,
+      "file": "27_poco-loco_27.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 28,
+      "file": "28_poco-loco_28.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/us_c7c86b252b.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Poco Loco 90 ft Luxury yacht rental Dubai at AED 4000/Hour",
+    "h1": "Poco Loco",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/poco-loco/B3zVy3"
+}

@@ -1,0 +1,129 @@
+{
+  "yacht": {
+    "name": "Blessed",
+    "slug": "blessed",
+    "id": "V8vax3",
+    "folder": "blessed"
+  },
+  "assets": [
+    {
+      "index": 1,
+      "file": "01_blessed_1.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/0xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 2,
+      "file": "02_blessed_2.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/1xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 3,
+      "file": "03_blessed_3.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/2xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 4,
+      "file": "04_blessed_4.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/3xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 5,
+      "file": "05_blessed_5.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/4xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 6,
+      "file": "06_blessed_6.jpg",
+      "url": "https://d19r6u3d126ojb.cloudfront.net/dubai_marina_84c503c31c.jpg",
+      "type": "gallery"
+    },
+    {
+      "index": 7,
+      "file": "07_blessed_7.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/5xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 8,
+      "file": "08_blessed_8.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/images/yacht_images/V8vax3/6xEreJaq-large-watermarked",
+      "type": "gallery"
+    },
+    {
+      "index": 9,
+      "file": "09_blessed_9.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_size.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 10,
+      "file": "10_blessed_10.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_bedrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 11,
+      "file": "11_blessed_11.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_crew.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 12,
+      "file": "12_blessed_12.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_guest_capacity.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 13,
+      "file": "13_blessed_13.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/attributes_washrooms.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 14,
+      "file": "14_blessed_14.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_kitchen.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 15,
+      "file": "15_blessed_15.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_air_condition.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 16,
+      "file": "16_blessed_16.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fly_bridge.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 17,
+      "file": "17_blessed_17.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_sunbath_beds.svg",
+      "type": "gallery"
+    },
+    {
+      "index": 18,
+      "file": "18_blessed_18.jpg",
+      "url": "https://d2104774mpe934.cloudfront.net/yacht_features_icons/features_fuel.svg",
+      "type": "gallery"
+    }
+  ],
+  "meta": {
+    "title": "Blessed 50 ft Luxury yacht rental Dubai at AED 1201/Hour",
+    "h1": "Blessed",
+    "price_text": "",
+    "guests": "",
+    "cabins": "",
+    "length": "",
+    "features": [],
+    "description": ""
+  },
+  "source_url": "https://www.beno.com/yachts/blessed/V8vax3"
+}
