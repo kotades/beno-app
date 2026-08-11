@@ -58,7 +58,7 @@ export default function LiveSupportWidget({ isOpen, onClose }: LiveSupportWidget
   };
 
   return (
-    <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-gray-100 flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200 h-[520px]">
+    <div className="fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] sm:w-96 bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-gray-100 flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200 h-[min(520px,calc(100dvh-8rem))]">
       
       {/* HEADER BAR */}
       <div className="bg-gradient-to-r from-gray-950 via-gray-900 to-teal-950 p-4 text-white flex items-center justify-between">
