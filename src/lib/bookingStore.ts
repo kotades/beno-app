@@ -1,3 +1,5 @@
+import { syncBookingToFirestore } from '@/lib/firestoreSync';
+
 export interface BookingItem {
   id: string; // e.g. "BENO-BK-98421"
   serviceName: string;
@@ -15,6 +17,8 @@ export interface BookingItem {
   addOns?: string[];
   notes?: string;
   image?: string;
+  serviceId?: string;
+  providerId?: string;
 }
 
 const LOCAL_STORAGE_KEY = 'beno_user_bookings';
@@ -68,6 +72,15 @@ export function saveBooking(booking: Omit<BookingItem, 'id' | 'createdAt' | 'sta
   if (typeof window !== 'undefined') {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated));
   }
+
+  // Synchronize immediately to Firebase Firestore
+  const firestoreRecord = {
+    ...newBooking,
+    serviceId: newBooking.serviceId || newBooking.id,
+    providerId: newBooking.providerId || 'sp-fleet'
+  };
+  syncBookingToFirestore(firestoreRecord);
+
   return newBooking;
 }
 

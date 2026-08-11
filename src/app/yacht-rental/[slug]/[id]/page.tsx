@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import yachtsDb from '@/data/yachts_db.json';
 import Footer from '@/components/Footer';
+import ReserveButton from '@/components/ReserveButton';
 
 export default async function YachtDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -165,12 +166,12 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ sl
             </div>
 
             {/* ACTION BUTTON */}
-            <Link
-              href="/booking/retrieve"
-              className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-4 rounded-2xl font-bold text-sm text-center block transition-all shadow-lg active:scale-95"
-            >
-              Book {yacht.name} Now
-            </Link>
+            <ReserveButton
+              serviceName={yacht.name}
+              category="Yacht"
+              price={yacht.price_per_hour}
+              image={mainHero}
+            />
 
             <Link href="/yacht-rental" className="block text-center text-xs text-gray-500 hover:text-gray-900 font-bold transition-colors pt-2">
               ← Back to All Yachts

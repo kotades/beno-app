@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import aerialsDbData from '@/data/aerials_db.json';
 import Footer from '@/components/Footer';
+import ReserveButton from '@/components/ReserveButton';
 
 export default async function AerialDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -146,12 +147,12 @@ export default async function AerialDetailPage({ params }: { params: Promise<{ s
               <span className="text-[11px] text-gray-500 block">Book the entire 5-seater helicopter exclusively for your group</span>
             </div>
 
-            <Link
-              href="/booking/retrieve"
-              className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-4 rounded-2xl font-bold text-sm text-center block transition-all shadow-lg active:scale-95"
-            >
-              Book {aerial.name} Now
-            </Link>
+            <ReserveButton
+              serviceName={aerial.name}
+              category="Helicopter"
+              price={Number(aerial.price_per_person)}
+              image={mainHero}
+            />
 
             <Link href="/aerials" className="block text-center text-xs text-gray-500 hover:text-gray-900 font-bold transition-colors pt-2">
               ← Back to All Helicopter Tours

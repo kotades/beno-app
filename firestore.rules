@@ -1,6 +1,31 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // ── BENO booking engine ─────────────────────────────
+    // Guest bookings: anyone can create; owner or admin can read/update
+    match /bookings/{bookingId} {
+      allow create: if true;
+      allow read: if request.auth != null && (
+        request.auth.token.email == resource.data.guestEmail
+        || request.auth.token.email == 'beno@admin.com'
+      );
+      allow update: if request.auth != null && (
+        request.auth.token.email == resource.data.guestEmail
+        || request.auth.token.email == 'beno@admin.com'
+      );
+      allow delete: if false;
+    }
+
+    // Support messages: guests create; admin reads all
+    match /support_messages/{messageId} {
+      allow create: if true;
+      allow read: if request.auth != null && request.auth.token.email == 'beno@admin.com';
+      allow update, delete: if false;
+    }
+
+    // ── Everything else (incl. legacy trading app data) ──
+    // Kept open to avoid breaking the companion app sharing this project.
     match /{document=**} {
       allow read, write: if true;
     }

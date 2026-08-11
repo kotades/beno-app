@@ -20,7 +20,7 @@ import {
   sendAdminAgentReply, 
   ChatMessage 
 } from '@/lib/supportChatStore';
-import { syncChatMessageToFirestore } from '@/lib/firestoreSync';
+import { syncChatMessageToFirestore, subscribeToAllBookings, syncBookingStatusToFirestore } from '@/lib/firestoreSync';
 import { 
   getManagedUsers, 
   toggleUserAdminRole, 
@@ -63,11 +63,20 @@ export default function ConciergeDashboardPage() {
   }, [activeAdminChannelId]);
 
   useEffect(() => {
+    const unsub = subscribeToAllBookings((firestoreBookings) => {
+      setBookings(firestoreBookings);
+      setMetrics(getEngineMetrics());
+    });
+    return unsub;
+  }, []);
+
+  useEffect(() => {
     adminMessagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [adminMessages]);
 
   const handleStatusChange = (id: string, status: BookingRecord['status']) => {
     updateBookingStatus(id, status);
+    syncBookingStatusToFirestore(id, status);
     refreshData();
   };
 

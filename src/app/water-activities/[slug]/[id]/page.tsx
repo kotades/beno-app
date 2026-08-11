@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import watersportsDbData from '@/data/watersports_db.json';
 import Footer from '@/components/Footer';
+import ReserveButton from '@/components/ReserveButton';
 
 export default async function WaterActivityDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -162,12 +163,12 @@ export default async function WaterActivityDetailPage({ params }: { params: Prom
               </div>
             </div>
 
-            <Link
-              href="/booking/retrieve"
-              className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-4 rounded-2xl font-bold text-sm text-center block transition-all shadow-lg active:scale-95"
-            >
-              Reserve {activity.name} Now
-            </Link>
+            <ReserveButton
+              serviceName={activity.name}
+              category="Water Activity"
+              price={Number(activity.price)}
+              image={mainHero}
+            />
 
             <Link href="/water-activities" className="block text-center text-xs text-gray-500 hover:text-gray-900 font-bold transition-colors pt-2">
               ← Back to All Water Activities

@@ -18,7 +18,7 @@ const db = getFirestore(app);
 
 export { db };
 
-export async function syncBookingToFirestore(booking: BookingRecord): Promise<void> {
+export async function syncBookingToFirestore(booking: any): Promise<void> {
   try {
     const docRef = doc(db, 'bookings', booking.id);
     await setDoc(docRef, {
@@ -28,6 +28,19 @@ export async function syncBookingToFirestore(booking: BookingRecord): Promise<vo
     console.log(`🔥 Firestore synced booking ${booking.id}`);
   } catch (e) {
     console.warn(`Firestore booking sync notice (Fallback active):`, e);
+  }
+}
+
+export async function syncBookingStatusToFirestore(id: string, status: string): Promise<void> {
+  try {
+    const docRef = doc(db, 'bookings', id);
+    await setDoc(docRef, {
+      status,
+      updatedAt: new Date().toISOString()
+    }, { merge: true });
+    console.log(`🔥 Firestore synced booking status ${id} → ${status}`);
+  } catch (e) {
+    console.warn(`Firestore booking status sync notice:`, e);
   }
 }
 
@@ -46,7 +59,7 @@ export async function syncChatMessageToFirestore(message: ChatMessage): Promise<
 
 export function subscribeToUserBookings(userEmail: string, callback: (bookings: BookingRecord[]) => void) {
   try {
-    const q = query(collection(db, 'bookings'), where('guestEmail', '==', userEmail), orderBy('createdAt', 'desc'));
+    const q = query(collection(db, 'bookings'), where('guestEmail', '==', userEmail));
     return onSnapshot(q, (snapshot) => {
       const list: BookingRecord[] = [];
       snapshot.forEach(docSnap => {
@@ -58,6 +71,24 @@ export function subscribeToUserBookings(userEmail: string, callback: (bookings: 
     });
   } catch (e) {
     console.warn("Firestore subscription notice:", e);
+    return () => {};
+  }
+}
+
+export function subscribeToAllBookings(callback: (bookings: BookingRecord[]) => void) {
+  try {
+    const q = query(collection(db, 'bookings'));
+    return onSnapshot(q, (snapshot) => {
+      const list: BookingRecord[] = [];
+      snapshot.forEach(docSnap => {
+        list.push(docSnap.data() as BookingRecord);
+      });
+      callback(list);
+    }, (err) => {
+      console.warn("Firestore snapshot all bookings notice:", err);
+    });
+  } catch (e) {
+    console.warn("Firestore subscribe all bookings notice:", e);
     return () => {};
   }
 }

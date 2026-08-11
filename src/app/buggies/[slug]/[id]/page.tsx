@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import buggiesDbData from '@/data/buggies_db.json';
 import Footer from '@/components/Footer';
+import ReserveButton from '@/components/ReserveButton';
 
 export default async function BuggyDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -162,12 +163,13 @@ export default async function BuggyDetailPage({ params }: { params: Promise<{ sl
               </div>
             </div>
 
-            <Link
-              href="/booking/retrieve"
+            <ReserveButton
+              serviceName={buggy.name}
+              category="Buggy"
+              price={Number(buggy.price_per_hour)}
+              image={mainHero}
               className="w-full bg-amber-600 hover:bg-amber-700 text-white py-4 rounded-2xl font-bold text-sm text-center block transition-all shadow-lg active:scale-95"
-            >
-              Reserve {buggy.name} Now
-            </Link>
+            />
 
             <Link href="/buggies" className="block text-center text-xs text-gray-500 hover:text-gray-900 font-bold transition-colors pt-2">
               ← Back to All Buggies & Quad Bikes

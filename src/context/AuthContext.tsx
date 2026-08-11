@@ -70,30 +70,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signInWithEmail = async (email: string, pass: string) => {
-    // Special Admin Account: authenticate via Firebase
-    // The admin account beno@admin.com must exist in Firebase Auth
-    try {
-      await signInWithEmailAndPassword(auth, email, pass);
-    } catch (e: any) {
-      // Admin-only fallback: if beno@admin.com credentials are correct but Firebase
-      // auth isn't configured, allow local admin session
-      const isSpecialAdmin = email.toLowerCase() === 'beno@admin.com' && pass === 'sannibeno';
-      if (isSpecialAdmin) {
-        const mockAdmin = {
-          uid: 'usr-admin-01',
-          email: 'beno@admin.com',
-          displayName: 'BENO Administrator',
-          photoURL: ''
-        } as any;
-        setUser(mockAdmin);
-        setIsAdmin(true);
-        setUserRole('admin');
-        registerOrUpdateUser(email, 'BENO Administrator', 'admin');
-        return;
-      }
-      // For regular users, re-throw so the UI can show the error
-      throw e;
-    }
+    // Real Firebase Auth only. Admin (beno@admin.com) must exist in Firebase Auth.
+    await signInWithEmailAndPassword(auth, email, pass);
   };
 
   const signUpWithEmail = async (email: string, pass: string) => {
