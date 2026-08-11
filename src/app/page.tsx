@@ -94,8 +94,8 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-[17px] font-semibold text-gray-800">{yacht.name}</h3>
                     <div className="text-[15px]">
-                       <span className="font-extrabold text-gray-900 mr-2">AED {yacht.price}</span>
-                       <span className="text-gray-400 line-through text-xs">AED {yacht.oldPrice}</span>
+                       <span className="font-extrabold text-gray-900 mr-2">${yacht.price}</span>
+                       <span className="text-gray-400 line-through text-xs">${yacht.oldPrice}</span>
                        <span className="text-gray-500 text-sm"> / hour</span>
                     </div>
                     <div className="inline-block bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full">{yacht.discount}</div>
@@ -152,8 +152,8 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-[15px] font-semibold text-gray-800 line-clamp-1">{car.name}</h3>
                     <div className="text-[15px]">
-                       <span className="font-extrabold text-gray-900 mr-2">AED {car.price}</span>
-                       <span className="text-gray-400 line-through text-xs">AED {car.oldPrice}</span>
+                       <span className="font-extrabold text-gray-900 mr-2">${car.price}</span>
+                       <span className="text-gray-400 line-through text-xs">${car.oldPrice}</span>
                        <span className="text-gray-500 text-sm"> / day (200 km)</span>
                     </div>
                     <div className="inline-block bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full">{car.discount}</div>
@@ -236,7 +236,7 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-[15px] font-semibold text-white line-clamp-1">{car.name}</h3>
                     <div className="text-[15px]">
-                       <span className="font-extrabold text-white mr-2">AED {car.price}</span>
+                       <span className="font-extrabold text-white mr-2">${car.price}</span>
                        <span className="text-gray-400 text-sm"> / day (250 km)</span>
                     </div>
                     {car.discount && <div className="inline-block bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-1">{car.discount}</div>}
@@ -293,7 +293,7 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-[15px] font-semibold text-white line-clamp-1">{buggy.name}</h3>
                     <div className="text-[15px] text-gray-400 text-center">
-                       <span className="line-through text-xs mr-1">AED {buggy.price}</span>
+                       <span className="line-through text-xs mr-1">${buggy.price}</span>
                        <span className="text-sm">/ hour</span>
                     </div>
                     <div className="inline-block bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-1">{buggy.discount}</div>

@@ -9,7 +9,7 @@ export interface GlobalLocation {
   country: string;
   countryCode: string;
   flagEmoji: string;
-  currencyCode: 'USD' | 'EUR' | 'GBP' | 'AED';
+  currencyCode: 'USD' | 'EUR' | 'GBP';
   currencySymbol: string;
   exchangeRateToUSD: number; // 1 USD = X Currency
 }
@@ -117,9 +117,6 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
 
   const formatPrice = (usdAmount: number): string => {
     const converted = Math.round(usdAmount * activeLocation.exchangeRateToUSD);
-    if (activeLocation.currencyCode === 'AED') {
-      return `AED ${converted.toLocaleString()}`;
-    }
     return `${activeLocation.currencySymbol}${converted.toLocaleString()}`;
   };
 

@@ -3,7 +3,10 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import LiveSupportWidget from '@/components/LiveSupportWidget';
+import dynamic from 'next/dynamic';
+
+// Lazy-load chat widget — heavy, only mounts when user opens chat
+const LiveSupportWidget = dynamic(() => import('@/components/LiveSupportWidget'), { ssr: false });
 import { useLocation, GLOBAL_DESTINATIONS } from '@/context/LocationContext';
 import { useAuth } from '@/context/AuthContext';
 
@@ -315,7 +318,7 @@ export default function Header() {
       </div>
 
       {/* LIVE SUPPORT CHAT POPUP WIDGET */}
-      <LiveSupportWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
+      {isChatOpen && <LiveSupportWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />}
     </>
   );
 }

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import yachtsDb from '@/data/yachts_db.json';
 import Footer from '@/components/Footer';
 import ReserveButton from '@/components/ReserveButton';
+import { formatCurrency } from '@/lib/currency';
 
 export default async function YachtDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -139,12 +140,12 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ sl
             <div className="border-b border-gray-100 pb-6">
               <span className="text-xs text-gray-400 font-bold uppercase block mb-1">Charter Rate</span>
               <div className="flex items-baseline space-x-2">
-                <span className="text-3xl font-black text-[#008B9B]">AED {yacht.price_per_hour?.toLocaleString()}</span>
+                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(yacht.price_per_hour || 0)}</span>
                 <span className="text-gray-500 text-sm font-medium">/ hour</span>
               </div>
               {yacht.original_price_per_hour > 0 && (
                 <span className="text-xs text-gray-400 line-through font-medium block mt-1">
-                  Original: AED {yacht.original_price_per_hour?.toLocaleString()} / hour
+                  Original: {formatCurrency(yacht.original_price_per_hour || 0)} / hour
                 </span>
               )}
             </div>

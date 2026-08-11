@@ -195,7 +195,6 @@ export default function ProfilePage() {
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
                   <option value="GBP">GBP (£)</option>
-                  <option value="AED">AED (د.إ)</option>
                   <option value="CAD">CAD (C$)</option>
                 </select>
               </div>

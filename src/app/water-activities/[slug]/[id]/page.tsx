@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import watersportsDbData from '@/data/watersports_db.json';
 import Footer from '@/components/Footer';
 import ReserveButton from '@/components/ReserveButton';
+import { formatCurrency } from '@/lib/currency';
 
 export default async function WaterActivityDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -142,7 +143,7 @@ export default async function WaterActivityDetailPage({ params }: { params: Prom
             <div className="border-b border-gray-100 pb-6">
               <span className="text-xs text-gray-400 font-bold uppercase block mb-1">Activity Session Rate</span>
               <div className="flex items-baseline space-x-2">
-                <span className="text-3xl font-black text-[#008B9B]">AED {Number(activity.price).toLocaleString()}</span>
+                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(Number(activity.price))}</span>
                 <span className="text-gray-500 text-sm font-medium">/ session</span>
               </div>
               <span className="text-xs text-gray-400 block mt-1">Includes Life Vest + Certified Instructor</span>

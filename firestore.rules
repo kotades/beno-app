@@ -14,7 +14,10 @@ service cloud.firestore {
         request.auth.token.email == resource.data.guestEmail
         || request.auth.token.email == 'beno@admin.com'
       );
-      allow delete: if false;
+      allow delete: if request.auth != null && (
+        request.auth.token.email == resource.data.guestEmail
+        || request.auth.token.email == 'beno@admin.com'
+      );
     }
 
     // Support messages: guests create; admin reads all

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import carsDbData from '@/data/cars_db.json';
 import Footer from '@/components/Footer';
 import ReserveButton from '@/components/ReserveButton';
+import { formatCurrency } from '@/lib/currency';
 
 export default async function CarDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -145,7 +146,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ slug
             <div className="border-b border-gray-100 pb-6">
               <span className="text-xs text-gray-400 font-bold uppercase block mb-1">Rental Rate</span>
               <div className="flex items-baseline space-x-2">
-                <span className="text-3xl font-black text-[#008B9B]">AED {Number(price).toLocaleString()}</span>
+                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(Number(price))}</span>
                 <span className="text-gray-500 text-sm font-medium">/ day</span>
               </div>
               <span className="text-xs text-gray-400 block mt-1">Includes 250 km / day allowance + VAT</span>

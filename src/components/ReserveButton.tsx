@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import BookingEngineModal from '@/components/BookingEngineModal';
+import dynamic from 'next/dynamic';
+
+// Lazy-load the booking modal so it only ships and mounts when the user clicks Reserve
+const BookingEngineModal = dynamic(() => import('@/components/BookingEngineModal'), { ssr: false });
 
 interface ReserveButtonProps {
   serviceName: string;
@@ -31,15 +34,17 @@ export default function ReserveButton({
       >
         Reserve {serviceName} Now
       </button>
-      <BookingEngineModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        serviceName={serviceName}
-        category={category}
-        price={price}
-        serviceId={serviceId}
-        image={image}
-      />
+      {isOpen && (
+        <BookingEngineModal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          serviceName={serviceName}
+          category={category}
+          price={price}
+          serviceId={serviceId}
+          image={image}
+        />
+      )}
     </>
   );
 }

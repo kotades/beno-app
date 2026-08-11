@@ -102,7 +102,7 @@ export default function BuyVsRentCalculatorPage() {
               </div>
               <div className="text-right">
                 <span className="text-xs text-gray-500 font-semibold block">Market Value</span>
-                <span className="text-base font-bold text-[#008B9B]">AED {asset.buyPrice.toLocaleString()}</span>
+                <span className="text-base font-bold text-[#008B9B]">${asset.buyPrice.toLocaleString()}</span>
               </div>
             </div>
 
@@ -152,19 +152,19 @@ export default function BuyVsRentCalculatorPage() {
             <div className="border-t border-gray-100 pt-6 space-y-3 text-xs text-gray-600 font-medium">
               <div className="flex justify-between">
                 <span>Estimated Depreciation ({asset.annualDepreciationPct * 100}%/yr):</span>
-                <span className="font-bold text-gray-900">AED {totalDepreciation.toLocaleString()}</span>
+                <span className="font-bold text-gray-900">${totalDepreciation.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span>Insurance & Registration ({ownershipYears} yrs):</span>
-                <span className="font-bold text-gray-900">AED {totalInsurance.toLocaleString()}</span>
+                <span className="font-bold text-gray-900">${totalInsurance.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span>Maintenance & Servicing ({ownershipYears} yrs):</span>
-                <span className="font-bold text-gray-900">AED {totalMaintenance.toLocaleString()}</span>
+                <span className="font-bold text-gray-900">${totalMaintenance.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span>Docking / Garage Storage ({ownershipYears} yrs):</span>
-                <span className="font-bold text-gray-900">AED {totalStorage.toLocaleString()}</span>
+                <span className="font-bold text-gray-900">${totalStorage.toLocaleString()}</span>
               </div>
             </div>
 
@@ -183,7 +183,7 @@ export default function BuyVsRentCalculatorPage() {
                 Total Cost of Buying & Owning
               </span>
               <span className="text-3xl font-black text-white">
-                AED {totalBuyCost.toLocaleString()}
+                ${totalBuyCost.toLocaleString()}
               </span>
               <p className="text-xs text-gray-400 mt-1">Includes depreciation loss, maintenance, storage & insurance.</p>
             </div>
@@ -194,7 +194,7 @@ export default function BuyVsRentCalculatorPage() {
                 Total Cost of Renting with BENO
               </span>
               <span className="text-3xl font-black text-teal-300">
-                AED {totalRentCost.toLocaleString()}
+                ${totalRentCost.toLocaleString()}
               </span>
               <p className="text-xs text-gray-400 mt-1">For {usageDays * ownershipYears} total usage days over {ownershipYears} years.</p>
             </div>
@@ -205,7 +205,7 @@ export default function BuyVsRentCalculatorPage() {
                 Estimated Capital Saved
               </span>
               <span className="text-3xl font-black block mt-1">
-                AED {Math.max(0, savings).toLocaleString()}
+                ${Math.max(0, savings).toLocaleString()}
               </span>
               <p className="text-xs font-semibold text-teal-950 mt-1">
                 {savings > 0 ? "You save capital, avoid depreciation loss, and enjoy 0 maintenance hassle." : "Full ownership matches high frequency usage."}

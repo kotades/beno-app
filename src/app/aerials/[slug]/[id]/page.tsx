@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import aerialsDbData from '@/data/aerials_db.json';
 import Footer from '@/components/Footer';
 import ReserveButton from '@/components/ReserveButton';
+import { formatCurrency } from '@/lib/currency';
 
 export default async function AerialDetailPage({ params }: { params: Promise<{ slug: string; id: string }> }) {
   const resolvedParams = await params;
@@ -135,7 +136,7 @@ export default async function AerialDetailPage({ params }: { params: Promise<{ s
             <div className="border-b border-gray-100 pb-6">
               <span className="text-xs text-gray-400 font-bold uppercase block mb-1">Per Person Sharing Rate</span>
               <div className="flex items-baseline space-x-2">
-                <span className="text-3xl font-black text-[#008B9B]">AED {Number(aerial.price_per_person).toLocaleString()}</span>
+                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(Number(aerial.price_per_person))}</span>
                 <span className="text-gray-500 text-sm font-medium">/ person</span>
               </div>
               <span className="text-xs text-gray-400 block mt-1">Guaranteed window seat + VIP Lounge Check-in</span>
@@ -143,7 +144,7 @@ export default async function AerialDetailPage({ params }: { params: Promise<{ s
 
             <div className="bg-cyan-50 p-4 rounded-2xl border border-cyan-100 space-y-1">
               <span className="text-xs font-bold text-[#008B9B] uppercase block">Private Charter Option</span>
-              <span className="text-base font-black text-gray-900">AED {Number(aerial.private_charter_price || aerial.price_per_person * 4).toLocaleString()}</span>
+              <span className="text-base font-black text-gray-900">{formatCurrency(Number(aerial.private_charter_price || aerial.price_per_person * 4))}</span>
               <span className="text-[11px] text-gray-500 block">Book the entire 5-seater helicopter exclusively for your group</span>
             </div>
 

@@ -10,8 +10,8 @@ export default function ExclusiveOffersPage() {
       title: 'Supercar & Sunset Yacht Combo',
       badge: '30% OFF',
       category: 'VIP Experience Bundle',
-      price: 'AED 4,800',
-      oldPrice: 'AED 6,900',
+      price: '$4,800',
+      oldPrice: '$6,900',
       image: '/assets/home-imgs/Ferrari_296_GTS_.webp',
       description: 'Spend the afternoon cruising in a Ferrari 296 GTS, then step directly onto your private 45ft Luxury Yacht charter at the marina for a sunset voyage.',
       perks: ['24-Hour Ferrari Rental', '2-Hour Private Yacht Charter', 'Free Hotel Delivery', 'Chilled Champagne']
@@ -21,8 +21,8 @@ export default function ExclusiveOffersPage() {
       title: 'Desert Buggy & Helicopter Skyline Package',
       badge: '25% OFF',
       category: 'Thrill & Aviation',
-      price: 'AED 3,200',
-      oldPrice: 'AED 4,250',
+      price: '$3,200',
+      oldPrice: '$4,250',
       image: '/assets/home-imgs/Polaris_RZR_XP_1000cc__2_seate.webp',
       description: 'Conquer high desert dunes in a 1000cc Polaris RZR Buggy followed by a panoramic Helicopter flight over iconic coastal skylines.',
       perks: ['1000cc Buggy Rental (2-Seater)', '17-Min Heli Flight for 2', 'Safety Gear Provided', 'VIP Transfer']
@@ -32,8 +32,8 @@ export default function ExclusiveOffersPage() {
       title: 'Weekend Executive Jet & Lamborghini Pass',
       badge: '30% OFF',
       category: 'Private Jet + Supercar',
-      price: 'AED 18,500',
-      oldPrice: 'AED 26,000',
+      price: '$18,500',
+      oldPrice: '$26,000',
       image: '/assets/home-imgs/Lamborghini_Huracan_EVO_Spyder.webp',
       description: 'Private Jet flight between premier global destinations plus full weekend access to a Lamborghini Huracan EVO Spyder awaiting you on the tarmac.',
       perks: ['Private Jet Flight (Return)', 'Tarmac Supercar Delivery', 'VIP Lounge Access', 'Zero Deposit Option']

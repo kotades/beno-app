@@ -77,9 +77,9 @@ export default function YachtsPage() {
                     <h2 className="text-xl font-bold text-gray-900 truncate mb-4">{yacht.name}</h2>
                     
                     <div className="flex items-baseline space-x-2">
-                      <span className="text-2xl font-black text-[#008B9B]">AED {yacht.price_per_hour?.toLocaleString()}</span>
+                      <span className="text-2xl font-black text-[#008B9B]">${yacht.price_per_hour?.toLocaleString()}</span>
                       {yacht.original_price_per_hour > 0 && (
-                        <span className="text-xs text-gray-400 line-through font-medium">AED {yacht.original_price_per_hour?.toLocaleString()}</span>
+                        <span className="text-xs text-gray-400 line-through font-medium">${yacht.original_price_per_hour?.toLocaleString()}</span>
                       )}
                       <span className="text-xs text-gray-500 font-medium">/ hour</span>
                     </div>

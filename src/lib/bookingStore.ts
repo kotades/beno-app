@@ -1,4 +1,5 @@
 import { syncBookingToFirestore } from '@/lib/firestoreSync';
+import { CURRENCY } from '@/lib/currency';
 
 export interface BookingItem {
   id: string; // e.g. "BENO-BK-98421"
@@ -65,6 +66,7 @@ export function saveBooking(booking: Omit<BookingItem, 'id' | 'createdAt' | 'sta
     ...booking,
     id: `BENO-BK-${randomNum}`,
     status: 'Confirmed',
+    currency: CURRENCY,
     createdAt: new Date().toISOString().split('T')[0]
   };
 

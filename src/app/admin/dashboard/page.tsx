@@ -20,7 +20,8 @@ import {
   sendAdminAgentReply, 
   ChatMessage 
 } from '@/lib/supportChatStore';
-import { syncChatMessageToFirestore, subscribeToAllBookings, syncBookingStatusToFirestore } from '@/lib/firestoreSync';
+import { syncChatMessageToFirestore, subscribeToAllBookings, syncBookingStatusToFirestore, deleteBooking } from '@/lib/firestoreSync';
+import { formatCurrency } from '@/lib/currency';
 import { 
   getManagedUsers, 
   toggleUserAdminRole, 
@@ -78,6 +79,22 @@ export default function ConciergeDashboardPage() {
     updateBookingStatus(id, status);
     syncBookingStatusToFirestore(id, status);
     refreshData();
+  };
+
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  const handleDeleteBooking = async (bk: BookingRecord) => {
+    if (!window.confirm(`Delete booking ${bk.id} (${bk.guestName})? This cannot be undone.`)) return;
+    setDeletingId(bk.id);
+    try {
+      await deleteBooking(bk.id);
+      refreshData();
+    } catch (e) {
+      console.error('Delete failed:', e);
+      window.alert('Failed to delete booking. Please try again.');
+    } finally {
+      setDeletingId(null);
+    }
   };
 
   const handleToggleAdminRole = (userId: string, currentRole: string) => {
@@ -158,7 +175,7 @@ export default function ConciergeDashboardPage() {
             <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between">
               <span className="text-xs font-bold text-gray-400 uppercase">Gross Guaranteed Revenue</span>
               <div className="mt-3">
-                <span className="text-3xl font-black text-[#008B9B]">AED {metrics.totalRevenue.toLocaleString()}</span>
+                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(metrics.totalRevenue)}</span>
                 <span className="text-xs text-teal-600 font-bold block mt-1">↑ Active Reservations</span>
               </div>
             </div>
@@ -464,8 +481,9 @@ export default function ConciergeDashboardPage() {
                       <th className="py-3 px-3">Guest</th>
                       <th className="py-3 px-3">Service & Category</th>
                       <th className="py-3 px-3">Date & Slot</th>
-                      <th className="py-3 px-3">Total (AED)</th>
+                      <th className="py-3 px-3">Total (USD)</th>
                       <th className="py-3 px-3">Status</th>
+                      <th className="py-3 px-3">Actions</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 text-xs font-medium">
@@ -485,7 +503,7 @@ export default function ConciergeDashboardPage() {
                           <div className="text-[11px] text-gray-500">{bk.startTime} ({bk.duration})</div>
                         </td>
                         <td className="py-4 px-3 font-black text-[#008B9B]">
-                          AED {bk.totalPrice.toLocaleString()}
+                          {formatCurrency(bk.totalPrice)}
                         </td>
                         <td className="py-4 px-3">
                           <select
@@ -506,6 +524,15 @@ export default function ConciergeDashboardPage() {
                             <option value="Completed">Completed</option>
                             <option value="Cancelled">Cancelled</option>
                           </select>
+                        </td>
+                        <td className="py-4 px-3">
+                          <button
+                            onClick={() => handleDeleteBooking(bk)}
+                            disabled={deletingId === bk.id}
+                            className="bg-red-50 hover:bg-red-100 text-red-600 text-[11px] font-bold px-3 py-1.5 rounded-xl transition-all border border-red-100 disabled:opacity-50"
+                          >
+                            {deletingId === bk.id ? 'Deleting…' : '🗑 Delete'}
+                          </button>
                         </td>
                       </tr>
                     ))}

@@ -117,7 +117,7 @@ export default function RentACarPage() {
                     <h2 className="text-lg font-bold text-gray-900 truncate mb-4">{car.name}</h2>
                     
                     <div className="flex items-baseline space-x-2">
-                      <span className="text-2xl font-black text-[#008B9B]">AED {Number(price).toLocaleString()}</span>
+                      <span className="text-2xl font-black text-[#008B9B]">${Number(price).toLocaleString()}</span>
                       <span className="text-xs text-gray-500 font-medium">/ day (250 km)</span>
                     </div>
                   </div>

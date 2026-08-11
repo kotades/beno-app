@@ -110,7 +110,7 @@ export default function BuggiesPage() {
                     </div>
 
                     <div className="flex items-baseline space-x-2">
-                      <span className="text-2xl font-black text-amber-600">AED {Number(buggy.price_per_hour).toLocaleString()}</span>
+                      <span className="text-2xl font-black text-amber-600">${Number(buggy.price_per_hour).toLocaleString()}</span>
                       <span className="text-xs text-gray-500 font-medium">/ hour</span>
                     </div>
                   </div>

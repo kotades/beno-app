@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Footer from '@/components/Footer';
 import { useAuth } from '@/context/AuthContext';
-import { subscribeToUserBookings } from '@/lib/firestoreSync';
+import { subscribeToUserBookings, deleteBooking } from '@/lib/firestoreSync';
 import type { BookingRecord } from '@/lib/bookingEngine';
+import { formatCurrency } from '@/lib/currency';
 
 export default function ManageBookingPage() {
   const { user, loading } = useAuth();
@@ -54,6 +55,21 @@ export default function ManageBookingPage() {
       setHasSearched(true);
       setSearching(false);
     }, 400);
+  };
+
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  const handleDelete = async (bk: BookingRecord) => {
+    if (!window.confirm(`Cancel and delete booking ${bk.id}? This cannot be undone.`)) return;
+    setDeletingId(bk.id);
+    try {
+      await deleteBooking(bk.id);
+    } catch (e) {
+      console.error('Delete failed:', e);
+      window.alert('Failed to delete booking. Please try again.');
+    } finally {
+      setDeletingId(null);
+    }
   };
 
   const handleClear = () => {
@@ -188,12 +204,21 @@ export default function ManageBookingPage() {
                     <p className="text-xs text-gray-400">Booked on {bk.createdAt} • VIP Concierge Escort Assigned</p>
                   </div>
 
-                  <button 
-                    onClick={() => alert(`Downloading PDF Booking Pass for ${bk.id}...`)}
-                    className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all border border-white/20 self-start sm:self-auto"
-                  >
-                    📄 Download PDF Pass
-                  </button>
+                  <div className="flex items-center space-x-2 self-start sm:self-auto">
+                    <button
+                      onClick={() => alert(`Downloading PDF Booking Pass for ${bk.id}...`)}
+                      className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all border border-white/20"
+                    >
+                      📄 Download PDF Pass
+                    </button>
+                    <button
+                      onClick={() => handleDelete(bk)}
+                      disabled={deletingId === bk.id}
+                      className="bg-red-500/20 hover:bg-red-500/40 text-red-200 text-xs font-bold px-4 py-2.5 rounded-xl transition-all border border-red-400/30 disabled:opacity-50"
+                    >
+                      {deletingId === bk.id ? 'Deleting…' : '🗑 Cancel Booking'}
+                    </button>
+                  </div>
                 </div>
 
                 {/* BODY DETAILS */}
@@ -245,7 +270,7 @@ export default function ManageBookingPage() {
                     </div>
                     <div className="text-left sm:text-right">
                       <span className="text-xs text-gray-400 block">Total Guaranteed</span>
-                      <span className="text-2xl font-black text-[#008B9B]">{bk.currency} {bk.totalPrice.toLocaleString()}</span>
+                      <span className="text-2xl font-black text-[#008B9B]">{formatCurrency(bk.totalPrice)}</span>
                     </div>
                   </div>
                 </div>

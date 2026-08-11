@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { saveBooking, BookingItem } from '@/lib/bookingStore';
+import { CURRENCY, formatCurrency } from '@/lib/currency';
 
 interface BookingEngineModalProps {
   isOpen: boolean;
@@ -73,7 +74,7 @@ export default function BookingEngineModal({
       startTime,
       duration,
       totalPrice: grandTotal,
-      currency: 'AED',
+      currency: CURRENCY,
       guestName,
       guestEmail,
       guestPhone,
@@ -87,7 +88,7 @@ export default function BookingEngineModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-black/75 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl relative space-y-6 overflow-y-auto max-h-[90vh]">
         
         {/* CLOSE BUTTON */}
@@ -104,7 +105,7 @@ export default function BookingEngineModal({
             Beno Reservation Engine • {category}
           </span>
           <h3 className="text-2xl font-black text-gray-900">{serviceName}</h3>
-          <p className="text-xs text-gray-500 mt-1">Starting Rate: AED {price.toLocaleString()}</p>
+          <p className="text-xs text-gray-500 mt-1">Starting Rate: {formatCurrency(price)}</p>
         </div>
 
         {/* STEP 1: DATE & ADDONS */}
@@ -158,7 +159,7 @@ export default function BookingEngineModal({
                       />
                       <span>{addon.label}</span>
                     </div>
-                    <span className="font-bold text-[#008B9B]">+AED {addon.price}</span>
+                    <span className="font-bold text-[#008B9B]">+{formatCurrency(addon.price)}</span>
                   </label>
                 ))}
               </div>
@@ -167,7 +168,7 @@ export default function BookingEngineModal({
             {/* TOTAL SUMMARY */}
             <div className="flex justify-between items-center bg-gray-50 p-4 rounded-2xl border border-gray-100">
               <span className="text-xs text-gray-500 font-bold">Estimated Grand Total</span>
-              <span className="text-xl font-black text-[#008B9B]">AED {grandTotal.toLocaleString()}</span>
+              <span className="text-xl font-black text-[#008B9B]">{formatCurrency(grandTotal)}</span>
             </div>
 
             <button
@@ -241,7 +242,7 @@ export default function BookingEngineModal({
                 type="submit"
                 className="w-2/3 bg-[#008B9B] hover:bg-[#007684] text-white py-3.5 rounded-2xl font-bold text-xs transition-all shadow-lg active:scale-95"
               >
-                Confirm & Guarantee Booking (AED {grandTotal.toLocaleString()})
+                Confirm & Guarantee Booking ({formatCurrency(grandTotal)})
               </button>
             </div>
           </form>
@@ -275,7 +276,7 @@ export default function BookingEngineModal({
               </div>
               <div className="flex justify-between border-t border-gray-200 pt-2">
                 <span className="text-gray-500 font-bold">Total Paid:</span>
-                <span className="font-black text-[#008B9B]">AED {createdBooking.totalPrice.toLocaleString()}</span>
+                <span className="font-black text-[#008B9B]">{formatCurrency(createdBooking.totalPrice)}</span>
               </div>
             </div>
 

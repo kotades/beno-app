@@ -1,15 +1,16 @@
 import { app } from '@/lib/firebase';
-import { 
-  getFirestore, 
-  collection, 
-  doc, 
-  setDoc, 
-  getDoc, 
-  getDocs, 
-  onSnapshot, 
-  query, 
-  where, 
-  orderBy 
+import {
+  getFirestore,
+  collection,
+  doc,
+  setDoc,
+  getDoc,
+  getDocs,
+  deleteDoc,
+  onSnapshot,
+  query,
+  where,
+  orderBy
 } from 'firebase/firestore';
 import type { BookingRecord } from '@/lib/bookingEngine';
 import { ChatMessage } from '@/lib/supportChatStore';
@@ -29,6 +30,12 @@ export async function syncBookingToFirestore(booking: any): Promise<void> {
   } catch (e) {
     console.warn(`Firestore booking sync notice (Fallback active):`, e);
   }
+}
+
+export async function deleteBooking(id: string): Promise<void> {
+  const docRef = doc(db, 'bookings', id);
+  await deleteDoc(docRef);
+  console.log(`🔥 Firestore deleted booking ${id}`);
 }
 
 export async function syncBookingStatusToFirestore(id: string, status: string): Promise<void> {
