@@ -50,3 +50,6 @@ test_target.txt
 *.tsbuildinfo
 next-env.d.ts
 
+
+# Playwright MCP artifacts
+.playwright-mcp/
