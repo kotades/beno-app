@@ -43,21 +43,21 @@ export default function HomePage() {
            <h2 className="text-2xl md:text-3xl font-bold text-teal-800 mb-6">Our Services</h2>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'Yacht Charter', img: '/assets/home-imgs/new-yacht.webp' },
-                { title: 'Car Rental', img: '/assets/home-imgs/new-car.webp' },
-                { title: 'Heli Tours', img: '/assets/home-imgs/new-new-helicopter.webp' },
-                { title: 'Desert Buggy Rentals', img: '/assets/home-imgs/new-buggy.webp' },
-                { title: 'Watersport Activities', img: '/assets/home-imgs/new-water-sports.webp' },
-                { title: 'Private Jet Charter', img: '/assets/home-imgs/new-private-jets.webp' },
+                { title: 'Yacht Charter', img: '/assets/home-imgs/new-yacht.webp', route: '/yacht-rental' },
+                { title: 'Car Rental', img: '/assets/home-imgs/new-car.webp', route: '/rent-a-car' },
+                { title: 'Heli Tours', img: '/assets/home-imgs/new-new-helicopter.webp', route: '/aerials' },
+                { title: 'Desert Buggy Rentals', img: '/assets/home-imgs/new-buggy.webp', route: '/buggies' },
+                { title: 'Watersport Activities', img: '/assets/home-imgs/new-water-sports.webp', route: '/water-activities' },
+                { title: 'Private Jet Charter', img: '/assets/home-imgs/new-private-jets.webp', route: '/private-jet' },
               ].map((service, i) => (
-                <div key={i} className="group relative h-56 md:h-64 rounded-xl overflow-hidden cursor-pointer shadow-md">
+                <Link href={service.route} key={i} className="group relative h-56 md:h-64 rounded-xl overflow-hidden cursor-pointer shadow-md block">
                    <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                    <div className="absolute bottom-4 left-6 right-6 flex justify-between items-center text-white">
                       <span className="text-xl md:text-2xl font-medium tracking-wide">{service.title}</span>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                    </div>
-                </div>
+                </Link>
               ))}
            </div>
         </div>
@@ -274,7 +274,7 @@ export default function HomePage() {
          <div className="max-w-[1920px] mx-auto xl:px-8">
             <div className="flex justify-between items-end mb-6 pb-2">
               <h2 className="text-2xl md:text-3xl font-bold">Buggy & Desert Rally Rental Worldwide</h2>
-              <Link href="/buggies-rental" className="text-white font-bold hover:underline text-sm uppercase tracking-wide">View All</Link>
+              <Link href="/buggies" className="text-white font-bold hover:underline text-sm uppercase tracking-wide">View All</Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
@@ -283,7 +283,7 @@ export default function HomePage() {
                 { name: 'Polaris-RZR XP 1000cc (4 seater)', meta: '4 Seater', price: '900', discount: '50 % off', img: '/assets/home-imgs/Polaris_RZR_XP_1000cc__4_seate.webp' },
                 { name: 'KTM Dirt Bike Adventure: Thrill in the ...', meta: '1 Seater', price: '715', discount: '37 % off', img: '/assets/home-imgs/KTM_Dirt_Bike_Adventure__Thril.webp' },
               ].map((buggy, idx) => (
-                <Link href={`/buggies-rental`} key={idx} className="group flex flex-col cursor-pointer border border-transparent hover:shadow-2xl rounded-xl transition-all pb-4">
+                <Link href={`/buggies`} key={idx} className="group flex flex-col cursor-pointer border border-transparent hover:shadow-2xl rounded-xl transition-all pb-4">
                   <div className="relative h-[250px] w-full rounded-xl overflow-hidden bg-[#E29864] shadow-sm mb-3">
                     <img src={buggy.img} alt={buggy.name} className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90" />
                   </div>
@@ -316,7 +316,7 @@ export default function HomePage() {
                <img src="/assets/home-imgs/Beno_x_EET_Destination_Managem.webp" className="h-8 md:h-12 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all" />
                <img src="/assets/home-imgs/Beno_x_Leisure_Marine_Associat.webp" className="h-8 md:h-12 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all" />
             </div>
-            <Link href="#" className="text-teal-700 font-bold hover:underline text-sm tracking-wide">See All Partners</Link>
+            <Link href="/partners" className="text-teal-700 font-bold hover:underline text-sm tracking-wide">See All Partners</Link>
          </div>
       </section>
 
@@ -359,7 +359,7 @@ export default function HomePage() {
                ))}
             </div>
             <div className="mt-6 text-center md:text-left">
-               <Link href="#" className="text-teal-700 font-bold hover:underline text-sm tracking-wide">Read all review on Google maps</Link>
+               <Link href="/reviews" className="text-teal-700 font-bold hover:underline text-sm tracking-wide">Read all review on Google maps</Link>
             </div>
          </div>
       </section>
@@ -371,7 +371,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
              <div className="flex justify-between items-end mb-12 border-b border-gray-200 pb-4">
               <h2 className="text-4xl md:text-5xl font-black tracking-tighter">To Stay Informed</h2>
-              <Link href="#" className="text-blue-600 font-bold hover:underline">View All Blogs →</Link>
+              <Link href="/blogs" className="text-blue-600 font-bold hover:underline">View All Blogs →</Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                {blogsSection.assets.slice(0, 2).map((blogImage, idx) => (
