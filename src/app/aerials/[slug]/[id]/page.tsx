@@ -151,6 +151,7 @@ export default async function AerialDetailPage({ params }: { params: Promise<{ s
               serviceName={aerial.name}
               category="Helicopter"
               price={Number(aerial.price_per_person)}
+              serviceId={aerial.id}
               image={mainHero}
             />
 

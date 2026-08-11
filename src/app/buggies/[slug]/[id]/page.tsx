@@ -167,6 +167,7 @@ export default async function BuggyDetailPage({ params }: { params: Promise<{ sl
               serviceName={buggy.name}
               category="Buggy"
               price={Number(buggy.price_per_hour)}
+              serviceId={buggy.id}
               image={mainHero}
               className="w-full bg-amber-600 hover:bg-amber-700 text-white py-4 rounded-2xl font-bold text-sm text-center block transition-all shadow-lg active:scale-95"
             />

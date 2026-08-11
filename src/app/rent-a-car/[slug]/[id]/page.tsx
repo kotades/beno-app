@@ -170,6 +170,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ slug
               serviceName={car.name}
               category={car.category || 'Car'}
               price={Number(price)}
+              serviceId={car.id}
               image={mainHero}
             />
 

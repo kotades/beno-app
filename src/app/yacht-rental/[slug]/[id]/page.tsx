@@ -170,6 +170,7 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ sl
               serviceName={yacht.name}
               category="Yacht"
               price={yacht.price_per_hour}
+              serviceId={yacht.id}
               image={mainHero}
             />
 

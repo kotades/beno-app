@@ -167,6 +167,7 @@ export default async function WaterActivityDetailPage({ params }: { params: Prom
               serviceName={activity.name}
               category="Water Activity"
               price={Number(activity.price)}
+              serviceId={activity.id}
               image={mainHero}
             />
 

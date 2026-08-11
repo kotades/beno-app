@@ -9,6 +9,7 @@ interface BookingEngineModalProps {
   serviceName: string;
   category: string;
   price: number;
+  serviceId?: string;
   image?: string;
 }
 
@@ -18,6 +19,7 @@ export default function BookingEngineModal({
   serviceName,
   category,
   price,
+  serviceId,
   image
 }: BookingEngineModalProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -66,6 +68,7 @@ export default function BookingEngineModal({
     const newBk = saveBooking({
       serviceName,
       category,
+      serviceId,
       startDate,
       startTime,
       duration,
