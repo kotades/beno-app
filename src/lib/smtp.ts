@@ -77,12 +77,15 @@ export interface GmailOptions extends MimeOptions {
 
 export async function sendViaGmail(opts: GmailOptions): Promise<void> {
   const sock = await new Promise<tls.TLSSocket>((resolve, reject) => {
-    const s = tls.connect({ host: SMTP_HOST, port: SMTP_PORT, servername: SMTP_HOST }, () => resolve(s));
+    const s = tls.connect({ host: SMTP_HOST, port: SMTP_PORT, servername: SMTP_HOST });
+    s.once('secureConnect', () => resolve(s));
     s.once('error', reject);
   });
 
   try {
-    sock.setTimeout(20000, () => sock.destroy(new Error('SMTP timeout')));
+    // Gmail can take >20s on a cold start (TLS + EHLO + AUTH on a 2-core
+    // Lambda). 60s covers it; Vercel default function timeout is 300s.
+    sock.setTimeout(60000, () => sock.destroy(new Error('SMTP timeout')));
     const readLine = lineReader(sock);
     const write = (s: string) => sock.write(s + '\r\n');
     const expect = async (codes: number[], what: string) => {
