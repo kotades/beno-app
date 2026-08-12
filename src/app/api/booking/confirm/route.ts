@@ -1,4 +1,5 @@
 import { NextRequest } from 'next/server';
+import { sendViaGmail } from '@/lib/smtp';
 
 interface BookingEmailPayload {
   id: string;
@@ -15,28 +16,12 @@ interface BookingEmailPayload {
   notes?: string;
 }
 
-export async function POST(request: NextRequest) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    return Response.json({ ok: false, error: 'RESEND_API_KEY not configured' }, { status: 500 });
-  }
-
-  let body: BookingEmailPayload;
-  try {
-    body = await request.json();
-  } catch {
-    return Response.json({ ok: false, error: 'Invalid JSON body' }, { status: 400 });
-  }
-
-  if (!body.guestEmail || !body.id) {
-    return Response.json({ ok: false, error: 'guestEmail and id required' }, { status: 400 });
-  }
-
+function buildHtml(body: BookingEmailPayload): string {
   const addOnsList = body.addOns?.length
     ? body.addOns.map((a) => `<li style="margin:2px 0">✓ ${a}</li>`).join('')
     : '<li style="margin:2px 0;color:#999">None</li>';
 
-  const html = `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html>
   <body style="margin:0;background:#f4f6f8;font-family:Arial,Helvetica,sans-serif;padding:32px 16px">
     <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e5e7eb">
@@ -70,29 +55,76 @@ export async function POST(request: NextRequest) {
     </div>
   </body>
 </html>`;
+}
+
+// Ordered list of Gmail senders. Primary configured now; secondary slot
+// reserved for the second account once 2FA/app password is ready.
+function gmailSenders(): { user: string; appPassword: string }[] {
+  const list: { user: string; appPassword: string }[] = [];
+  const primary = process.env.GMAIL_USER;
+  const primaryPass = process.env.GMAIL_APP_PASSWORD;
+  const secondary = process.env.GMAIL_USER_2;
+  const secondaryPass = process.env.GMAIL_APP_PASSWORD_2;
+  if (primary && primaryPass) list.push({ user: primary, appPassword: primaryPass });
+  if (secondary && secondaryPass) list.push({ user: secondary, appPassword: secondaryPass });
+  return list;
+}
+
+async function sendViaResend(to: string, subject: string, html: string): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) throw new Error('No email channel configured (Gmail and Resend unset)');
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      from: 'BENO Concierge <onboarding@resend.dev>',
+      to: [to],
+      subject,
+      html
+    })
+  });
+  if (!res.ok) throw new Error(`Resend failed (${res.status}): ${await res.text()}`);
+}
+
+export async function POST(request: NextRequest) {
+  let body: BookingEmailPayload;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ ok: false, error: 'Invalid JSON body' }, { status: 400 });
+  }
+
+  if (!body.guestEmail || !body.id) {
+    return Response.json({ ok: false, error: 'guestEmail and id required' }, { status: 400 });
+  }
+
+  const html = buildHtml(body);
+  const subject = `Booking Confirmed — ${body.id} · ${body.serviceName}`;
+
+  // Try each configured Gmail sender in order; fall through to Resend.
+  for (const sender of gmailSenders()) {
+    try {
+      await sendViaGmail({
+        fromName: 'BENO Concierge',
+        fromEmail: sender.user,
+        to: body.guestEmail,
+        subject,
+        html,
+        user: sender.user,
+        appPassword: sender.appPassword
+      });
+      return Response.json({ ok: true, channel: 'gmail', from: sender.user });
+    } catch (e) {
+      console.error(`Gmail send failed (${sender.user}):`, (e as Error).message);
+    }
+  }
 
   try {
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: 'BENO Concierge <onboarding@resend.dev>',
-        to: [body.guestEmail],
-        subject: `Booking Confirmed — ${body.id} · ${body.serviceName}`,
-        html
-      })
-    });
-
-    if (!res.ok) {
-      const errText = await res.text();
-      return Response.json({ ok: false, error: errText }, { status: res.status });
-    }
-
-    const data = await res.json();
-    return Response.json({ ok: true, id: (data as { id?: string }).id });
+    await sendViaResend(body.guestEmail, subject, html);
+    return Response.json({ ok: true, channel: 'resend' });
   } catch (e) {
     return Response.json({ ok: false, error: (e as Error).message }, { status: 500 });
   }
