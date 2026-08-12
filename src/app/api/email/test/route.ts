@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
     { user: secondary, appPassword: secondaryPass }
   ]) {
     if (!sender.user || !sender.appPassword) continue;
-    const entry = { user: sender.user, configured: true, delivered: false };
+    const entry: (typeof results)[number] = { user: sender.user, configured: true, delivered: false };
     try {
       await sendViaGmail({
         fromName: 'BENO Test',
