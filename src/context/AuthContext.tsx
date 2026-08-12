@@ -1,21 +1,21 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { 
-  auth, 
-  googleProvider, 
-  signInWithPopup, 
-  signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword, 
-  signOut, 
-  onAuthStateChanged, 
+import {
+  auth,
+  googleProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
   User,
   storage,
   ref,
   uploadBytes,
   getDownloadURL
 } from '@/lib/firebase';
-import { registerOrUpdateUser, UserRole } from '@/lib/userManagementStore';
+import { registerOrUpdateUser, getManagedUsers, UserRole } from '@/lib/userManagementStore';
 
 interface AuthContextType {
   user: User | null;
@@ -41,28 +41,55 @@ const AuthContext = createContext<AuthContextType>({
   uploadAvatar: async () => ''
 });
 
+function computeAdminState(email: string | null | undefined): { isAdmin: boolean; userRole: UserRole } {
+  if (!email) return { isAdmin: false, userRole: 'user' };
+  const isSuper = email.toLowerCase() === 'beno@admin.com';
+  const managed = getManagedUsers().find(u => u.email.toLowerCase() === email.toLowerCase());
+  const role = managed?.role ?? (isSuper ? 'admin' : 'user');
+  return { isAdmin: isSuper || role === 'admin', userRole: role };
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
   const [userRole, setUserRole] = useState<UserRole>('user');
 
+  const refreshAdminState = (email: string | null | undefined) => {
+    const { isAdmin: newIsAdmin, userRole: newRole } = computeAdminState(email);
+    setIsAdmin(newIsAdmin);
+    setUserRole(newRole);
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       if (currentUser?.email) {
-        const isAdm = currentUser.email.toLowerCase() === 'beno@admin.com';
-        const uRec = registerOrUpdateUser(currentUser.email, currentUser.displayName || undefined, isAdm ? 'admin' : 'user');
-        setIsAdmin(uRec.role === 'admin' || isAdm);
-        setUserRole(uRec.role);
-      } else {
-        setIsAdmin(false);
-        setUserRole('user');
+        registerOrUpdateUser(currentUser.email, currentUser.displayName || undefined);
       }
+      refreshAdminState(currentUser?.email);
       setLoading(false);
     });
     return () => unsubscribe();
   }, []);
+
+  // Listen for localStorage changes (e.g., when admin promotes a user)
+  useEffect(() => {
+    const handleStorage = (e: StorageEvent) => {
+      if (e.key === 'beno_managed_users' && user?.email) {
+        refreshAdminState(user.email);
+      }
+    };
+    const handleCustom = () => {
+      if (user?.email) refreshAdminState(user.email);
+    };
+    window.addEventListener('storage', handleStorage);
+    window.addEventListener('beno-users-changed', handleCustom);
+    return () => {
+      window.removeEventListener('storage', handleStorage);
+      window.removeEventListener('beno-users-changed', handleCustom);
+    };
+  }, [user?.email]);
 
   const signInWithGoogle = async () => {
     // Real Firebase Google Sign-In — no mock fallback

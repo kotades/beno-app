@@ -104,7 +104,15 @@ export async function POST(request: NextRequest) {
   const html = buildHtml(body);
   const subject = `Booking Confirmed — ${body.id} · ${body.serviceName}`;
 
-  // Try each configured Gmail sender in order; fall through to Resend.
+  // Resend first — reliable from Vercel. Gmail as backup if Resend fails.
+  try {
+    await sendViaResend(body.guestEmail, subject, html);
+    return Response.json({ ok: true, channel: 'resend' });
+  } catch (e) {
+    console.error('Resend failed:', (e as Error).message);
+  }
+
+  // Fallback: Gmail senders
   for (const sender of gmailSenders()) {
     try {
       await sendViaGmail({
@@ -122,10 +130,5 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  try {
-    await sendViaResend(body.guestEmail, subject, html);
-    return Response.json({ ok: true, channel: 'resend' });
-  } catch (e) {
-    return Response.json({ ok: false, error: (e as Error).message }, { status: 500 });
-  }
+  return Response.json({ ok: false, error: 'All email channels failed' }, { status: 500 });
 }

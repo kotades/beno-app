@@ -15,7 +15,8 @@ import {
   subscribeToConversation,
   deleteConversation,
   deleteAllConversations,
-  ConversationMessage
+  ConversationMessage,
+  conversationId
 } from '@/lib/firestoreSync';
 import { createMessage, isParticipant } from '@/lib/chatStore';
 import { formatCurrency } from '@/lib/currency';
@@ -233,7 +234,31 @@ export default function ConciergeDashboardPage() {
     const prev = convMap.get(m.conversationId);
     if (!prev || m.createdAt > prev.createdAt) convMap.set(m.conversationId, m);
   });
-  const convs = Array.from(convMap.values()).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+
+  // Compute unread counts per conversation (messages from guest that admin hasn't read)
+  const unreadCounts = new Map<string, number>();
+  convThreads.forEach((m) => {
+    if (m.senderEmail !== ADMIN_EMAIL && !m.read) {
+      unreadCounts.set(m.conversationId, (unreadCounts.get(m.conversationId) || 0) + 1);
+    }
+  });
+
+  const convs = Array.from(convMap.values()).sort((a, b) => {
+    // Sort: conversations with unread first, then by latest message time
+    const aUnread = unreadCounts.get(a.conversationId) || 0;
+    const bUnread = unreadCounts.get(b.conversationId) || 0;
+    if (aUnread !== bUnread) return bUnread - aUnread;
+    return b.createdAt.localeCompare(a.createdAt);
+  });
+
+  // Build user list for sidebar: all managed users (except beno@admin.com for non-super)
+  // plus any conversation participants not in managedUsers
+  const managedUsersList = managedUsers.filter(u => isSuperAdmin || u.email.toLowerCase() !== ADMIN_EMAIL);
+  const convParticipants = new Set(convs.map(m => guestEmailOf(m.conversationId)).filter(Boolean));
+  const allUserEmails = new Set([
+    ...managedUsersList.map(u => u.email.toLowerCase()),
+    ...convParticipants
+  ]);
 
   const guestEmailOf = (convId: string) => convId.split('__').find((p) => p !== ADMIN_EMAIL) || '';
   const adminMsgs = adminMessages.filter((m) => isParticipant(m, ADMIN_EMAIL));
@@ -338,43 +363,62 @@ export default function ConciergeDashboardPage() {
             {/* CONVERSATION LIST & REPLY TERMINAL GRID */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-[420px]">
 
-              {/* CONVERSATION LIST (4 COLS) */}
+              {/* USER LIST & CONVERSATIONS (4 COLS) */}
               <div className="lg:col-span-4 bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col overflow-hidden">
-                <div className="text-[10px] font-black text-gray-400 uppercase tracking-wider px-2 py-2">Guest Conversations</div>
+                <div className="text-[10px] font-black text-gray-400 uppercase tracking-wider px-2 py-2">Guests & Conversations</div>
                 <div className="flex-1 overflow-y-auto divide-y divide-gray-200/60">
-                  {convs.length === 0 && (
+                  {allUserEmails.size === 0 && (
                     <div className="p-6 text-center text-xs text-gray-400 font-medium">
-                      No guest conversations yet.<br />Messages from the guest widget or /chat will appear here.
+                      No guests yet.<br />Users appear here after signing up or messaging.
                     </div>
                   )}
-                  {convs.map((m) => {
-                    const guest = guestEmailOf(m.conversationId);
-                    const isActive = m.conversationId === activeConvId;
-                    const time = new Date(m.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                  {Array.from(allUserEmails).sort().map((guestEmail) => {
+                    const convId = conversationId(guestEmail, ADMIN_EMAIL);
+                    const convMsg = convMap.get(convId);
+                    const isActive = convId === activeConvId;
+                    const unread = unreadCounts.get(convId) || 0;
+                    const hasConv = !!convMsg;
+                    const time = hasConv ? new Date(convMsg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '';
+                    const preview = hasConv ? convMsg.body : 'No messages yet — click to start';
+                    const managedUser = managedUsersList.find(u => u.email.toLowerCase() === guestEmail);
+                    const displayName = managedUser?.name || guestEmail.split('@')[0];
+
                     return (
                       <div
-                        key={m.conversationId}
-                        onClick={() => setActiveConvId(m.conversationId)}
+                        key={convId}
+                        onClick={() => setActiveConvId(convId)}
                         className={`p-3 cursor-pointer transition-all ${isActive ? 'bg-white shadow-sm border-l-4 border-[#008B9B]' : 'hover:bg-gray-100/70'}`}
                       >
-                        <div className="flex justify-between items-baseline mb-0.5">
-                          <h4 className="text-xs font-bold text-gray-900 truncate">{guest}</h4>
-                          <span className="text-[9px] text-gray-400">{time}</span>
+                        <div className="flex items-baseline justify-between gap-2 mb-0.5">
+                          <div className="flex items-center gap-2 flex-1 min-w-0">
+                            <h4 className="text-xs font-bold text-gray-900 truncate">{displayName}</h4>
+                            <span className="text-[10px] text-gray-400 font-mono truncate">{guestEmail}</span>
+                            {unread > 0 && (
+                              <span className="flex-shrink-0 bg-[#008B9B] text-white text-[9px] font-bold px-2 py-0.5 rounded-full">
+                                {unread}
+                              </span>
+                            )}
+                          </div>
+                          {hasConv && (
+                            <span className="text-[9px] text-gray-400 flex-shrink-0">{time}</span>
+                          )}
                         </div>
                         <div className="flex justify-between items-center gap-2">
-                          <p className="text-[11px] text-gray-500 truncate">{m.body}</p>
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleDeleteConversation(m.conversationId);
-                            }}
-                            disabled={deletingConv === m.conversationId}
-                            className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1 rounded-lg transition-all disabled:opacity-40 text-[11px] font-bold flex-shrink-0"
-                            title={`Delete conversation with ${guest}`}
-                          >
-                            {deletingConv === m.conversationId ? '…' : '🗑'}
-                          </button>
+                          <p className="text-[11px] text-gray-500 truncate">{preview}</p>
+                          {hasConv && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteConversation(convId);
+                              }}
+                              disabled={deletingConv === convId}
+                              className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1 rounded-lg transition-all disabled:opacity-40 text-[11px] font-bold flex-shrink-0"
+                              title={`Delete conversation with ${guestEmail}`}
+                            >
+                              {deletingConv === convId ? '…' : '🗑'}
+                            </button>
+                          )}
                         </div>
                       </div>
                     );

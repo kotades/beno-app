@@ -29,6 +29,12 @@ export function getManagedUsers(): ManagedUser[] {
   }
 }
 
+function notifyUsersChanged() {
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('beno-users-changed'));
+  }
+}
+
 export function toggleUserAdminRole(userId: string): ManagedUser[] {
   const current = getManagedUsers();
   const updated = current.map(u => {
@@ -41,6 +47,7 @@ export function toggleUserAdminRole(userId: string): ManagedUser[] {
 
   if (typeof window !== 'undefined') {
     localStorage.setItem(LOCAL_USERS_KEY, JSON.stringify(updated));
+    notifyUsersChanged();
   }
   return updated;
 }
@@ -51,6 +58,7 @@ export function deleteUserAccount(userId: string): ManagedUser[] {
 
   if (typeof window !== 'undefined') {
     localStorage.setItem(LOCAL_USERS_KEY, JSON.stringify(updated));
+    notifyUsersChanged();
   }
   return updated;
 }
@@ -61,6 +69,7 @@ export function updateUserVIPTier(userId: string, newTier: VIPTier): ManagedUser
 
   if (typeof window !== 'undefined') {
     localStorage.setItem(LOCAL_USERS_KEY, JSON.stringify(updated));
+    notifyUsersChanged();
   }
   return updated;
 }
