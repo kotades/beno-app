@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
   const secondary = process.env.GMAIL_USER_2;
   const secondaryPass = process.env.GMAIL_APP_PASSWORD_2;
 
-  const results: { user: string; configured: boolean; delivered: boolean }[] = [];
+  const results: { user: string; configured: boolean; delivered: boolean; error?: string }[] = [];
 
   for (const sender of [
     { user: primary, appPassword: primaryPass },
@@ -37,7 +37,10 @@ export async function GET(request: NextRequest) {
       });
       entry.delivered = true;
     } catch (e) {
+      const msg = (e as Error).message;
+      console.error(`[email/test] ${sender.user} failed:`, msg);
       entry.delivered = false;
+      entry.error = msg;
     }
     results.push(entry);
   }
@@ -53,7 +56,7 @@ export async function GET(request: NextRequest) {
   return Response.json(
     {
       ok: allDelivered,
-      results: results.map((r) => ({ user: r.user, delivered: r.delivered }))
+      results: results.map((r) => ({ user: r.user, delivered: r.delivered, error: r.error }))
     },
     { status: allDelivered ? 200 : 500 }
   );
