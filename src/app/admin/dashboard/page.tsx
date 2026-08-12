@@ -4,15 +4,12 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdminGuard from '@/components/AdminGuard';
-import { 
-  getBookings, 
-  getBlockedTimes, 
-  updateBookingStatus, 
-  addBlockedTime, 
-  getEngineMetrics, 
-  SERVICE_PROVIDERS, 
-  BookingRecord, 
-  BlockedTime 
+import {
+  getBlockedTimes,
+  addBlockedTime,
+  SERVICE_PROVIDERS,
+  BookingRecord,
+  BlockedTime
 } from '@/lib/bookingEngine';
 import {
   subscribeToAllBookings,
@@ -24,6 +21,7 @@ import {
 } from '@/lib/firestoreSync';
 import { createMessage, isParticipant } from '@/lib/chatStore';
 import { formatCurrency } from '@/lib/currency';
+import ConfirmDialog from '@/components/ConfirmDialog';
 import { 
   getManagedUsers, 
   toggleUserAdminRole, 
@@ -37,8 +35,33 @@ export default function ConciergeDashboardPage() {
   const [bookings, setBookings] = useState<BookingRecord[]>([]);
   const [blockedTimes, setBlockedTimes] = useState<BlockedTime[]>([]);
   const [managedUsers, setManagedUsers] = useState<ManagedUser[]>([]);
-  const [metrics, setMetrics] = useState<any>({ totalRevenue: 0, confirmedCount: 0, pendingCount: 0, totalBookings: 0, blockedSlotsCount: 0 });
   const [activeTab, setActiveTab] = useState<string>('all');
+
+  // Custom confirmation dialog state (replaces window.confirm — async, no INP block)
+  const [confirmState, setConfirmState] = useState<{
+    title: string;
+    message: string;
+    confirmLabel?: string;
+    danger?: boolean;
+    onConfirm: () => void;
+  } | null>(null);
+
+  // Lightweight toast for non-blocking success/info messages (replaces window.alert)
+  const [toast, setToast] = useState<string | null>(null);
+  const showToast = (msg: string) => {
+    setToast(msg);
+    window.setTimeout(() => setToast(null), 3500);
+  };
+
+  const metrics = {
+    totalRevenue: bookings
+      .filter((b) => b.status === 'Confirmed' || b.status === 'Completed')
+      .reduce((acc, b) => acc + (Number(b.totalPrice) || 0), 0),
+    confirmedCount: bookings.filter((b) => b.status === 'Confirmed').length,
+    pendingCount: bookings.filter((b) => b.status === 'Pending Deposit').length,
+    totalBookings: bookings.length,
+    blockedSlotsCount: blockedTimes.length
+  };
 
   // Admin Support Desk state
   const ADMIN_EMAIL = 'beno@admin.com';
@@ -56,9 +79,7 @@ export default function ConciergeDashboardPage() {
   const [blockReason, setBlockReason] = useState('Scheduled Maintenance & Inspection');
 
   const refreshData = () => {
-    setBookings(getBookings());
     setBlockedTimes(getBlockedTimes());
-    setMetrics(getEngineMetrics());
     setManagedUsers(getManagedUsers());
   };
 
@@ -78,6 +99,12 @@ export default function ConciergeDashboardPage() {
     return unsub;
   }, [activeConvId]);
 
+  // Live Firestore subscription = single source of truth for bookings (all accounts)
+  useEffect(() => {
+    const unsub = subscribeToAllBookings(setBookings);
+    return () => { if (typeof unsub === 'function') unsub(); };
+  }, []);
+
   useEffect(() => {
     refreshData();
   }, []);
@@ -87,40 +114,58 @@ export default function ConciergeDashboardPage() {
   }, [adminMessages]);
 
   const handleStatusChange = (id: string, status: BookingRecord['status']) => {
-    updateBookingStatus(id, status);
     syncBookingStatusToFirestore(id, status);
-    refreshData();
   };
 
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
-  const handleDeleteBooking = async (bk: BookingRecord) => {
-    if (!window.confirm(`Delete booking ${bk.id} (${bk.guestName})? This cannot be undone.`)) return;
-    setDeletingId(bk.id);
-    try {
-      await deleteBooking(bk.id);
-      refreshData();
-    } catch (e) {
-      console.error('Delete failed:', e);
-      window.alert('Failed to delete booking. Please try again.');
-    } finally {
-      setDeletingId(null);
-    }
+  const handleDeleteBooking = (bk: BookingRecord) => {
+    setConfirmState({
+      title: 'Delete Booking',
+      message: `Delete booking ${bk.id} (${bk.guestName})? This cannot be undone.`,
+      confirmLabel: 'Delete',
+      danger: true,
+      onConfirm: async () => {
+        setDeletingId(bk.id);
+        try {
+          await deleteBooking(bk.id);
+        } catch (e) {
+          console.error('Delete failed:', e);
+          showToast('Failed to delete booking. Please try again.');
+        } finally {
+          setDeletingId(null);
+          setConfirmState(null);
+        }
+      }
+    });
   };
 
   const handleToggleAdminRole = (userId: string, currentRole: string) => {
     const nextRole = currentRole === 'admin' ? 'User' : 'Admin';
-    if (confirm(`Are you sure you want to change user role to ${nextRole}?`)) {
-      toggleUserAdminRole(userId);
-      refreshData();
-    }
+    setConfirmState({
+      title: 'Change User Role',
+      message: `Are you sure you want to change user role to ${nextRole}?`,
+      confirmLabel: `Make ${nextRole}`,
+      onConfirm: () => {
+        toggleUserAdminRole(userId);
+        refreshData();
+        setConfirmState(null);
+      }
+    });
   };
 
   const handleDeleteUserAccount = (userId: string, userEmail: string) => {
-    if (confirm(`Are you sure you want to delete user account (${userEmail})? This action cannot be undone.`)) {
-      deleteUserAccount(userId);
-      refreshData();
-    }
+    setConfirmState({
+      title: 'Delete User Account',
+      message: `Are you sure you want to delete user account (${userEmail})? This action cannot be undone.`,
+      confirmLabel: 'Delete',
+      danger: true,
+      onConfirm: () => {
+        deleteUserAccount(userId);
+        refreshData();
+        setConfirmState(null);
+      }
+    });
   };
 
   const handleVIPChange = (userId: string, tier: VIPTier) => {
@@ -132,7 +177,7 @@ export default function ConciergeDashboardPage() {
     e.preventDefault();
     addBlockedTime(blockService, blockProvider, blockDate, blockSlot, blockReason);
     refreshData();
-    alert(`Inventory slot on ${blockDate} (${blockSlot}) has been locked.`);
+    showToast(`Inventory slot on ${blockDate} (${blockSlot}) has been locked.`);
   };
 
   const handleSendAdminReply = (e: React.FormEvent) => {
@@ -665,6 +710,26 @@ export default function ConciergeDashboardPage() {
           </div>
 
         </main>
+
+        {/* Custom confirmation dialog (async — replaces blocking window.confirm) */}
+        {confirmState && (
+          <ConfirmDialog
+            isOpen={!!confirmState}
+            title={confirmState.title}
+            message={confirmState.message}
+            confirmLabel={confirmState.confirmLabel}
+            danger={confirmState.danger}
+            onConfirm={confirmState.onConfirm}
+            onCancel={() => setConfirmState(null)}
+          />
+        )}
+
+        {/* Non-blocking toast (replaces window.alert) */}
+        {toast && (
+          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-gray-900 text-white text-xs font-bold px-5 py-3 rounded-2xl shadow-2xl">
+            {toast}
+          </div>
+        )}
 
         <Footer />
       </div>

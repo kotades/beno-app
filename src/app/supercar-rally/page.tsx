@@ -1,12 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import ReserveButton from '@/components/ReserveButton';
 import supercarRallyData from '@/data/supercar_rally_db.json';
 
 export default function SupercarRallyPage() {
-  const [selectedPackage, setSelectedPackage] = useState<any>(null);
   const packages = supercarRallyData.packages || [];
   const fleet = supercarRallyData.fleet || [];
 
@@ -103,12 +102,14 @@ export default function SupercarRallyPage() {
                     <span className="text-2xl font-black text-red-600">{pkg.price_display}</span>
                   </div>
 
-                  <button
-                    onClick={() => setSelectedPackage(pkg)}
+                  <ReserveButton
+                    serviceName={pkg.name}
+                    category="Supercar Rally"
+                    price={pkg.price}
+                    serviceId={pkg.id}
+                    image={pkg.image}
                     className="bg-gray-900 hover:bg-red-600 text-white px-6 py-3.5 rounded-2xl font-bold text-xs transition-all shadow-md active:scale-95"
-                  >
-                    Reserve Rally Slot
-                  </button>
+                  />
                 </div>
               </div>
             ))}
@@ -148,22 +149,7 @@ export default function SupercarRallyPage() {
           </div>
         </div>
 
-        {/* BOOKING INQUIRY MODAL */}
-        {selectedPackage && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative space-y-6">
-              <button 
-                onClick={() => setSelectedPackage(null)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 text-xl font-bold"
-              >
-                ✕
-              </button>
-
-            </div>
-          </div>
-        )}
-
-      </main>
+        </main>
 
       <Footer />
     </div>

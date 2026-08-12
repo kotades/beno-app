@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import Footer from '@/components/Footer';
 import privateJetData from '@/data/private_jet_db.json';
+
+const BookingEngineModal = dynamic(() => import('@/components/BookingEngineModal'), { ssr: false });
 
 export default function PrivateJetPage() {
   const [flightType, setFlightType] = useState<'oneway' | 'roundtrip' | 'multicity'>('oneway');
@@ -11,7 +13,7 @@ export default function PrivateJetPage() {
   const [toCity, setToCity] = useState('Paris (LBG)');
   const [flightDate, setFlightDate] = useState('2026-08-20');
   const [passengers, setPassengers] = useState('4 Passengers');
-  const [selectedRoute, setSelectedRoute] = useState<any>(null);
+  const [booking, setBooking] = useState<{ serviceName: string; category: string; price: number; serviceId: string; image?: string } | null>(null);
 
   const routes = privateJetData.routes || [];
   const fleet = privateJetData.fleet || [];
@@ -150,7 +152,7 @@ export default function PrivateJetPage() {
               {/* SEARCH CTA BUTTON */}
               <div className="md:col-span-2">
                 <button
-                  onClick={() => setSelectedRoute({ from: fromCity, to: toCity, price_display: 'Custom Charter Quote' })}
+                  onClick={() => setBooking({ serviceName: `${fromCity} → ${toCity}`, category: 'Private Jet', price: 0, serviceId: 'custom-charter' })}
                   className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-4 rounded-2xl font-bold text-xs tracking-wider transition-all shadow-lg active:scale-95 flex items-center justify-center space-x-2"
                 >
                   <span>Search a flight</span>
@@ -177,9 +179,9 @@ export default function PrivateJetPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {routes.map((route: any) => (
-              <div 
+              <div
                 key={route.id}
-                onClick={() => setSelectedRoute(route)}
+                onClick={() => setBooking({ serviceName: `${route.from} → ${route.to}`, category: 'Private Jet', price: route.price, serviceId: route.id, image: route.image })}
                 className="group relative h-64 rounded-3xl overflow-hidden shadow-md cursor-pointer border border-gray-100 hover:shadow-2xl transition-all"
               >
                 <img 
@@ -244,7 +246,7 @@ export default function PrivateJetPage() {
                   </div>
 
                   <button
-                    onClick={() => setSelectedRoute({ from: 'Miami Intl (MIA)', to: 'Custom Destination', price_display: `$${jet.price_per_hour.toLocaleString()} / hr` })}
+                    onClick={() => setBooking({ serviceName: jet.name, category: 'Private Jet', price: +jet.price_per_hour, serviceId: `jet-${jet.id}` })}
                     className="w-full bg-gray-900 hover:bg-[#008B9B] text-white py-3 rounded-2xl font-bold text-xs text-center transition-all block"
                   >
                     Charter {jet.name}
@@ -255,43 +257,17 @@ export default function PrivateJetPage() {
           </div>
         </div>
 
-        {/* INQUIRY MODAL */}
-        {selectedRoute && (
-          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative space-y-6">
-              <button 
-                onClick={() => setSelectedRoute(null)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 text-xl font-bold"
-              >
-                ✕
-              </button>
-
-              <div>
-                <span className="text-xs font-bold text-[#008B9B] uppercase tracking-wider block mb-1">Private Jet Charter Inquiry</span>
-                <h3 className="text-2xl font-black text-gray-900">{selectedRoute.from} → {selectedRoute.to}</h3>
-                <p className="text-xs text-gray-500 mt-1">Starting from {selectedRoute.price_display}</p>
-              </div>
-
-              <form onSubmit={(e) => { e.preventDefault(); alert('Thank you! Your private jet charter request has been submitted to Beno VIP Concierge.'); setSelectedRoute(null); }} className="space-y-4">
-                <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">Full Name</label>
-                  <input type="text" required placeholder="John Doe" className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs focus:outline-none focus:border-[#008B9B]" />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">Phone / WhatsApp</label>
-                  <input type="tel" required placeholder="+971 50 000 0000" className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs focus:outline-none focus:border-[#008B9B]" />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">Special Requirements (Catering, Pets, Luggage)</label>
-                  <textarea rows={3} placeholder="E.g. Halal fine dining, 6 luggage bags..." className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs focus:outline-none focus:border-[#008B9B]" />
-                </div>
-
-                <button type="submit" className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-4 rounded-2xl font-bold text-sm transition-all shadow-lg">
-                  Submit Private Jet Charter Request
-                </button>
-              </form>
-            </div>
-          </div>
+        {/* BOOKING ENGINE MODAL */}
+        {booking && (
+          <BookingEngineModal
+            isOpen={!!booking}
+            onClose={() => setBooking(null)}
+            serviceName={booking.serviceName}
+            category={booking.category}
+            price={booking.price}
+            serviceId={booking.serviceId}
+            image={booking.image}
+          />
         )}
 
       </main>

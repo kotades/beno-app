@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { saveBooking, BookingItem } from '@/lib/bookingStore';
 import { CURRENCY, formatCurrency } from '@/lib/currency';
+import { useAuth } from '@/context/AuthContext';
 
 interface BookingEngineModalProps {
   isOpen: boolean;
@@ -23,20 +24,28 @@ export default function BookingEngineModal({
   serviceId,
   image
 }: BookingEngineModalProps) {
+  const { user } = useAuth();
   const [step, setStep] = useState<1 | 2 | 3>(1);
-  
+
   // Form States
   const [startDate, setStartDate] = useState('2026-08-20');
   const [startTime, setStartTime] = useState('14:00');
   const [duration, setDuration] = useState('4 Hours');
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
-  
-  const [guestName, setGuestName] = useState('');
-  const [guestEmail, setGuestEmail] = useState('');
+
+  const [guestName, setGuestName] = useState(user?.displayName ?? '');
+  const [guestEmail, setGuestEmail] = useState(user?.email ?? '');
   const [guestPhone, setGuestPhone] = useState('');
   const [notes, setNotes] = useState('');
 
   const [createdBooking, setCreatedBooking] = useState<BookingItem | null>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -88,8 +97,8 @@ export default function BookingEngineModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/75 flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl relative space-y-6 overflow-y-auto max-h-[90vh]">
+    <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm overflow-y-auto pt-24 pb-8 px-4 flex items-center justify-center">
+      <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl relative space-y-6 my-auto max-h-[calc(100vh-7rem)] overflow-y-auto">
         
         {/* CLOSE BUTTON */}
         <button 

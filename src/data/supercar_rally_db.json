@@ -7,7 +7,7 @@
       "duration": "Full Day (8 Hours)",
       "cars_count": "5 Supercars Rotation",
       "price": 12500,
-      "price_display": "AED 12,500 / driver",
+      "price_display": "$ 12,500 / driver",
       "location": "Ras Al Khaimah - Jebel Jais Peak",
       "image": "/assets/beno.com-supercar-rally-resources/04_supercar_rally_4.webp",
       "highlights": [
@@ -25,7 +25,7 @@
       "duration": "Half Day (6 Hours)",
       "cars_count": "4 Supercars Rotation",
       "price": 9800,
-      "price_display": "AED 9,800 / driver",
+      "price_display": "$ 9,800 / driver",
       "location": "Hajar Mountains & Hatta Kayak Lake",
       "image": "/assets/beno.com-supercar-rally-resources/08_supercar_rally_8.webp",
       "highlights": [
@@ -42,7 +42,7 @@
       "duration": "Evening (4 Hours)",
       "cars_count": "5 Supercars Rotation",
       "price": 7500,
-      "price_display": "AED 7,500 / driver",
+      "price_display": "$ 7,500 / driver",
       "location": "Dubai Marina & Downtown Boulevard",
       "image": "/assets/beno.com-supercar-rally-resources/03_supercar_rally_3.webp",
       "highlights": [
@@ -59,7 +59,7 @@
       "duration": "Full Day (7 Hours)",
       "cars_count": "5 Supercars Rotation",
       "price": 14000,
-      "price_display": "AED 14,000 / driver",
+      "price_display": "$ 14,000 / driver",
       "location": "Abu Dhabi Yas Island & Coastal Highway",
       "image": "/assets/beno.com-supercar-rally-resources/09_supercar_rally_9.png",
       "highlights": [

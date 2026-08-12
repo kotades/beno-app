@@ -70,6 +70,9 @@ export function saveBooking(booking: Omit<BookingItem, 'id' | 'createdAt' | 'sta
     createdAt: new Date().toISOString().split('T')[0]
   };
 
+  // Normalize email so it always matches the dashboard query (lowercase)
+  newBooking.guestEmail = newBooking.guestEmail?.toLowerCase() ?? '';
+
   const updated = [newBooking, ...current];
   if (typeof window !== 'undefined') {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated));

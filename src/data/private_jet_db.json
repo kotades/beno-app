@@ -6,7 +6,7 @@
       "to": "Paris Le Bourget (LBG)",
       "duration": "6h 45m",
       "price": 150000,
-      "price_display": "AED 150,000",
+      "price_display": "$ 150,000",
       "image": "/assets/beno.com-private-jet-resources/01_private_jet_1.jpg",
       "category": "Popular"
     },
@@ -16,7 +16,7 @@
       "to": "London Farnborough (FAB)",
       "duration": "7h 15m",
       "price": 200000,
-      "price_display": "AED 200,000",
+      "price_display": "$ 200,000",
       "image": "/assets/beno.com-private-jet-resources/02_private_jet_2.png",
       "category": "Popular"
     },
@@ -26,7 +26,7 @@
       "to": "Malé Maldives (MLE)",
       "duration": "4h 10m",
       "price": 145000,
-      "price_display": "AED 145,000",
+      "price_display": "$ 145,000",
       "image": "/assets/beno.com-private-jet-resources/03_private_jet_3.jpg",
       "category": "Popular"
     },
@@ -36,7 +36,7 @@
       "to": "New York Teterboro (TEB)",
       "duration": "14h 20m",
       "price": 310000,
-      "price_display": "AED 310,000",
+      "price_display": "$ 310,000",
       "image": "/assets/beno.com-private-jet-resources/04_private_jet_4.jpg",
       "category": "Popular"
     },
@@ -46,7 +46,7 @@
       "to": "Riyadh King Khalid (RUH)",
       "duration": "1h 45m",
       "price": 70000,
-      "price_display": "AED 70,000",
+      "price_display": "$ 70,000",
       "image": "/assets/beno.com-private-jet-resources/05_private_jet_5.jpg",
       "category": "Popular"
     },
@@ -56,7 +56,7 @@
       "to": "Geneva Cointrin (GVA)",
       "duration": "6h 30m",
       "price": 180000,
-      "price_display": "AED 180,000",
+      "price_display": "$ 180,000",
       "image": "/assets/beno.com-private-jet-resources/01_private_jet_1.jpg",
       "category": "Popular"
     }

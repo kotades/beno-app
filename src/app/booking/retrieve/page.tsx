@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { subscribeToUserBookings, deleteBooking } from '@/lib/firestoreSync';
 import type { BookingRecord } from '@/lib/bookingEngine';
 import { formatCurrency } from '@/lib/currency';
+import ConfirmDialog from '@/components/ConfirmDialog';
 
 export default function ManageBookingPage() {
   const { user, loading } = useAuth();
@@ -58,18 +59,38 @@ export default function ManageBookingPage() {
   };
 
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [confirmState, setConfirmState] = useState<{
+    title: string;
+    message: string;
+    confirmLabel?: string;
+    danger?: boolean;
+    onConfirm: () => void;
+  } | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
+  const showToast = (msg: string) => {
+    setToast(msg);
+    window.setTimeout(() => setToast(null), 3500);
+  };
 
-  const handleDelete = async (bk: BookingRecord) => {
-    if (!window.confirm(`Cancel and delete booking ${bk.id}? This cannot be undone.`)) return;
-    setDeletingId(bk.id);
-    try {
-      await deleteBooking(bk.id);
-    } catch (e) {
-      console.error('Delete failed:', e);
-      window.alert('Failed to delete booking. Please try again.');
-    } finally {
-      setDeletingId(null);
-    }
+  const handleDelete = (bk: BookingRecord) => {
+    setConfirmState({
+      title: 'Cancel Booking',
+      message: `Cancel and delete booking ${bk.id}? This cannot be undone.`,
+      confirmLabel: 'Cancel Booking',
+      danger: true,
+      onConfirm: async () => {
+        setDeletingId(bk.id);
+        try {
+          await deleteBooking(bk.id);
+        } catch (e) {
+          console.error('Delete failed:', e);
+          showToast('Failed to delete booking. Please try again.');
+        } finally {
+          setDeletingId(null);
+          setConfirmState(null);
+        }
+      }
+    });
   };
 
   const handleClear = () => {
@@ -206,7 +227,7 @@ export default function ManageBookingPage() {
 
                   <div className="flex items-center space-x-2 self-start sm:self-auto">
                     <button
-                      onClick={() => alert(`Downloading PDF Booking Pass for ${bk.id}...`)}
+                      onClick={() => showToast(`Booking pass for ${bk.id} would be emailed here.`)}
                       className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all border border-white/20"
                     >
                       📄 Download PDF Pass
@@ -280,6 +301,26 @@ export default function ManageBookingPage() {
         </div>
 
       </main>
+
+      {/* Custom confirmation dialog (async — replaces blocking window.confirm) */}
+      {confirmState && (
+        <ConfirmDialog
+          isOpen={!!confirmState}
+          title={confirmState.title}
+          message={confirmState.message}
+          confirmLabel={confirmState.confirmLabel}
+          danger={confirmState.danger}
+          onConfirm={confirmState.onConfirm}
+          onCancel={() => setConfirmState(null)}
+        />
+      )}
+
+      {/* Non-blocking toast (replaces window.alert) */}
+      {toast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-gray-900 text-white text-xs font-bold px-5 py-3 rounded-2xl shadow-2xl">
+          {toast}
+        </div>
+      )}
 
       <Footer />
     </div>

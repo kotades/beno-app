@@ -52,7 +52,7 @@ export async function syncBookingStatusToFirestore(id: string, status: string): 
 
 export function subscribeToUserBookings(userEmail: string, callback: (bookings: BookingRecord[]) => void) {
   try {
-    const q = query(collection(db, 'bookings'), where('guestEmail', '==', userEmail));
+    const q = query(collection(db, 'bookings'), where('guestEmail', '==', userEmail.toLowerCase()));
     return onSnapshot(q, (snapshot) => {
       const list: BookingRecord[] = [];
       snapshot.forEach(docSnap => {

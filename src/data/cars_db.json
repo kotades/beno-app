@@ -7,7 +7,7 @@
       "category": "Luxury",
       "brand": "Audi",
       "price_per_day": 299,
-      "price_display": "AED 299/day",
+      "price_display": "$ 299/day",
       "localImages": [
         "/assets/beno.com-cars-resources/audi-a6-full-option-L8Jqo3/01_audi-a6-full-option_1.jpg",
         "/assets/beno.com-cars-resources/audi-a6-full-option-L8Jqo3/02_audi-a6-full-option_2.jpg",
@@ -45,7 +45,7 @@
       "category": "SUV",
       "brand": "Cadillac",
       "price_per_day": 999,
-      "price_display": "AED 999/day",
+      "price_display": "$ 999/day",
       "localImages": [
         "/assets/beno.com-cars-resources/cadillac-escalade-black-NkYd78/01_cadillac-escalade-black_1.jpg",
         "/assets/beno.com-cars-resources/cadillac-escalade-black-NkYd78/02_cadillac-escalade-black_2.webp",
@@ -81,7 +81,7 @@
       "category": "SUV",
       "brand": "Cadillac",
       "price_per_day": 1199,
-      "price_display": "AED 1199/day",
+      "price_display": "$ 1199/day",
       "localImages": [
         "/assets/beno.com-cars-resources/cadillac-escalade-white-Vmwolm/01_cadillac-escalade-white_1.jpg",
         "/assets/beno.com-cars-resources/cadillac-escalade-white-Vmwolm/02_cadillac-escalade-white_2.jpg",
@@ -137,7 +137,7 @@
       "category": "Supercar",
       "brand": "Chevrolet",
       "price_per_day": 1300,
-      "price_display": "AED 1300/day",
+      "price_display": "$ 1300/day",
       "localImages": [
         "/assets/beno.com-cars-resources/chevrolet-corvette-stingray-c8-P8p1Ok/01_chevrolet-corvette-stingray-c8_1.jpg",
         "/assets/beno.com-cars-resources/chevrolet-corvette-stingray-c8-P8p1Ok/02_chevrolet-corvette-stingray-c8_2.webp",
@@ -173,7 +173,7 @@
       "category": "SUV",
       "brand": "Chevrolet",
       "price_per_day": 599,
-      "price_display": "AED 599/day",
+      "price_display": "$ 599/day",
       "localImages": [
         "/assets/beno.com-cars-resources/chevrolet-tahoe-black-Wmnoy3/01_chevrolet-tahoe-black_1.jpg",
         "/assets/beno.com-cars-resources/chevrolet-tahoe-black-Wmnoy3/02_chevrolet-tahoe-black_2.jpg",
@@ -223,7 +223,7 @@
       "category": "Supercar",
       "brand": "Ferrari",
       "price_per_day": 299,
-      "price_display": "AED 299/day",
+      "price_display": "$ 299/day",
       "localImages": [
         "/assets/beno.com-cars-resources/ferrari-296-gts--xkXjB3/01_ferrari-296-gts-_1.jpg",
         "/assets/beno.com-cars-resources/ferrari-296-gts--xkXjB3/02_ferrari-296-gts-_2.webp",
@@ -259,7 +259,7 @@
       "category": "Supercar",
       "brand": "Ferrari",
       "price_per_day": 4200,
-      "price_display": "AED 4200/day",
+      "price_display": "$ 4200/day",
       "localImages": [
         "/assets/beno.com-cars-resources/ferrari-f8-spider--NkYjjm/01_ferrari-f8-spider-_1.jpg",
         "/assets/beno.com-cars-resources/ferrari-f8-spider--NkYjjm/02_ferrari-f8-spider-_2.jpg",
@@ -317,7 +317,7 @@
       "category": "Luxury",
       "brand": "Gac",
       "price_per_day": 179,
-      "price_display": "AED 179/day",
+      "price_display": "$ 179/day",
       "localImages": [
         "/assets/beno.com-cars-resources/gac-gs3-grey-WmqoK8/01_gac-gs3-grey_1.jpg",
         "/assets/beno.com-cars-resources/gac-gs3-grey-WmqoK8/02_gac-gs3-grey_2.jpg",
@@ -357,7 +357,7 @@
       "category": "Luxury",
       "brand": "Hyundai",
       "price_per_day": 149,
-      "price_display": "AED 149/day",
+      "price_display": "$ 149/day",
       "localImages": [
         "/assets/beno.com-cars-resources/hyundai-creta-full-option-dk4N43/01_hyundai-creta-full-option_1.jpg",
         "/assets/beno.com-cars-resources/hyundai-creta-full-option-dk4N43/02_hyundai-creta-full-option_2.jpg",
@@ -397,7 +397,7 @@
       "category": "SUV",
       "brand": "Jeep",
       "price_per_day": 399,
-      "price_display": "AED 399/day",
+      "price_display": "$ 399/day",
       "localImages": [
         "/assets/beno.com-cars-resources/jeep-wrangler-rubicon--xkeaNk/01_jeep-wrangler-rubicon-_1.webp",
         "/assets/beno.com-cars-resources/jeep-wrangler-rubicon--xkeaNk/02_jeep-wrangler-rubicon-_2.jpg",
@@ -427,7 +427,7 @@
       "category": "Supercar",
       "brand": "Lamborghini",
       "price_per_day": 3200,
-      "price_display": "AED 3200/day",
+      "price_display": "$ 3200/day",
       "localImages": [
         "/assets/beno.com-cars-resources/lamborghini-huracan-evo-spyder-zmdbL8/01_lamborghini-huracan-evo-spyder_1.jpg",
         "/assets/beno.com-cars-resources/lamborghini-huracan-evo-spyder-zmdbL8/02_lamborghini-huracan-evo-spyder_2.jpg",
@@ -467,7 +467,7 @@
       "category": "Luxury",
       "brand": "Nissan",
       "price_per_day": 77,
-      "price_display": "AED 77/day",
+      "price_display": "$ 77/day",
       "localImages": [
         "/assets/beno.com-cars-resources/nissan-sunny-2024-L8JjQ8/01_nissan-sunny-2024_1.jpg",
         "/assets/beno.com-cars-resources/nissan-sunny-2024-L8JjQ8/02_nissan-sunny-2024_2.jpg",
@@ -507,7 +507,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 99,
-      "price_display": "AED 99/day",
+      "price_display": "$ 99/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-pegas-2023-b3xQG8/01_kia-pegas-2023_1.jpg",
         "/assets/beno.com-cars-resources/kia-pegas-2023-b3xQG8/02_kia-pegas-2023_2.jpg",
@@ -533,7 +533,7 @@
       "category": "Luxury",
       "brand": "Nissan",
       "price_per_day": 99,
-      "price_display": "AED 99/day",
+      "price_display": "$ 99/day",
       "localImages": [
         "/assets/beno.com-cars-resources/nissan-sunny-2023-mid-option-739V28/01_nissan-sunny-2023-mid-option_1.jpg",
         "/assets/beno.com-cars-resources/nissan-sunny-2023-mid-option-739V28/02_nissan-sunny-2023-mid-option_2.jpg",
@@ -575,7 +575,7 @@
       "category": "Luxury",
       "brand": "Nissan",
       "price_per_day": 99,
-      "price_display": "AED 99/day",
+      "price_display": "$ 99/day",
       "localImages": [
         "/assets/beno.com-cars-resources/nissan-sunny-new-shape-Vmw60k/01_nissan-sunny-new-shape_1.jpg",
         "/assets/beno.com-cars-resources/nissan-sunny-new-shape-Vmw60k/02_nissan-sunny-new-shape_2.jpg",
@@ -613,7 +613,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 105,
-      "price_display": "AED 105/day",
+      "price_display": "$ 105/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-picanto-hatchback-dk4nE3/01_kia-picanto-hatchback_1.jpg",
         "/assets/beno.com-cars-resources/kia-picanto-hatchback-dk4nE3/02_kia-picanto-hatchback_2.jpg",
@@ -651,7 +651,7 @@
       "category": "Luxury",
       "brand": "Hyundai",
       "price_per_day": 121,
-      "price_display": "AED 121/day",
+      "price_display": "$ 121/day",
       "localImages": [
         "/assets/beno.com-cars-resources/hyundai-accent-2022-M3ABz8/01_hyundai-accent-2022_1.jpg",
         "/assets/beno.com-cars-resources/hyundai-accent-2022-M3ABz8/02_hyundai-accent-2022_2.jpg",
@@ -689,7 +689,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 130,
-      "price_display": "AED 130/day",
+      "price_display": "$ 130/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-pegas-2024-full-option-NkYpX8/01_kia-pegas-2024-full-option_1.jpg",
         "/assets/beno.com-cars-resources/kia-pegas-2024-full-option-NkYpX8/02_kia-pegas-2024-full-option_2.jpg",
@@ -729,7 +729,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 299,
-      "price_display": "AED 299/day",
+      "price_display": "$ 299/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-pegas-2024-full-option-Y8y7vm/01_kia-pegas-2024-full-option_1.jpg",
         "/assets/beno.com-cars-resources/kia-pegas-2024-full-option-Y8y7vm/02_kia-pegas-2024-full-option_2.jpg",
@@ -769,7 +769,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 130,
-      "price_display": "AED 130/day",
+      "price_display": "$ 130/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-pegas-2024-full-option-E3PxL3/01_kia-pegas-2024-full-option_1.jpg",
         "/assets/beno.com-cars-resources/kia-pegas-2024-full-option-E3PxL3/02_kia-pegas-2024-full-option_2.jpg",
@@ -809,7 +809,7 @@
       "category": "Luxury",
       "brand": "Mitsubishi",
       "price_per_day": 143,
-      "price_display": "AED 143/day",
+      "price_display": "$ 143/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mitsubishi-asx-2022-B3ze9m/01_mitsubishi-asx-2022_1.jpg",
         "/assets/beno.com-cars-resources/mitsubishi-asx-2022-B3ze9m/02_mitsubishi-asx-2022_2.jpg",
@@ -847,7 +847,7 @@
       "category": "Luxury",
       "brand": "Nissan",
       "price_per_day": 143,
-      "price_display": "AED 143/day",
+      "price_display": "$ 143/day",
       "localImages": [
         "/assets/beno.com-cars-resources/nissan-kicks-2022-dkrQ98/01_nissan-kicks-2022_1.jpg",
         "/assets/beno.com-cars-resources/nissan-kicks-2022-dkrQ98/02_nissan-kicks-2022_2.jpg",
@@ -885,7 +885,7 @@
       "category": "Luxury",
       "brand": "Hyundai",
       "price_per_day": 149,
-      "price_display": "AED 149/day",
+      "price_display": "$ 149/day",
       "localImages": [
         "/assets/beno.com-cars-resources/hyundai-creta-2022-z37xo8/01_hyundai-creta-2022_1.jpg",
         "/assets/beno.com-cars-resources/hyundai-creta-2022-z37xo8/02_hyundai-creta-2022_2.jpg",
@@ -923,7 +923,7 @@
       "category": "Luxury",
       "brand": "Mg",
       "price_per_day": 149,
-      "price_display": "AED 149/day",
+      "price_display": "$ 149/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mg-gt-full-option-V8LJ9m/01_mg-gt-full-option_1.jpg",
         "/assets/beno.com-cars-resources/mg-gt-full-option-V8LJ9m/02_mg-gt-full-option_2.jpg",
@@ -963,7 +963,7 @@
       "category": "Luxury",
       "brand": "Mg",
       "price_per_day": 149,
-      "price_display": "AED 149/day",
+      "price_display": "$ 149/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mg-zs-full-option-dkrAx8/01_mg-zs-full-option_1.jpg",
         "/assets/beno.com-cars-resources/mg-zs-full-option-dkrAx8/02_mg-zs-full-option_2.jpg",
@@ -1003,7 +1003,7 @@
       "category": "Luxury",
       "brand": "Toyota",
       "price_per_day": 149,
-      "price_display": "AED 149/day",
+      "price_display": "$ 149/day",
       "localImages": [
         "/assets/beno.com-cars-resources/toyota-corolla-cross-full-option-Vmwn0k/01_toyota-corolla-cross-full-option_1.jpg",
         "/assets/beno.com-cars-resources/toyota-corolla-cross-full-option-Vmwn0k/02_toyota-corolla-cross-full-option_2.jpg",
@@ -1043,7 +1043,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 165,
-      "price_display": "AED 165/day",
+      "price_display": "$ 165/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-seltos-2023-V8LyMk/01_kia-seltos-2023_1.jpg",
         "/assets/beno.com-cars-resources/kia-seltos-2023-V8LyMk/02_kia-seltos-2023_2.jpg",
@@ -1083,7 +1083,7 @@
       "category": "Luxury",
       "brand": "Peugeot",
       "price_per_day": 165,
-      "price_display": "AED 165/day",
+      "price_display": "$ 165/day",
       "localImages": [
         "/assets/beno.com-cars-resources/peugeot-2008-2023-P8pZym/01_peugeot-2008-2023_1.jpg",
         "/assets/beno.com-cars-resources/peugeot-2008-2023-P8pZym/02_peugeot-2008-2023_2.jpg",
@@ -1123,7 +1123,7 @@
       "category": "Luxury",
       "brand": "Mazda",
       "price_per_day": 198,
-      "price_display": "AED 198/day",
+      "price_display": "$ 198/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mazda-6-2023-x31XPm/01_mazda-6-2023_1.jpg",
         "/assets/beno.com-cars-resources/mazda-6-2023-x31XPm/02_mazda-6-2023_2.jpg",
@@ -1163,7 +1163,7 @@
       "category": "Luxury",
       "brand": "Peugeot",
       "price_per_day": 198,
-      "price_display": "AED 198/day",
+      "price_display": "$ 198/day",
       "localImages": [
         "/assets/beno.com-cars-resources/peugeot-3008-2024-E3Pjzk/01_peugeot-3008-2024_1.jpg",
         "/assets/beno.com-cars-resources/peugeot-3008-2024-E3Pjzk/02_peugeot-3008-2024_2.jpg",
@@ -1197,7 +1197,7 @@
       "category": "Luxury",
       "brand": "Mazda",
       "price_per_day": 199,
-      "price_display": "AED 199/day",
+      "price_display": "$ 199/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mazda-6--x300e3/01_mazda-6-_1.jpg",
         "/assets/beno.com-cars-resources/mazda-6--x300e3/02_mazda-6-_2.jpg",
@@ -1235,7 +1235,7 @@
       "category": "Luxury",
       "brand": "Mg",
       "price_per_day": 199,
-      "price_display": "AED 199/day",
+      "price_display": "$ 199/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mg-rx5-full-option-xkXvB3/01_mg-rx5-full-option_1.jpg",
         "/assets/beno.com-cars-resources/mg-rx5-full-option-xkXvB3/02_mg-rx5-full-option_2.jpg",
@@ -1275,7 +1275,7 @@
       "category": "Luxury",
       "brand": "Nissan",
       "price_per_day": 199,
-      "price_display": "AED 199/day",
+      "price_display": "$ 199/day",
       "localImages": [
         "/assets/beno.com-cars-resources/nissan-altima--xke1Nk/01_nissan-altima-_1.jpg",
         "/assets/beno.com-cars-resources/nissan-altima--xke1Nk/02_nissan-altima-_2.jpg",
@@ -1313,7 +1313,7 @@
       "category": "Luxury",
       "brand": "Chevrolet",
       "price_per_day": 216,
-      "price_display": "AED 216/day",
+      "price_display": "$ 216/day",
       "localImages": [
         "/assets/beno.com-cars-resources/chevrolet-captiva-black-2023-P3aM13/01_chevrolet-captiva-black-2023_1.jpg",
         "/assets/beno.com-cars-resources/chevrolet-captiva-black-2023-P3aM13/02_chevrolet-captiva-black-2023_2.jpg",
@@ -1353,7 +1353,7 @@
       "category": "Luxury",
       "brand": "Audi",
       "price_per_day": 252,
-      "price_display": "AED 252/day",
+      "price_display": "$ 252/day",
       "localImages": [
         "/assets/beno.com-cars-resources/audi-a3-2023-w3bvp3/01_audi-a3-2023_1.jpg",
         "/assets/beno.com-cars-resources/audi-a3-2023-w3bvp3/02_audi-a3-2023_2.jpg",
@@ -1391,7 +1391,7 @@
       "category": "SUV",
       "brand": "Mg",
       "price_per_day": 279,
-      "price_display": "AED 279/day",
+      "price_display": "$ 279/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mg-rx8-full-option-zmdOjk/01_mg-rx8-full-option_1.jpg",
         "/assets/beno.com-cars-resources/mg-rx8-full-option-zmdOjk/02_mg-rx8-full-option_2.jpg",
@@ -1431,7 +1431,7 @@
       "category": "SUV",
       "brand": "Toyota",
       "price_per_day": 599,
-      "price_display": "AED 599/day",
+      "price_display": "$ 599/day",
       "localImages": [
         "/assets/beno.com-cars-resources/toyota-land-cruiser-gxr--285vNk/01_toyota-land-cruiser-gxr-_1.jpg",
         "/assets/beno.com-cars-resources/toyota-land-cruiser-gxr--285vNk/02_toyota-land-cruiser-gxr-_2.webp",
@@ -1467,7 +1467,7 @@
       "category": "Luxury",
       "brand": "Nissan",
       "price_per_day": 300,
-      "price_display": "AED 300/day",
+      "price_display": "$ 300/day",
       "localImages": [
         "/assets/beno.com-cars-resources/nissan-patrol-white-2019-xkXr13/01_nissan-patrol-white-2019_1.jpg",
         "/assets/beno.com-cars-resources/nissan-patrol-white-2019-xkXr13/02_nissan-patrol-white-2019_2.jpg",
@@ -1505,7 +1505,7 @@
       "category": "Luxury",
       "brand": "Kia",
       "price_per_day": 329,
-      "price_display": "AED 329/day",
+      "price_display": "$ 329/day",
       "localImages": [
         "/assets/beno.com-cars-resources/kia-sorento--zmdBj8/01_kia-sorento-_1.jpg",
         "/assets/beno.com-cars-resources/kia-sorento--zmdBj8/02_kia-sorento-_2.jpg",
@@ -1543,7 +1543,7 @@
       "category": "Supercar",
       "brand": "Lamborghini",
       "price_per_day": 2900,
-      "price_display": "AED 2900/day",
+      "price_display": "$ 2900/day",
       "localImages": [
         "/assets/beno.com-cars-resources/lamborghini-huracan-sterrato-M3N9zm/01_lamborghini-huracan-sterrato_1.jpg",
         "/assets/beno.com-cars-resources/lamborghini-huracan-sterrato-M3N9zm/02_lamborghini-huracan-sterrato_2.jpg",
@@ -1581,7 +1581,7 @@
       "category": "Supercar",
       "brand": "Lamborghini",
       "price_per_day": 2924,
-      "price_display": "AED 2924/day",
+      "price_display": "$ 2924/day",
       "localImages": [
         "/assets/beno.com-cars-resources/lamborghini-urus-my2-WmqMBm/01_lamborghini-urus-my2_1.jpg",
         "/assets/beno.com-cars-resources/lamborghini-urus-my2-WmqMBm/02_lamborghini-urus-my2_2.jpg",
@@ -1621,7 +1621,7 @@
       "category": "Luxury",
       "brand": "Mc",
       "price_per_day": 3800,
-      "price_display": "AED 3800/day",
+      "price_display": "$ 3800/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mc-laren-720-s-black-7394Vm/01_mc-laren-720-s-black_1.jpg",
         "/assets/beno.com-cars-resources/mc-laren-720-s-black-7394Vm/02_mc-laren-720-s-black_2.jpg",
@@ -1661,7 +1661,7 @@
       "category": "Luxury",
       "brand": "Mc",
       "price_per_day": 4275,
-      "price_display": "AED 4275/day",
+      "price_display": "$ 4275/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mc-laren-720-s-blue-M3A6v8/01_mc-laren-720-s-blue_1.jpg",
         "/assets/beno.com-cars-resources/mc-laren-720-s-blue-M3A6v8/02_mc-laren-720-s-blue_2.jpg",
@@ -1703,7 +1703,7 @@
       "category": "Luxury",
       "brand": "Mc",
       "price_per_day": 4388,
-      "price_display": "AED 4388/day",
+      "price_display": "$ 4388/day",
       "localImages": [
         "/assets/beno.com-cars-resources/mc-laren-720-s-white-X32d7k/01_mc-laren-720-s-white_1.jpg",
         "/assets/beno.com-cars-resources/mc-laren-720-s-white-X32d7k/02_mc-laren-720-s-white_2.jpg",
@@ -1745,7 +1745,7 @@
       "category": "Luxury",
       "brand": "Audi",
       "price_per_day": 1500,
-      "price_display": "AED 1500/day",
+      "price_display": "$ 1500/day",
       "localImages": [
         "/assets/beno.com-cars-resources/audi-r8-2023-grey-coupe--WmqY6m/01_audi-r8-2023-grey-coupe-_1.jpg",
         "/assets/beno.com-cars-resources/audi-r8-2023-grey-coupe--WmqY6m/02_audi-r8-2023-grey-coupe-_2.jpg",
@@ -1785,7 +1785,7 @@
       "category": "Supercar",
       "brand": "Lamborghini",
       "price_per_day": 2900,
-      "price_display": "AED 2900/day",
+      "price_display": "$ 2900/day",
       "localImages": [
         "/assets/beno.com-cars-resources/lamborghini-huracan-evo-x310pm/01_lamborghini-huracan-evo_1.jpg",
         "/assets/beno.com-cars-resources/lamborghini-huracan-evo-x310pm/02_lamborghini-huracan-evo_2.jpg",
