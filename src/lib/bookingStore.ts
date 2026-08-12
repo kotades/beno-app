@@ -83,7 +83,23 @@ export function saveBooking(booking: Omit<BookingItem, 'id' | 'createdAt' | 'sta
   };
   syncBookingToFirestore(firestoreRecord);
 
+  // Send confirmation email (fire-and-forget — never block the booking flow)
+  sendBookingConfirmationEmail(firestoreRecord);
+
   return newBooking;
+}
+
+function sendBookingConfirmationEmail(bk: BookingItem): void {
+  fetch('/api/booking/confirm', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(bk)
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data.ok) console.warn('Booking email notice:', data.error);
+    })
+    .catch((e) => console.warn('Booking email notice:', e));
 }
 
 export function findBooking(referenceOrEmail: string): BookingItem[] {

@@ -13,7 +13,6 @@ import {
   orderBy
 } from 'firebase/firestore';
 import type { BookingRecord } from '@/lib/bookingEngine';
-import { ChatMessage } from '@/lib/supportChatStore';
 
 const db = getFirestore(app);
 
@@ -51,19 +50,6 @@ export async function syncBookingStatusToFirestore(id: string, status: string): 
   }
 }
 
-export async function syncChatMessageToFirestore(message: ChatMessage): Promise<void> {
-  try {
-    const docRef = doc(db, 'support_messages', message.id);
-    await setDoc(docRef, {
-      ...message,
-      updatedAt: new Date().toISOString()
-    }, { merge: true });
-    console.log(`🔥 Firestore synced support message ${message.id}`);
-  } catch (e) {
-    console.warn(`Firestore message sync notice (Fallback active):`, e);
-  }
-}
-
 export function subscribeToUserBookings(userEmail: string, callback: (bookings: BookingRecord[]) => void) {
   try {
     const q = query(collection(db, 'bookings'), where('guestEmail', '==', userEmail));
@@ -78,6 +64,65 @@ export function subscribeToUserBookings(userEmail: string, callback: (bookings: 
     });
   } catch (e) {
     console.warn("Firestore subscription notice:", e);
+    return () => {};
+  }
+}
+
+// ── 1:1 conversations ─────────────────────────────
+// conversation id = `${a}__${b}` (emails lowercased, sorted) so a thread
+// between the same two users always maps to one Firestore doc.
+export function conversationId(a: string, b: string): string {
+  const sorted = [a.toLowerCase(), b.toLowerCase()].sort();
+  return `${sorted[0]}__${sorted[1]}`;
+}
+
+export interface ConversationMessage {
+  id: string;
+  conversationId: string;
+  senderEmail: string;
+  senderName: string;
+  body: string;
+  createdAt: string; // ISO
+  read: boolean;
+}
+
+export function syncMessageToFirestore(msg: ConversationMessage): Promise<void> {
+  // Derive participant emails from the sorted convId so array-contains queries work
+  const [a, b] = msg.conversationId.split('__');
+  return setDoc(doc(db, 'conversation_messages', msg.id), {
+    ...msg,
+    participantEmails: [a, b]
+  }, { merge: true });
+}
+
+export function subscribeToConversation(convId: string, callback: (messages: ConversationMessage[]) => void) {
+  try {
+    const q = query(collection(db, 'conversation_messages'), where('conversationId', '==', convId));
+    return onSnapshot(q, (snapshot) => {
+      const list: ConversationMessage[] = [];
+      snapshot.forEach((d) => list.push(d.data() as ConversationMessage));
+      callback(list.sort((x, y) => x.createdAt.localeCompare(y.createdAt)));
+    }, (err) => {
+      console.warn('Conversation snapshot notice:', err);
+    });
+  } catch (e) {
+    console.warn('Conversation subscription notice:', e);
+    return () => {};
+  }
+}
+
+export function subscribeToUserConversations(email: string, callback: (messages: ConversationMessage[]) => void) {
+  try {
+    const q = query(collection(db, 'conversation_messages'), where('participantEmails', 'array-contains', email.toLowerCase()));
+    return onSnapshot(q, (snapshot) => {
+      const list: ConversationMessage[] = [];
+      snapshot.forEach((d) => list.push(d.data() as ConversationMessage));
+      callback(list);
+    }, (err) => {
+      console.warn('User conversations snapshot notice:', err);
+    });
+  } catch (e) {
+    console.warn('User conversations subscription notice:', e);
     return () => {};
   }
 }

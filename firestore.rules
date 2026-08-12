@@ -27,6 +27,14 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
+    // ── 1:1 conversations ──────────────────────────────
+    // Only the two participants can create or read a thread's messages.
+    match /conversation_messages/{messageId} {
+      allow create: if request.auth != null && request.auth.token.email in request.resource.data.participantEmails;
+      allow read: if request.auth != null && request.auth.token.email in resource.data.participantEmails;
+      allow update, delete: if false;
+    }
+
     // ── Everything else (incl. legacy trading app data) ──
     // Kept open to avoid breaking the companion app sharing this project.
     match /{document=**} {

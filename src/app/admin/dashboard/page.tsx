@@ -14,13 +14,15 @@ import {
   BookingRecord, 
   BlockedTime 
 } from '@/lib/bookingEngine';
-import { 
-  SUPPORT_CHANNELS, 
-  getMessagesForChannel, 
-  sendAdminAgentReply, 
-  ChatMessage 
-} from '@/lib/supportChatStore';
-import { syncChatMessageToFirestore, subscribeToAllBookings, syncBookingStatusToFirestore, deleteBooking } from '@/lib/firestoreSync';
+import {
+  subscribeToAllBookings,
+  syncBookingStatusToFirestore,
+  deleteBooking,
+  subscribeToUserConversations,
+  subscribeToConversation,
+  ConversationMessage
+} from '@/lib/firestoreSync';
+import { createMessage, isParticipant } from '@/lib/chatStore';
 import { formatCurrency } from '@/lib/currency';
 import { 
   getManagedUsers, 
@@ -39,8 +41,10 @@ export default function ConciergeDashboardPage() {
   const [activeTab, setActiveTab] = useState<string>('all');
 
   // Admin Support Desk state
-  const [activeAdminChannelId, setActiveAdminChannelId] = useState<string>('channel-vip');
-  const [adminMessages, setAdminMessages] = useState<ChatMessage[]>([]);
+  const ADMIN_EMAIL = 'beno@admin.com';
+  const [convThreads, setConvThreads] = useState<ConversationMessage[]>([]);
+  const [activeConvId, setActiveConvId] = useState<string | null>(null);
+  const [adminMessages, setAdminMessages] = useState<ConversationMessage[]>([]);
   const [adminReplyText, setAdminReplyText] = useState<string>('');
   const adminMessagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -55,20 +59,27 @@ export default function ConciergeDashboardPage() {
     setBookings(getBookings());
     setBlockedTimes(getBlockedTimes());
     setMetrics(getEngineMetrics());
-    setAdminMessages(getMessagesForChannel(activeAdminChannelId));
     setManagedUsers(getManagedUsers());
   };
 
+  // All user conversations involving the admin inbox
   useEffect(() => {
-    refreshData();
-  }, [activeAdminChannelId]);
+    const unsub = subscribeToUserConversations(ADMIN_EMAIL, setConvThreads);
+    return unsub;
+  }, []);
+
+  // Live messages for the active conversation
+  useEffect(() => {
+    if (!activeConvId) {
+      setAdminMessages([]);
+      return;
+    }
+    const unsub = subscribeToConversation(activeConvId, setAdminMessages);
+    return unsub;
+  }, [activeConvId]);
 
   useEffect(() => {
-    const unsub = subscribeToAllBookings((firestoreBookings) => {
-      setBookings(firestoreBookings);
-      setMetrics(getEngineMetrics());
-    });
-    return unsub;
+    refreshData();
   }, []);
 
   useEffect(() => {
@@ -126,15 +137,24 @@ export default function ConciergeDashboardPage() {
 
   const handleSendAdminReply = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!adminReplyText.trim()) return;
-
-    const newMsg = sendAdminAgentReply(activeAdminChannelId, adminReplyText);
-    syncChatMessageToFirestore(newMsg);
-    setAdminMessages(getMessagesForChannel(activeAdminChannelId));
+    const text = adminReplyText.trim();
+    if (!text || !activeConvId) return;
+    const [a, b] = activeConvId.split('__');
+    const recipient = a === ADMIN_EMAIL ? b : a;
+    createMessage(ADMIN_EMAIL, 'BENO Concierge', recipient, text);
     setAdminReplyText('');
   };
 
-  const activeAdminChannel = SUPPORT_CHANNELS.find(c => c.id === activeAdminChannelId) || SUPPORT_CHANNELS[0];
+  // Group threads by conversation id, latest message per thread
+  const convMap = new Map<string, ConversationMessage>();
+  convThreads.forEach((m) => {
+    const prev = convMap.get(m.conversationId);
+    if (!prev || m.createdAt > prev.createdAt) convMap.set(m.conversationId, m);
+  });
+  const convs = Array.from(convMap.values()).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+
+  const guestEmailOf = (convId: string) => convId.split('__').find((p) => p !== ADMIN_EMAIL) || '';
+  const adminMsgs = adminMessages.filter((m) => isParticipant(m, ADMIN_EMAIL));
 
   const filteredBookings = activeTab === 'all'
     ? bookings
@@ -214,122 +234,114 @@ export default function ConciergeDashboardPage() {
                   Realtime Provider Desk
                 </span>
                 <h2 className="text-2xl font-black text-gray-900">💬 BENO Live Support Terminal</h2>
-                <p className="text-xs text-gray-500 mt-0.5">Reply to guest chat inquiries in real-time across all 4 concierge divisions.</p>
+                <p className="text-xs text-gray-500 mt-0.5">Reply to guest conversations in real-time. Each guest gets a private 1:1 thread.</p>
               </div>
-
-              {/* CHANNEL SELECTOR TABS */}
-              <div className="flex space-x-2 overflow-x-auto scrollbar-hide py-1">
-                {SUPPORT_CHANNELS.map((ch) => (
-                  <button
-                    key={ch.id}
-                    onClick={() => setActiveAdminChannelId(ch.id)}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
-                      activeAdminChannelId === ch.id
-                        ? 'bg-[#008B9B] text-white shadow-md'
-                        : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-                    }`}
-                  >
-                    {ch.name}
-                  </button>
-                ))}
-              </div>
+              <span className="bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold px-3.5 py-1.5 rounded-full">
+                {convs.length} Active Conversations
+              </span>
             </div>
 
-            {/* CHAT MESSAGES & REPLY TERMINAL GRID */}
+            {/* CONVERSATION LIST & REPLY TERMINAL GRID */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-[420px]">
-              
-              {/* ACTIVE CHANNEL INFO (4 COLS) */}
-              <div className="lg:col-span-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col justify-between">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <img 
-                      src={activeAdminChannel.agent.avatar} 
-                      alt={activeAdminChannel.agent.name} 
-                      className="w-14 h-14 rounded-full object-cover border-2 border-teal-600 shadow-sm"
-                    />
-                    <div>
-                      <h4 className="font-bold text-base text-gray-900">{activeAdminChannel.agent.name}</h4>
-                      <span className="text-xs text-teal-600 font-bold block">{activeAdminChannel.agent.role}</span>
-                    </div>
-                  </div>
 
-                  <div className="bg-white p-4 rounded-xl border border-gray-200 text-xs space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400 font-medium">Division:</span>
-                      <span className="font-bold text-gray-900">{activeAdminChannel.category}</span>
+              {/* CONVERSATION LIST (4 COLS) */}
+              <div className="lg:col-span-4 bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col overflow-hidden">
+                <div className="text-[10px] font-black text-gray-400 uppercase tracking-wider px-2 py-2">Guest Conversations</div>
+                <div className="flex-1 overflow-y-auto divide-y divide-gray-200/60">
+                  {convs.length === 0 && (
+                    <div className="p-6 text-center text-xs text-gray-400 font-medium">
+                      No guest conversations yet.<br />Messages from the guest widget or /chat will appear here.
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400 font-medium">Status:</span>
-                      <span className="font-bold text-teal-600">🟢 Online & Responding</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="text-[11px] text-gray-400 leading-relaxed italic">
-                  * Note: Admin replies sent from this dashboard stream live directly to guest widgets and the /chat portal.
+                  )}
+                  {convs.map((m) => {
+                    const guest = guestEmailOf(m.conversationId);
+                    const isActive = m.conversationId === activeConvId;
+                    const time = new Date(m.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    return (
+                      <div
+                        key={m.conversationId}
+                        onClick={() => setActiveConvId(m.conversationId)}
+                        className={`p-3 cursor-pointer transition-all ${isActive ? 'bg-white shadow-sm border-l-4 border-[#008B9B]' : 'hover:bg-gray-100/70'}`}
+                      >
+                        <div className="flex justify-between items-baseline mb-0.5">
+                          <h4 className="text-xs font-bold text-gray-900 truncate">{guest}</h4>
+                          <span className="text-[9px] text-gray-400">{time}</span>
+                        </div>
+                        <p className="text-[11px] text-gray-500 truncate">{m.body}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
               {/* MESSAGE FEED & COMPOSER (8 COLS) */}
               <div className="lg:col-span-8 flex flex-col justify-between border border-gray-200 rounded-2xl overflow-hidden bg-white">
-                
-                {/* FEED */}
-                <div className="flex-1 p-5 overflow-y-auto space-y-3 bg-gray-50/50">
-                  {adminMessages.map((msg) => {
-                    const isAdminAgent = msg.sender === 'agent';
-                    return (
-                      <div 
-                        key={msg.id}
-                        className={`flex items-end space-x-2.5 ${isAdminAgent ? 'flex-row-reverse space-x-reverse' : 'flex-row'}`}
-                      >
-                        <img 
-                          src={msg.senderAvatar} 
-                          alt={msg.senderName} 
-                          className="w-7 h-7 rounded-full object-cover border border-gray-200 flex-shrink-0"
-                        />
-
-                        <div className={`max-w-[75%] space-y-1 ${isAdminAgent ? 'text-right' : 'text-left'}`}>
-                          <div className="flex items-baseline space-x-2 px-1">
-                            <span className="text-[10px] font-bold text-gray-500">{msg.senderName}</span>
-                            <span className="text-[9px] text-gray-400">{msg.createdAt}</span>
-                          </div>
-
-                          <div 
-                            className={`p-3 rounded-2xl text-xs leading-relaxed font-semibold ${
-                              isAdminAgent
-                                ? 'bg-[#008B9B] text-white rounded-br-none shadow-xs'
-                                : 'bg-white text-gray-900 border border-gray-200 shadow-xs rounded-bl-none'
-                            }`}
+                {!activeConvId ? (
+                  <div className="flex-1 flex items-center justify-center text-center p-8 bg-gray-50/40">
+                    <div>
+                      <div className="text-3xl mb-2">💬</div>
+                      <h4 className="text-sm font-bold text-gray-800">Select a conversation</h4>
+                      <p className="text-[11px] text-gray-500">Choose a guest thread on the left to reply.</p>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    {/* FEED */}
+                    <div className="flex-1 p-5 overflow-y-auto space-y-3 bg-gray-50/50">
+                      {adminMsgs.length === 0 && (
+                        <div className="text-center text-xs text-gray-400 pt-6">No messages yet in this thread.</div>
+                      )}
+                      {adminMsgs.map((msg) => {
+                        const isAdminAgent = msg.senderEmail === ADMIN_EMAIL;
+                        return (
+                          <div
+                            key={msg.id}
+                            className={`flex items-end space-x-2.5 ${isAdminAgent ? 'flex-row-reverse space-x-reverse' : 'flex-row'}`}
                           >
-                            {msg.image && (
-                              <img src={msg.image} alt="Attachment" className="w-full max-h-40 object-cover rounded-lg mb-2" />
-                            )}
-                            <span>{msg.body}</span>
+                            <div className="w-7 h-7 rounded-full bg-teal-500/20 text-teal-600 flex items-center justify-center font-black text-[10px] flex-shrink-0">
+                              {(msg.senderName || 'G').charAt(0).toUpperCase()}
+                            </div>
+                            <div className={`max-w-[75%] space-y-1 ${isAdminAgent ? 'text-right' : 'text-left'}`}>
+                              <div className="flex items-baseline space-x-2 px-1">
+                                <span className="text-[10px] font-bold text-gray-500">{msg.senderName}</span>
+                                <span className="text-[9px] text-gray-400">
+                                  {new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                </span>
+                              </div>
+                              <div
+                                className={`p-3 rounded-2xl text-xs leading-relaxed font-semibold ${
+                                  isAdminAgent
+                                    ? 'bg-[#008B9B] text-white rounded-br-none shadow-xs'
+                                    : 'bg-white text-gray-900 border border-gray-200 shadow-xs rounded-bl-none'
+                                }`}
+                              >
+                                {msg.body}
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                  <div ref={adminMessagesEndRef} />
-                </div>
+                        );
+                      })}
+                      <div ref={adminMessagesEndRef} />
+                    </div>
 
-                {/* ADMIN COMPOSER */}
-                <form onSubmit={handleSendAdminReply} className="p-3 bg-white border-t border-gray-200 flex items-center space-x-2">
-                  <input 
-                    type="text"
-                    value={adminReplyText}
-                    onChange={(e) => setAdminReplyText(e.target.value)}
-                    placeholder={`Reply as ${activeAdminChannel.agent.name}...`}
-                    className="flex-1 bg-white border border-teal-600 rounded-xl px-4 py-2.5 text-xs text-gray-900 placeholder:text-gray-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#008B9B]"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-[#008B9B] hover:bg-[#007684] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all active:scale-95"
-                  >
-                    Send Admin Reply
-                  </button>
-                </form>
-
+                    {/* ADMIN COMPOSER */}
+                    <form onSubmit={handleSendAdminReply} className="p-3 bg-white border-t border-gray-200 flex items-center space-x-2">
+                      <input
+                        type="text"
+                        value={adminReplyText}
+                        onChange={(e) => setAdminReplyText(e.target.value)}
+                        placeholder={`Reply to ${guestEmailOf(activeConvId)}...`}
+                        className="flex-1 bg-white border border-teal-600 rounded-xl px-4 py-2.5 text-xs text-gray-900 placeholder:text-gray-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#008B9B]"
+                      />
+                      <button
+                        type="submit"
+                        className="bg-[#008B9B] hover:bg-[#007684] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition-all active:scale-95"
+                      >
+                        Send Admin Reply
+                      </button>
+                    </form>
+                  </>
+                )}
               </div>
 
             </div>
