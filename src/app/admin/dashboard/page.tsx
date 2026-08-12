@@ -5,11 +5,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdminGuard from '@/components/AdminGuard';
 import {
-  getBlockedTimes,
-  addBlockedTime,
-  SERVICE_PROVIDERS,
-  BookingRecord,
-  BlockedTime
+  BookingRecord
 } from '@/lib/bookingEngine';
 import {
   subscribeToAllBookings,
@@ -17,23 +13,26 @@ import {
   deleteBooking,
   subscribeToUserConversations,
   subscribeToConversation,
+  deleteConversation,
+  deleteAllConversations,
   ConversationMessage
 } from '@/lib/firestoreSync';
 import { createMessage, isParticipant } from '@/lib/chatStore';
 import { formatCurrency } from '@/lib/currency';
+import { useAuth } from '@/context/AuthContext';
 import ConfirmDialog from '@/components/ConfirmDialog';
-import { 
-  getManagedUsers, 
-  toggleUserAdminRole, 
-  deleteUserAccount, 
-  updateUserVIPTier, 
-  ManagedUser, 
-  VIPTier 
+import {
+  getManagedUsers,
+  toggleUserAdminRole,
+  deleteUserAccount,
+  updateUserVIPTier,
+  ManagedUser,
+  VIPTier
 } from '@/lib/userManagementStore';
 
 export default function ConciergeDashboardPage() {
+  const { user } = useAuth();
   const [bookings, setBookings] = useState<BookingRecord[]>([]);
-  const [blockedTimes, setBlockedTimes] = useState<BlockedTime[]>([]);
   const [managedUsers, setManagedUsers] = useState<ManagedUser[]>([]);
   const [activeTab, setActiveTab] = useState<string>('all');
 
@@ -59,27 +58,22 @@ export default function ConciergeDashboardPage() {
       .reduce((acc, b) => acc + (Number(b.totalPrice) || 0), 0),
     confirmedCount: bookings.filter((b) => b.status === 'Confirmed').length,
     pendingCount: bookings.filter((b) => b.status === 'Pending Deposit').length,
-    totalBookings: bookings.length,
-    blockedSlotsCount: blockedTimes.length
+    totalBookings: bookings.length
   };
 
   // Admin Support Desk state
   const ADMIN_EMAIL = 'beno@admin.com';
+  // Only the true BENO owner (beno@admin.com) is super admin: can manage users.
+  // Regular admins can reply to chats and delete conversations/bookings, but
+  // cannot promote/demote/delete other users.
+  const isSuperAdmin = user?.email?.toLowerCase() === ADMIN_EMAIL;
   const [convThreads, setConvThreads] = useState<ConversationMessage[]>([]);
   const [activeConvId, setActiveConvId] = useState<string | null>(null);
   const [adminMessages, setAdminMessages] = useState<ConversationMessage[]>([]);
   const [adminReplyText, setAdminReplyText] = useState<string>('');
   const adminMessagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Block date form state
-  const [blockService, setBlockService] = useState('arya-yacht');
-  const [blockProvider, setBlockProvider] = useState('sp-marine');
-  const [blockDate, setBlockDate] = useState('2026-08-25');
-  const [blockSlot, setBlockSlot] = useState('15:30');
-  const [blockReason, setBlockReason] = useState('Scheduled Maintenance & Inspection');
-
   const refreshData = () => {
-    setBlockedTimes(getBlockedTimes());
     setManagedUsers(getManagedUsers());
   };
 
@@ -173,13 +167,6 @@ export default function ConciergeDashboardPage() {
     refreshData();
   };
 
-  const handleAddBlock = (e: React.FormEvent) => {
-    e.preventDefault();
-    addBlockedTime(blockService, blockProvider, blockDate, blockSlot, blockReason);
-    refreshData();
-    showToast(`Inventory slot on ${blockDate} (${blockSlot}) has been locked.`);
-  };
-
   const handleSendAdminReply = (e: React.FormEvent) => {
     e.preventDefault();
     const text = adminReplyText.trim();
@@ -188,6 +175,56 @@ export default function ConciergeDashboardPage() {
     const recipient = a === ADMIN_EMAIL ? b : a;
     createMessage(ADMIN_EMAIL, 'BENO Concierge', recipient, text);
     setAdminReplyText('');
+  };
+
+  const [deletingConv, setDeletingConv] = useState<string | null>(null);
+
+  const handleDeleteConversation = (convId: string) => {
+    const guest = guestEmailOf(convId);
+    setConfirmState({
+      title: 'Delete Conversation',
+      message: `Permanently delete the conversation with ${guest || 'this guest'}? All messages in this thread will be removed and cannot be recovered.`,
+      confirmLabel: 'Delete Thread',
+      danger: true,
+      onConfirm: async () => {
+        setDeletingConv(convId);
+        try {
+          await deleteConversation(convId);
+          if (activeConvId === convId) setActiveConvId(null);
+          showToast(`Conversation with ${guest} deleted.`);
+        } catch (e) {
+          console.error('Delete conversation failed:', e);
+          showToast('Failed to delete conversation. Please try again.');
+        } finally {
+          setDeletingConv(null);
+          setConfirmState(null);
+        }
+      }
+    });
+  };
+
+  const handleDeleteAllConversations = () => {
+    const count = convs.length;
+    setConfirmState({
+      title: 'Delete All Conversations',
+      message: `Permanently delete ALL ${count} conversation${count === 1 ? '' : 's'} in the support inbox? This removes every message and cannot be undone.`,
+      confirmLabel: 'Delete Everything',
+      danger: true,
+      onConfirm: async () => {
+        setDeletingConv('__all__');
+        try {
+          await deleteAllConversations();
+          setActiveConvId(null);
+          showToast('All conversations deleted.');
+        } catch (e) {
+          console.error('Delete all conversations failed:', e);
+          showToast('Failed to delete all conversations. Please try again.');
+        } finally {
+          setDeletingConv(null);
+          setConfirmState(null);
+        }
+      }
+    });
   };
 
   // Group threads by conversation id, latest message per thread
@@ -262,10 +299,10 @@ export default function ConciergeDashboardPage() {
             </div>
 
             <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between">
-              <span className="text-xs font-bold text-gray-400 uppercase">Locked Maintenance Slots</span>
+              <span className="text-xs font-bold text-gray-400 uppercase">All Reservations</span>
               <div className="mt-3">
-                <span className="text-3xl font-black text-gray-900">{metrics.blockedSlotsCount}</span>
-                <span className="text-xs text-gray-500 font-medium block mt-1">Inventory Lockouts</span>
+                <span className="text-3xl font-black text-gray-900">{metrics.totalBookings}</span>
+                <span className="text-xs text-gray-500 font-medium block mt-1">Total Booking Entries</span>
               </div>
             </div>
 
@@ -281,9 +318,21 @@ export default function ConciergeDashboardPage() {
                 <h2 className="text-2xl font-black text-gray-900">💬 BENO Live Support Terminal</h2>
                 <p className="text-xs text-gray-500 mt-0.5">Reply to guest conversations in real-time. Each guest gets a private 1:1 thread.</p>
               </div>
-              <span className="bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold px-3.5 py-1.5 rounded-full">
-                {convs.length} Active Conversations
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold px-3.5 py-1.5 rounded-full">
+                  {convs.length} Active Conversations
+                </span>
+                {convs.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={handleDeleteAllConversations}
+                    disabled={deletingConv === '__all__'}
+                    className="bg-red-50 text-red-600 border border-red-200 text-xs font-bold px-3.5 py-1.5 rounded-full hover:bg-red-100 transition-all disabled:opacity-50"
+                  >
+                    {deletingConv === '__all__' ? 'Deleting…' : '🗑 Delete All'}
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* CONVERSATION LIST & REPLY TERMINAL GRID */}
@@ -312,7 +361,21 @@ export default function ConciergeDashboardPage() {
                           <h4 className="text-xs font-bold text-gray-900 truncate">{guest}</h4>
                           <span className="text-[9px] text-gray-400">{time}</span>
                         </div>
-                        <p className="text-[11px] text-gray-500 truncate">{m.body}</p>
+                        <div className="flex justify-between items-center gap-2">
+                          <p className="text-[11px] text-gray-500 truncate">{m.body}</p>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleDeleteConversation(m.conversationId);
+                            }}
+                            disabled={deletingConv === m.conversationId}
+                            className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1 rounded-lg transition-all disabled:opacity-40 text-[11px] font-bold flex-shrink-0"
+                            title={`Delete conversation with ${guest}`}
+                          >
+                            {deletingConv === m.conversationId ? '…' : '🗑'}
+                          </button>
+                        </div>
                       </div>
                     );
                   })}
@@ -401,7 +464,9 @@ export default function ConciergeDashboardPage() {
               </span>
               <h2 className="text-2xl font-black text-gray-900">👥 Users & Permissions Control Hub</h2>
               <p className="text-xs text-gray-500 mt-0.5">
-                View registered users, elevate admin access, promote VIP tiers, or delete user accounts.
+                {isSuperAdmin
+                  ? 'Full control: elevate admin access, promote VIP tiers, or delete user accounts.'
+                  : 'View-only: regular admins can chat and manage bookings, but cannot modify user accounts.'}
               </p>
             </div>
 
@@ -424,76 +489,93 @@ export default function ConciergeDashboardPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100 text-xs font-medium">
-                {managedUsers.map((u) => {
-                  const isAdminRole = u.role === 'admin';
-                  return (
-                    <tr key={u.id} className="hover:bg-gray-50/80 transition-colors">
-                      <td className="py-4 px-3">
-                        <div className="flex items-center space-x-3">
-                          <img 
-                            src={u.photoURL || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'} 
-                            alt={u.name} 
-                            className="w-9 h-9 rounded-full object-cover border border-gray-200"
-                          />
-                          <div>
-                            <div className="font-bold text-gray-900">{u.name}</div>
-                            <div className="text-[10px] text-gray-400 font-mono">{u.id}</div>
+                {managedUsers
+                  // Only the BENO super admin can see the beno@admin.com account.
+                  .filter((u) => isSuperAdmin || u.email.toLowerCase() !== ADMIN_EMAIL)
+                  .map((u) => {
+                    const isBenoSup = u.email?.toLowerCase() === ADMIN_EMAIL;
+                    const isAdminRole = u.role === 'admin';
+                    return (
+                      <tr key={u.id} className="hover:bg-gray-50/80 transition-colors">
+                        <td className="py-4 px-3">
+                          <div className="flex items-center space-x-3">
+                            <img
+                              src={u.photoURL || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'}
+                              alt={u.name}
+                              className="w-9 h-9 rounded-full object-cover border border-gray-200"
+                            />
+                            <div>
+                              <div className="font-bold text-gray-900">{u.name}</div>
+                              <div className="text-[10px] text-gray-400 font-mono">{u.id}</div>
+                            </div>
                           </div>
-                        </div>
-                      </td>
+                        </td>
 
-                      <td className="py-4 px-3 font-semibold text-gray-800">{u.email}</td>
+                        <td className="py-4 px-3 font-semibold text-gray-800">{u.email}</td>
 
-                      <td className="py-4 px-3">
-                        <span className={`text-[11px] font-bold px-3 py-1 rounded-full ${
-                          isAdminRole 
-                            ? 'bg-amber-100 text-amber-900 border border-amber-300' 
-                            : 'bg-teal-50 text-[#008B9B] border border-teal-200'
-                        }`}>
-                          {isAdminRole ? '🛡️ Admin' : '👤 VIP Guest'}
-                        </span>
-                      </td>
+                        <td className="py-4 px-3">
+                          <span className={`text-[11px] font-bold px-3 py-1 rounded-full ${
+                            isBenoSup
+                              ? 'bg-gray-950 text-white border border-gray-900'
+                              : isAdminRole
+                                ? 'bg-amber-100 text-amber-900 border border-amber-300'
+                                : 'bg-teal-50 text-[#008B9B] border border-teal-200'
+                          }`}>
+                            {isBenoSup ? '👑 Super Admin' : isAdminRole ? '🛡️ Admin' : '👤 VIP Guest'}
+                          </span>
+                        </td>
 
-                      <td className="py-4 px-3">
-                        <select
-                          value={u.vipTier}
-                          onChange={(e) => handleVIPChange(u.id, e.target.value as VIPTier)}
-                          className="bg-gray-50 border border-gray-200 rounded-xl px-2.5 py-1 text-xs font-bold text-gray-800 focus:outline-none cursor-pointer"
-                        >
-                          <option value="Silver">Silver</option>
-                          <option value="Gold">Gold</option>
-                          <option value="Platinum">Platinum</option>
-                          <option value="Black Diamond">Black Diamond</option>
-                        </select>
-                      </td>
-
-                      <td className="py-4 px-3 text-gray-500 font-medium">{u.createdAt}</td>
-
-                      <td className="py-4 px-3 text-right">
-                        <div className="flex items-center justify-end space-x-2">
-                          <button
-                            onClick={() => handleToggleAdminRole(u.id, u.role)}
-                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                              isAdminRole
-                                ? 'bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300'
-                                : 'bg-amber-500 hover:bg-amber-600 text-gray-950 font-black shadow-xs'
-                            }`}
+                        <td className="py-4 px-3">
+                          <select
+                            value={u.vipTier}
+                            onChange={(e) => handleVIPChange(u.id, e.target.value as VIPTier)}
+                            disabled={!isSuperAdmin || isBenoSup}
+                            className="bg-gray-50 border border-gray-200 rounded-xl px-2.5 py-1 text-xs font-bold text-gray-800 focus:outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                           >
-                            {isAdminRole ? 'Demote User' : 'Make Admin 🛡️'}
-                          </button>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Platinum">Platinum</option>
+                            <option value="Black Diamond">Black Diamond</option>
+                          </select>
+                        </td>
 
-                          <button
-                            onClick={() => handleDeleteUserAccount(u.id, u.email)}
-                            className="bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 px-3 py-1.5 rounded-xl text-xs font-bold transition-all"
-                            title="Delete User Account"
-                          >
-                            🗑️ Delete
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
+                        <td className="py-4 px-3 text-gray-500 font-medium">{u.createdAt}</td>
+
+                        <td className="py-4 px-3 text-right">
+                          {isSuperAdmin ? (
+                            <div className="flex items-center justify-end space-x-2">
+                              {isBenoSup ? (
+                                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">—</span>
+                              ) : (
+                                <>
+                                  <button
+                                    onClick={() => handleToggleAdminRole(u.id, u.role)}
+                                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                                      isAdminRole
+                                        ? 'bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300'
+                                        : 'bg-amber-500 hover:bg-amber-600 text-gray-950 font-black shadow-xs'
+                                    }`}
+                                  >
+                                    {isAdminRole ? 'Demote User' : 'Make Admin 🛡️'}
+                                  </button>
+
+                                  <button
+                                    onClick={() => handleDeleteUserAccount(u.id, u.email)}
+                                    className="bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 px-3 py-1.5 rounded-xl text-xs font-bold transition-all"
+                                    title="Delete User Account"
+                                  >
+                                    🗑️ Delete
+                                  </button>
+                                </>
+                              )}
+                            </div>
+                          ) : (
+                            <span className="text-[11px] font-bold text-gray-400">Read only</span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
               </tbody>
             </table>
           </div>
@@ -605,107 +687,10 @@ export default function ConciergeDashboardPage() {
 
             </div>
 
-            {/* BLACKOUT DATES & MAINTENANCE LOCKER (4 COLS) */}
+            {/* RIGHT RAIL (4 COLS) — reserved for future admin modules */}
             <div className="lg:col-span-4 space-y-6">
-              
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Inventory Lock Engine</h3>
-                  <p className="text-xs text-gray-500">Block asset dates/slots for maintenance or private VIP use.</p>
-                </div>
 
-                <form onSubmit={handleAddBlock} className="space-y-3">
-                  <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">Target Service</label>
-                    <select
-                      value={blockService}
-                      onChange={(e) => setBlockService(e.target.value)}
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs font-semibold focus:outline-none focus:border-[#008B9B]"
-                    >
-                      <option value="arya-yacht">Arya Luxury Flybridge Yacht</option>
-                      <option value="lamborghini-huracan">Lamborghini Huracán EVO</option>
-                      <option value="gulfstream-g650">Gulfstream G650ER Jet</option>
-                      <option value="single-kayak">Single Kayak (Water Sports)</option>
-                      <option value="jebel-jais-rally">Jebel Jais Supercar Rally</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">Provider Division</label>
-                    <select
-                      value={blockProvider}
-                      onChange={(e) => setBlockProvider(e.target.value)}
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs font-semibold focus:outline-none focus:border-[#008B9B]"
-                    >
-                      {SERVICE_PROVIDERS.map((sp) => (
-                        <option key={sp.id} value={sp.id}>{sp.name}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <label className="block text-xs font-bold text-gray-700 mb-1">Lock Date</label>
-                      <input 
-                        type="date"
-                        value={blockDate}
-                        onChange={(e) => setBlockDate(e.target.value)}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs font-semibold focus:outline-none focus:border-[#008B9B]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-gray-700 mb-1">Lock Slot</label>
-                      <select
-                        value={blockSlot}
-                        onChange={(e) => setBlockSlot(e.target.value)}
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs font-semibold focus:outline-none focus:border-[#008B9B]"
-                      >
-                        <option value="09:00">09:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="15:30">03:30 PM</option>
-                        <option value="18:00">06:00 PM</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">Lockout Reason</label>
-                    <input 
-                      type="text"
-                      required
-                      value={blockReason}
-                      onChange={(e) => setBlockReason(e.target.value)}
-                      placeholder="E.g. Scheduled Engine Overhaul"
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs focus:outline-none focus:border-[#008B9B]"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-gray-900 hover:bg-[#008B9B] text-white py-3.5 rounded-2xl font-bold text-xs transition-all shadow-md active:scale-95"
-                  >
-                    🔒 Lock Inventory Slot
-                  </button>
-                </form>
-              </div>
-
-              {/* ACTIVE BLOCKED TIMES LIST */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 space-y-3">
-                <h4 className="text-sm font-bold text-gray-900">Active Inventory Lockouts ({blockedTimes.length})</h4>
-                <div className="space-y-2">
-                  {blockedTimes.map((blk) => (
-                    <div key={blk.id} className="bg-red-50/70 border border-red-100 p-3 rounded-xl text-xs space-y-1">
-                      <div className="flex justify-between font-bold text-red-900">
-                        <span>{blk.serviceId}</span>
-                        <span>{blk.date} @ {blk.slotTime}</span>
-                      </div>
-                      <p className="text-red-700 text-[11px]">{blk.reason}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
+          </div>
 
           </div>
 

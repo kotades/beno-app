@@ -10,7 +10,8 @@ import {
   onSnapshot,
   query,
   where,
-  orderBy
+  orderBy,
+  writeBatch
 } from 'firebase/firestore';
 import type { BookingRecord } from '@/lib/bookingEngine';
 
@@ -125,6 +126,23 @@ export function subscribeToUserConversations(email: string, callback: (messages:
     console.warn('User conversations subscription notice:', e);
     return () => {};
   }
+}
+
+// Admin-only: permanently delete a conversation's messages (all docs in the thread).
+export async function deleteConversation(convId: string): Promise<void> {
+  const q = query(collection(db, 'conversation_messages'), where('conversationId', '==', convId));
+  const snap = await getDocs(q);
+  const batch = writeBatch(db);
+  snap.forEach((d) => batch.delete(d.ref));
+  await batch.commit();
+}
+
+// Admin-only: wipe every conversation message (entire support inbox).
+export async function deleteAllConversations(): Promise<void> {
+  const snap = await getDocs(collection(db, 'conversation_messages'));
+  const batch = writeBatch(db);
+  snap.forEach((d) => batch.delete(d.ref));
+  await batch.commit();
 }
 
 export function subscribeToAllBookings(callback: (bookings: BookingRecord[]) => void) {
