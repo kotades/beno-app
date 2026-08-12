@@ -75,7 +75,10 @@ export interface GmailOptions extends MimeOptions {
   appPassword: string; // 16-char Gmail app password (requires 2FA enabled)
 }
 
-export async function sendViaGmail(opts: GmailOptions): Promise<void> {
+const ATTEMPT_TIMEOUT_MS = 15000;
+const MAX_ATTEMPTS = 3;
+
+async function attemptSend(opts: GmailOptions): Promise<void> {
   const sock = await new Promise<tls.TLSSocket>((resolve, reject) => {
     const s = tls.connect({ host: SMTP_HOST, port: SMTP_PORT, servername: SMTP_HOST });
     s.once('secureConnect', () => resolve(s));
@@ -83,9 +86,10 @@ export async function sendViaGmail(opts: GmailOptions): Promise<void> {
   });
 
   try {
-    // Gmail can take >20s on a cold start (TLS + EHLO + AUTH on a 2-core
-    // Lambda). 60s covers it; Vercel default function timeout is 300s.
-    sock.setTimeout(60000, () => sock.destroy(new Error('SMTP timeout')));
+    // Short per-attempt budget: a cold Lambda + Gmail TLS can stall >15s.
+    // sendViaGmail retries the whole attempt, so a timeout only costs one
+    // reconnect instead of burning the full function runtime on a dead socket.
+    sock.setTimeout(ATTEMPT_TIMEOUT_MS, () => sock.destroy(new Error('SMTP timeout')));
     const readLine = lineReader(sock);
     const write = (s: string) => sock.write(s + '\r\n');
     const expect = async (codes: number[], what: string) => {
@@ -115,4 +119,20 @@ export async function sendViaGmail(opts: GmailOptions): Promise<void> {
   } finally {
     sock.end();
   }
+}
+
+export async function sendViaGmail(opts: GmailOptions): Promise<void> {
+  let lastErr: Error | undefined;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      await attemptSend(opts);
+      return;
+    } catch (e) {
+      lastErr = e as Error;
+      if (attempt < MAX_ATTEMPTS) {
+        console.warn(`[smtp] attempt ${attempt}/${MAX_ATTEMPTS} failed: ${lastErr.message}; retrying`);
+      }
+    }
+  }
+  throw lastErr ?? new Error('SMTP send failed');
 }
