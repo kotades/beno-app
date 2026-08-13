@@ -58,10 +58,10 @@
       "guests": 60,
       "cabins": 4,
       "length_ft": 92,
-      "price_per_hour": 13000,
-      "original_price_per_hour": 15000,
+      "price_per_day": 18400,
+      "original_price_per_day": 15000,
       "discount_pct": 25,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 48,
       "location": "Global VIP Marina",
       "manufacturing_country": "United Arab Emirates",
@@ -128,7 +128,8 @@
       ],
       "localVideos": [],
       "localFolder": "solana",
-      "scraped_title": "Solana"
+      "scraped_title": "Solana",
+      "price_display": "$ 18,400/day"
     },
     {
       "id": "ARYA01",
@@ -141,10 +142,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 42,
-      "price_per_hour": 1300,
-      "original_price_per_hour": 2000,
+      "price_per_day": 12200,
+      "original_price_per_day": 2000,
       "discount_pct": 35,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 32,
       "location": "Global VIP Marina",
       "gallery": [
@@ -221,7 +222,8 @@
         "/assets/main-yatchs-imgs/arya/34_arya_video34.webm"
       ],
       "localFolder": "arya",
-      "scraped_title": "Arya"
+      "scraped_title": "Arya",
+      "price_display": "$ 12,200/day"
     },
     {
       "id": "CALI01",
@@ -234,10 +236,10 @@
       "guests": 10,
       "cabins": 3,
       "length_ft": 45,
-      "price_per_hour": 975,
-      "original_price_per_hour": 1900,
+      "price_per_day": 19800,
+      "original_price_per_day": 1900,
       "discount_pct": 35,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 24,
       "location": "Global VIP Marina",
       "gallery": [
@@ -294,7 +296,8 @@
         "/assets/main-yatchs-imgs/cali/34_cali_video34.webm"
       ],
       "localFolder": "cali",
-      "scraped_title": "Cali"
+      "scraped_title": "Cali",
+      "price_display": "$ 19,800/day"
     },
     {
       "id": "JUDE01",
@@ -307,10 +310,10 @@
       "guests": 27,
       "cabins": 3,
       "length_ft": 74,
-      "price_per_hour": 5250,
-      "original_price_per_hour": 9000,
+      "price_per_day": 24900,
+      "original_price_per_day": 9000,
       "discount_pct": 35,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 19,
       "location": "Global VIP Marina",
       "gallery": [
@@ -373,7 +376,8 @@
         "/assets/main-yatchs-imgs/jude/36_jude_video36.mp4"
       ],
       "localFolder": "jude",
-      "scraped_title": "Jude"
+      "scraped_title": "Jude",
+      "price_display": "$ 24,900/day"
     },
     {
       "id": "JULIA01",
@@ -385,10 +389,10 @@
       "guests": 21,
       "cabins": 3,
       "length_ft": 64,
-      "price_per_hour": 1950,
-      "original_price_per_hour": 3000,
+      "price_per_day": 20400,
+      "original_price_per_day": 3000,
       "discount_pct": 35,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 27,
       "location": "Global VIP Marina",
       "gallery": [
@@ -447,7 +451,8 @@
         "/assets/main-yatchs-imgs/julia/36_julia_video36.webm"
       ],
       "localFolder": "julia",
-      "scraped_title": "Julia"
+      "scraped_title": "Julia",
+      "price_display": "$ 20,400/day"
     },
     {
       "id": "SANTORINI01",
@@ -460,10 +465,10 @@
       "guests": 30,
       "cabins": 3,
       "length_ft": 60,
-      "price_per_hour": 975,
-      "original_price_per_hour": 8000,
+      "price_per_day": 17100,
+      "original_price_per_day": 8000,
       "discount_pct": 35,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 15,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -522,7 +527,8 @@
         "/assets/main-yatchs-imgs/santorini/36_santorini_video36.webm"
       ],
       "localFolder": "santorini",
-      "scraped_title": "Santorini"
+      "scraped_title": "Santorini",
+      "price_display": "$ 17,100/day"
     },
     {
       "id": "SOL01",
@@ -535,10 +541,10 @@
       "guests": 30,
       "cabins": 2,
       "length_ft": 60,
-      "price_per_hour": 2275,
-      "original_price_per_hour": 3000,
+      "price_per_day": 14700,
+      "original_price_per_day": 3000,
       "discount_pct": 25,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 11,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -595,7 +601,8 @@
         "/assets/main-yatchs-imgs/sol/36_sol_video36.webm"
       ],
       "localFolder": "sol",
-      "scraped_title": "Sol"
+      "scraped_title": "Sol",
+      "price_display": "$ 14,700/day"
     },
     {
       "id": "SUNSET01",
@@ -607,10 +614,10 @@
       "guests": 22,
       "cabins": 1,
       "length_ft": 60,
-      "price_per_hour": 1625,
-      "original_price_per_hour": 2500,
+      "price_per_day": 11600,
+      "original_price_per_day": 2500,
       "discount_pct": 25,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 8,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -666,7 +673,8 @@
         "/assets/main-yatchs-imgs/sunset/35_sunset_video35.webm"
       ],
       "localFolder": "sunset",
-      "scraped_title": "Sunset"
+      "scraped_title": "Sunset",
+      "price_display": "$ 11,600/day"
     },
     {
       "id": "ALTAR01",
@@ -678,10 +686,10 @@
       "guests": 25,
       "cabins": 1,
       "length_ft": 50,
-      "price_per_hour": 2000,
-      "original_price_per_hour": 0,
+      "price_per_day": 7000,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 9,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -723,7 +731,8 @@
       ],
       "localVideos": [],
       "localFolder": "altar",
-      "scraped_title": "Altar"
+      "scraped_title": "Altar",
+      "price_display": "$ 7,000/day"
     },
     {
       "id": "ANNA01",
@@ -735,10 +744,10 @@
       "guests": 38,
       "cabins": 4,
       "length_ft": 100,
-      "price_per_hour": 4251,
-      "original_price_per_hour": 0,
+      "price_per_day": 18300,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 5,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -789,7 +798,8 @@
       ],
       "localVideos": [],
       "localFolder": "anna",
-      "scraped_title": "Anna"
+      "scraped_title": "Anna",
+      "price_display": "$ 18,300/day"
     },
     {
       "id": "FREEDOM01",
@@ -801,10 +811,10 @@
       "guests": 50,
       "cabins": 5,
       "length_ft": 165,
-      "price_per_hour": 3450,
-      "original_price_per_hour": 0,
+      "price_per_day": 19100,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 12,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -852,7 +862,8 @@
       ],
       "localVideos": [],
       "localFolder": "freedom",
-      "scraped_title": "Freedom"
+      "scraped_title": "Freedom",
+      "price_display": "$ 19,100/day"
     },
     {
       "id": "POSEIDON01",
@@ -865,10 +876,10 @@
       "guests": 70,
       "cabins": 3,
       "length_ft": 80,
-      "price_per_hour": 6000,
-      "original_price_per_hour": 0,
+      "price_per_day": 14700,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 22,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -921,7 +932,8 @@
       ],
       "localVideos": [],
       "localFolder": "poseidon",
-      "scraped_title": "Poseidon"
+      "scraped_title": "Poseidon",
+      "price_display": "$ 14,700/day"
     },
     {
       "id": "WmnMOk",
@@ -931,10 +943,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 19500,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -982,7 +994,8 @@
       ],
       "localVideos": [],
       "localFolder": "candy",
-      "scraped_title": "Candy"
+      "scraped_title": "Candy",
+      "price_display": "$ 19,500/day"
     },
     {
       "id": "zkWgek",
@@ -992,10 +1005,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 21600,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1039,7 +1052,8 @@
       ],
       "localVideos": [],
       "localFolder": "lucky-star",
-      "scraped_title": "Lucky Star"
+      "scraped_title": "Lucky Star",
+      "price_display": "$ 21,600/day"
     },
     {
       "id": "zmdvv8",
@@ -1049,10 +1063,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 19700,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1093,7 +1107,8 @@
       ],
       "localVideos": [],
       "localFolder": "monica",
-      "scraped_title": "Monica"
+      "scraped_title": "Monica",
+      "price_display": "$ 19,700/day"
     },
     {
       "id": "w3DZOk",
@@ -1103,10 +1118,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 23000,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1155,7 +1170,8 @@
       ],
       "localVideos": [],
       "localFolder": "gallus",
-      "scraped_title": "Gallus"
+      "scraped_title": "Gallus",
+      "price_display": "$ 23,000/day"
     },
     {
       "id": "Zmoz1k",
@@ -1165,10 +1181,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 7400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1207,7 +1223,8 @@
       ],
       "localVideos": [],
       "localFolder": "daphne",
-      "scraped_title": "Daphne"
+      "scraped_title": "Daphne",
+      "price_display": "$ 7,400/day"
     },
     {
       "id": "WmqB23",
@@ -1217,10 +1234,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 20800,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1262,7 +1279,8 @@
       ],
       "localVideos": [],
       "localFolder": "icon",
-      "scraped_title": "Icon"
+      "scraped_title": "Icon",
+      "price_display": "$ 20,800/day"
     },
     {
       "id": "P8pZmv",
@@ -1272,10 +1290,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 22000,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1314,7 +1332,8 @@
       ],
       "localVideos": [],
       "localFolder": "azimut-aquarius-1",
-      "scraped_title": "Azimut (Aquarius 1)"
+      "scraped_title": "Azimut (Aquarius 1)",
+      "price_display": "$ 22,000/day"
     },
     {
       "id": "L8JQX3",
@@ -1324,10 +1343,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 20700,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1368,7 +1387,8 @@
       ],
       "localVideos": [],
       "localFolder": "encore",
-      "scraped_title": "Encore"
+      "scraped_title": "Encore",
+      "price_display": "$ 20,700/day"
     },
     {
       "id": "w3bK8e",
@@ -1378,10 +1398,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 8400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1420,7 +1440,8 @@
       ],
       "localVideos": [],
       "localFolder": "majesty-aquarius-2",
-      "scraped_title": "Majesty (Aquarius 2)"
+      "scraped_title": "Majesty (Aquarius 2)",
+      "price_display": "$ 8,400/day"
     },
     {
       "id": "9kVBlk",
@@ -1430,10 +1451,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 11900,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1476,7 +1497,8 @@
       ],
       "localVideos": [],
       "localFolder": "mr-mrs-smith",
-      "scraped_title": "Mr & Mrs Smith"
+      "scraped_title": "Mr & Mrs Smith",
+      "price_display": "$ 11,900/day"
     },
     {
       "id": "b3xOam",
@@ -1486,10 +1508,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 24800,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1536,7 +1558,8 @@
       ],
       "localVideos": [],
       "localFolder": "kronos",
-      "scraped_title": "Kronos"
+      "scraped_title": "Kronos",
+      "price_display": "$ 24,800/day"
     },
     {
       "id": "V8BZo8",
@@ -1546,10 +1569,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 10400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1587,7 +1610,8 @@
       ],
       "localVideos": [],
       "localFolder": "dos",
-      "scraped_title": "Dos"
+      "scraped_title": "Dos",
+      "price_display": "$ 10,400/day"
     },
     {
       "id": "dk4Kz8",
@@ -1597,10 +1621,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 23600,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1637,7 +1661,8 @@
       ],
       "localVideos": [],
       "localFolder": "orion",
-      "scraped_title": "Orion"
+      "scraped_title": "Orion",
+      "price_display": "$ 23,600/day"
     },
     {
       "id": "M3Aj8p",
@@ -1647,10 +1672,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 11200,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1693,7 +1718,8 @@
       ],
       "localVideos": [],
       "localFolder": "majesty-44",
-      "scraped_title": "Majesty 44"
+      "scraped_title": "Majesty 44",
+      "price_display": "$ 11,200/day"
     },
     {
       "id": "V8L4P8",
@@ -1703,10 +1729,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 11400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1743,7 +1769,8 @@
       ],
       "localVideos": [],
       "localFolder": "riverside",
-      "scraped_title": "Riverside"
+      "scraped_title": "Riverside",
+      "price_display": "$ 11,400/day"
     },
     {
       "id": "Mk6Ez8",
@@ -1753,10 +1780,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 13700,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1794,7 +1821,8 @@
       ],
       "localVideos": [],
       "localFolder": "aries",
-      "scraped_title": "Aries"
+      "scraped_title": "Aries",
+      "price_display": "$ 13,700/day"
     },
     {
       "id": "NkY9kr",
@@ -1804,10 +1832,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 12400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1848,7 +1876,8 @@
       ],
       "localVideos": [],
       "localFolder": "ocean-princess-aquarius-3",
-      "scraped_title": "Ocean Princess (Aquarius 3)"
+      "scraped_title": "Ocean Princess (Aquarius 3)",
+      "price_display": "$ 12,400/day"
     },
     {
       "id": "Wkl19m",
@@ -1858,10 +1887,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 24000,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1902,7 +1931,8 @@
       ],
       "localVideos": [],
       "localFolder": "elara",
-      "scraped_title": "Elara"
+      "scraped_title": "Elara",
+      "price_display": "$ 24,000/day"
     },
     {
       "id": "V8LYgk",
@@ -1912,10 +1942,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 13400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -1959,7 +1989,8 @@
       ],
       "localVideos": [],
       "localFolder": "iris",
-      "scraped_title": "Iris"
+      "scraped_title": "Iris",
+      "price_display": "$ 13,400/day"
     },
     {
       "id": "VmwJ2k",
@@ -1969,10 +2000,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 24800,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2011,7 +2042,8 @@
       ],
       "localVideos": [],
       "localFolder": "grand-crew",
-      "scraped_title": "Grand Crew"
+      "scraped_title": "Grand Crew",
+      "price_display": "$ 24,800/day"
     },
     {
       "id": "x30o9m",
@@ -2021,10 +2053,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 11600,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2061,7 +2093,8 @@
       ],
       "localVideos": [],
       "localFolder": "magnum",
-      "scraped_title": "Magnum"
+      "scraped_title": "Magnum",
+      "price_display": "$ 11,600/day"
     },
     {
       "id": "63O6Wm",
@@ -2071,10 +2104,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 23400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2115,7 +2148,8 @@
       ],
       "localVideos": [],
       "localFolder": "8of-us",
-      "scraped_title": "8ofUs"
+      "scraped_title": "8ofUs",
+      "price_display": "$ 23,400/day"
     },
     {
       "id": "xkXEGm",
@@ -2125,10 +2159,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 7500,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2169,7 +2203,8 @@
       ],
       "localVideos": [],
       "localFolder": "my-choice",
-      "scraped_title": "My Choice"
+      "scraped_title": "My Choice",
+      "price_display": "$ 7,500/day"
     },
     {
       "id": "ymZzdm",
@@ -2179,10 +2214,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 13500,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2223,7 +2258,8 @@
       ],
       "localVideos": [],
       "localFolder": "leopard",
-      "scraped_title": "Leopard"
+      "scraped_title": "Leopard",
+      "price_display": "$ 13,500/day"
     },
     {
       "id": "ymZd8E",
@@ -2233,10 +2269,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 11400,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2278,7 +2314,8 @@
       ],
       "localVideos": [],
       "localFolder": "princess-56-aquarius-5",
-      "scraped_title": "Princess 56(Aquarius 5)"
+      "scraped_title": "Princess 56(Aquarius 5)",
+      "price_display": "$ 11,400/day"
     },
     {
       "id": "63O6jm",
@@ -2288,10 +2325,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 21600,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2334,7 +2371,8 @@
       ],
       "localVideos": [],
       "localFolder": "dionysos",
-      "scraped_title": "Dionysos"
+      "scraped_title": "Dionysos",
+      "price_display": "$ 21,600/day"
     },
     {
       "id": "dkrn6k",
@@ -2344,10 +2382,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 8700,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2395,7 +2433,8 @@
       ],
       "localVideos": [],
       "localFolder": "j-uno",
-      "scraped_title": "J. Uno"
+      "scraped_title": "J. Uno",
+      "price_display": "$ 8,700/day"
     },
     {
       "id": "B3zLkd",
@@ -2405,10 +2444,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 16100,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2447,7 +2486,8 @@
       ],
       "localVideos": [],
       "localFolder": "majesty-48",
-      "scraped_title": "Majesty 48"
+      "scraped_title": "Majesty 48",
+      "price_display": "$ 16,100/day"
     },
     {
       "id": "z37QkB",
@@ -2457,10 +2497,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 18900,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2502,7 +2542,8 @@
       ],
       "localVideos": [],
       "localFolder": "elite-56",
-      "scraped_title": "Elite 56"
+      "scraped_title": "Elite 56",
+      "price_display": "$ 18,900/day"
     },
     {
       "id": "B3zVy3",
@@ -2512,10 +2553,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 13800,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2563,7 +2604,8 @@
       ],
       "localVideos": [],
       "localFolder": "poco-loco",
-      "scraped_title": "Poco Loco"
+      "scraped_title": "Poco Loco",
+      "price_display": "$ 13,800/day"
     },
     {
       "id": "M3N4Ok",
@@ -2573,10 +2615,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 20900,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2616,7 +2658,8 @@
       ],
       "localVideos": [],
       "localFolder": "misty",
-      "scraped_title": "Misty"
+      "scraped_title": "Misty",
+      "price_display": "$ 20,900/day"
     },
     {
       "id": "V8vax3",
@@ -2626,10 +2669,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 17000,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2667,7 +2710,8 @@
       ],
       "localVideos": [],
       "localFolder": "blessed",
-      "scraped_title": "Blessed"
+      "scraped_title": "Blessed",
+      "price_display": "$ 17,000/day"
     },
     {
       "id": "Y8yomD",
@@ -2677,10 +2721,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 11800,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2722,7 +2766,8 @@
       ],
       "localVideos": [],
       "localFolder": "cranchi-aquarius-4",
-      "scraped_title": "Cranchi (Aquarius 4)"
+      "scraped_title": "Cranchi (Aquarius 4)",
+      "price_display": "$ 11,800/day"
     },
     {
       "id": "E3P182",
@@ -2732,10 +2777,10 @@
       "guests": 10,
       "cabins": 2,
       "length_ft": 50,
-      "price_per_hour": 1500,
-      "original_price_per_hour": 0,
+      "price_per_day": 13500,
+      "original_price_per_day": 0,
       "discount_pct": 0,
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 10,
       "location": "Global VIP Marina",
       "gallery": [],
@@ -2776,13 +2821,14 @@
       ],
       "localVideos": [],
       "localFolder": "oryx",
-      "scraped_title": "Oryx"
+      "scraped_title": "Oryx",
+      "price_display": "$ 13,500/day"
     }
   ],
   "faqs": [
     {
       "q": "How much does it cost to rent a yacht in Dubai?",
-      "a": "Yacht rentals in Dubai start from $ 400/hour for smaller vessels. Premium yachts and superyachts range from $ 1,000 to $ 15,000/hour. All prices include captain, crew, fuel, soft beverages, and safety equipment."
+      "a": "Yacht rentals in Dubai start from $ 400/day for smaller vessels. Premium yachts and superyachts range from $ 1,000 to $ 15,000/day. All prices include captain, crew, fuel, soft beverages, and safety equipment."
     },
     {
       "q": "What is included in a Beno yacht charter?",
@@ -2794,7 +2840,7 @@
     },
     {
       "q": "What are the popular yacht routes in Dubai?",
-      "a": "2-Hour: Marina \u2192 JBR \u2192 Atlantis. 3-Hour: JBR \u2192 Marina Mall \u2192 Dubai Eye \u2192 Atlantis Hotel. 4-Hour: Marina \u2192 JBR \u2192 Atlantis \u2192 Burj Al Arab. All routes are weather-dependent and can be customized."
+      "a": "2-Hour: Marina → JBR → Atlantis. 3-Hour: JBR → Marina Mall → Dubai Eye → Atlantis Hotel. 4-Hour: Marina → JBR → Atlantis → Burj Al Arab. All routes are weather-dependent and can be customized."
     },
     {
       "q": "How far in advance should I book a yacht in Dubai?",

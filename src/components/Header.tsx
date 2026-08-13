@@ -24,7 +24,7 @@ export default function Header() {
   const router = useRouter();
 
   const { activeLocation, setActiveLocation } = useLocation();
-  const { user, isAdmin, logout } = useAuth();
+  const { user, isAdmin, logout, refreshAdminState } = useAuth();
 
   // Subscribe to user's conversations to track unread messages
   useEffect(() => {
@@ -61,10 +61,11 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Close menu on route change (mobile UX)
+  // Close menu on route change (mobile UX) and refresh admin state
   useEffect(() => {
     setIsMenuOpen(false);
-  }, []);
+    refreshAdminState();
+  }, [refreshAdminState]);
 
   const baseMenuItems = [
     { label: 'Profile', href: '/profile', hasDot: true },
@@ -320,6 +321,7 @@ export default function Header() {
       </header>
 
       {/* FLOATING "CHAT WITH US" BUTTON */}
+      {!isAdmin && (
       <div className="fixed bottom-6 right-6 z-40">
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
@@ -330,7 +332,7 @@ export default function Header() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
-            {unreadCount > 0 && (
+            {unreadCount > 0 && !isChatOpen && (
               <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center animate-pulse">
                 {unreadCount > 9 ? '9+' : unreadCount}
               </span>
@@ -338,6 +340,7 @@ export default function Header() {
           </div>
         </button>
       </div>
+      )}
 
       {/* LIVE SUPPORT CHAT POPUP WIDGET */}
       {isChatOpen && <LiveSupportWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />}

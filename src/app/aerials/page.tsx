@@ -104,8 +104,8 @@ export default function AerialsPage() {
                     </p>
                     
                     <div className="flex items-baseline space-x-2">
-                      <span className="text-2xl font-black text-[#008B9B]">${Number(aerial.price_per_person).toLocaleString()}</span>
-                      <span className="text-xs text-gray-500 font-medium">/ person</span>
+                      <span className="text-2xl font-black text-[#008B9B]">${Number(aerial.price_per_day).toLocaleString()}</span>
+                      <span className="text-xs text-gray-500 font-medium">/day</span>
                     </div>
                   </div>
                 </div>

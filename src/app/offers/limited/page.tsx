@@ -30,7 +30,7 @@ export default function LimitedOffersPage() {
       image: '/assets/home-imgs/new-yacht.webp',
       originalPrice: '$5,000',
       salePrice: '$2,000',
-      unit: '/ hour',
+      unit: '/day',
       specs: '27 Guests | 3 Cabins | Free Soft Drinks',
       code: 'BENO60'
     },
@@ -56,7 +56,7 @@ export default function LimitedOffersPage() {
       image: '/assets/home-imgs/Polaris_RZR_XP_1000cc__2_seate.webp',
       originalPrice: '$1,690',
       salePrice: '$845',
-      unit: '/ hour',
+      unit: '/day',
       specs: '2 Seater | Helmet & Goggles Included',
       code: 'BUGGY50'
     },
@@ -82,7 +82,7 @@ export default function LimitedOffersPage() {
       image: '/assets/home-imgs/new-yacht.webp',
       originalPrice: '$1,500',
       salePrice: '$900',
-      unit: '/ hour',
+      unit: '/day',
       specs: '10 Guests | 3 Cabins | Captain & Crew',
       code: 'CALI40'
     },

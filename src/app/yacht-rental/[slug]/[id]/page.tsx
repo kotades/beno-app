@@ -140,12 +140,12 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ sl
             <div className="border-b border-gray-100 pb-6">
               <span className="text-xs text-gray-400 font-bold uppercase block mb-1">Charter Rate</span>
               <div className="flex items-baseline space-x-2">
-                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(yacht.price_per_hour || 0)}</span>
-                <span className="text-gray-500 text-sm font-medium">/ hour</span>
+                <span className="text-3xl font-black text-[#008B9B]">{formatCurrency(yacht.price_per_day || 0)}</span>
+                <span className="text-gray-500 text-sm font-medium">/day</span>
               </div>
-              {yacht.original_price_per_hour > 0 && (
+              {yacht.original_price_per_day > 0 && (
                 <span className="text-xs text-gray-400 line-through font-medium block mt-1">
-                  Original: {formatCurrency(yacht.original_price_per_hour || 0)} / hour
+                  Original: {formatCurrency(yacht.original_price_per_day || 0)} /day
                 </span>
               )}
             </div>
@@ -170,7 +170,7 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ sl
             <ReserveButton
               serviceName={yacht.name}
               category="Yacht"
-              price={yacht.price_per_hour}
+              price={yacht.price_per_day}
               serviceId={yacht.id}
               image={mainHero}
             />

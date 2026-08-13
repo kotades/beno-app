@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
-import { subscribeToConversation, conversationId, ConversationMessage } from '@/lib/firestoreSync';
+import { subscribeToConversation, conversationId, ConversationMessage, markConversationAsRead } from '@/lib/firestoreSync';
 import { createMessage, isParticipant } from '@/lib/chatStore';
 
 const ADMIN_EMAIL = 'beno@admin.com';
@@ -28,8 +28,9 @@ export default function LiveSupportWidget({ isOpen, onClose }: LiveSupportWidget
       return;
     }
     const unsub = subscribeToConversation(convId, setMessages);
+    markConversationAsRead(convId, myEmail);
     return unsub;
-  }, [isOpen, convId]);
+  }, [isOpen, convId, myEmail]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { sendViaGmail } from '@/lib/smtp';
+import { sendViaBrevo } from '@/lib/brevo';
 
 interface BookingEmailPayload {
   id: string;
@@ -57,38 +57,6 @@ function buildHtml(body: BookingEmailPayload): string {
 </html>`;
 }
 
-// Ordered list of Gmail senders. Primary configured now; secondary slot
-// reserved for the second account once 2FA/app password is ready.
-function gmailSenders(): { user: string; appPassword: string }[] {
-  const list: { user: string; appPassword: string }[] = [];
-  const primary = process.env.GMAIL_USER;
-  const primaryPass = process.env.GMAIL_APP_PASSWORD;
-  const secondary = process.env.GMAIL_USER_2;
-  const secondaryPass = process.env.GMAIL_APP_PASSWORD_2;
-  if (primary && primaryPass) list.push({ user: primary, appPassword: primaryPass });
-  if (secondary && secondaryPass) list.push({ user: secondary, appPassword: secondaryPass });
-  return list;
-}
-
-async function sendViaResend(to: string, subject: string, html: string): Promise<void> {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) throw new Error('No email channel configured (Gmail and Resend unset)');
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      from: 'BENO Concierge <onboarding@resend.dev>',
-      to: [to],
-      subject,
-      html
-    })
-  });
-  if (!res.ok) throw new Error(`Resend failed (${res.status}): ${await res.text()}`);
-}
-
 export async function POST(request: NextRequest) {
   let body: BookingEmailPayload;
   try {
@@ -104,31 +72,31 @@ export async function POST(request: NextRequest) {
   const html = buildHtml(body);
   const subject = `Booking Confirmed — ${body.id} · ${body.serviceName}`;
 
-  // Resend first — reliable from Vercel. Gmail as backup if Resend fails.
+  // Brevo first — reliable from Vercel. Gmail as optional fallback.
   try {
-    await sendViaResend(body.guestEmail, subject, html);
-    return Response.json({ ok: true, channel: 'resend' });
+    await sendViaBrevo(body.guestEmail, subject, html);
+    return Response.json({ ok: true, channel: 'brevo' });
   } catch (e) {
-    console.error('Resend failed:', (e as Error).message);
+    console.error('Brevo failed:', (e as Error).message);
   }
 
-  // Fallback: Gmail senders
-  for (const sender of gmailSenders()) {
-    try {
-      await sendViaGmail({
-        fromName: 'BENO Concierge',
-        fromEmail: sender.user,
-        to: body.guestEmail,
-        subject,
-        html,
-        user: sender.user,
-        appPassword: sender.appPassword
-      });
-      return Response.json({ ok: true, channel: 'gmail', from: sender.user });
-    } catch (e) {
-      console.error(`Gmail send failed (${sender.user}):`, (e as Error).message);
-    }
-  }
+  // Optional: Gmail fallback (uncomment if needed)
+  // for (const sender of gmailSenders()) {
+  //   try {
+  //     await sendViaGmail({
+  //       fromName: 'BENO Concierge',
+  //       fromEmail: sender.user,
+  //       to: body.guestEmail,
+  //       subject,
+  //       html,
+  //       user: sender.user,
+  //       appPassword: sender.appPassword
+  //     });
+  //     return Response.json({ ok: true, channel: 'gmail', from: sender.user });
+  //   } catch (e) {
+  //     console.error(`Gmail send failed (${sender.user}):`, (e as Error).message);
+  //   }
+  // }
 
   return Response.json({ ok: false, error: 'All email channels failed' }, { status: 500 });
 }

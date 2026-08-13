@@ -15,6 +15,7 @@ import {
   subscribeToConversation,
   deleteConversation,
   deleteAllConversations,
+  markConversationAsRead,
   ConversationMessage,
   conversationId
 } from '@/lib/firestoreSync';
@@ -23,13 +24,13 @@ import { formatCurrency } from '@/lib/currency';
 import { useAuth } from '@/context/AuthContext';
 import ConfirmDialog from '@/components/ConfirmDialog';
 import {
-  getManagedUsers,
-  toggleUserAdminRole,
-  deleteUserAccount,
+  subscribeToAllUsers,
+  updateUserRole,
+  deleteUserDoc,
   updateUserVIPTier,
   ManagedUser,
   VIPTier
-} from '@/lib/userManagementStore';
+} from '@/lib/userStoreFirestore';
 
 export default function ConciergeDashboardPage() {
   const { user } = useAuth();
@@ -74,10 +75,7 @@ export default function ConciergeDashboardPage() {
   const [adminReplyText, setAdminReplyText] = useState<string>('');
   const adminMessagesEndRef = useRef<HTMLDivElement>(null);
 
-  const refreshData = () => {
-    setManagedUsers(getManagedUsers());
-  };
-
+  
   // All user conversations involving the admin inbox
   useEffect(() => {
     const unsub = subscribeToUserConversations(ADMIN_EMAIL, setConvThreads);
@@ -101,7 +99,8 @@ export default function ConciergeDashboardPage() {
   }, []);
 
   useEffect(() => {
-    refreshData();
+    const unsub = subscribeToAllUsers(setManagedUsers);
+    return () => unsub();
   }, []);
 
   useEffect(() => {
@@ -141,9 +140,8 @@ export default function ConciergeDashboardPage() {
       title: 'Change User Role',
       message: `Are you sure you want to change user role to ${nextRole}?`,
       confirmLabel: `Make ${nextRole}`,
-      onConfirm: () => {
-        toggleUserAdminRole(userId);
-        refreshData();
+      onConfirm: async () => {
+        await updateUserRole(userId, nextRole.toLowerCase() as 'user' | 'admin');
         setConfirmState(null);
       }
     });
@@ -156,8 +154,8 @@ export default function ConciergeDashboardPage() {
       confirmLabel: 'Delete',
       danger: true,
       onConfirm: () => {
-        deleteUserAccount(userId);
-        refreshData();
+        deleteUserDoc(userId);
+        
         setConfirmState(null);
       }
     });
@@ -165,7 +163,7 @@ export default function ConciergeDashboardPage() {
 
   const handleVIPChange = (userId: string, tier: VIPTier) => {
     updateUserVIPTier(userId, tier);
-    refreshData();
+    
   };
 
   const handleSendAdminReply = (e: React.FormEvent) => {
@@ -251,6 +249,8 @@ export default function ConciergeDashboardPage() {
     return b.createdAt.localeCompare(a.createdAt);
   });
 
+  const guestEmailOf = (convId: string) => convId.split('__').find((p) => p !== ADMIN_EMAIL) || '';
+
   // Build user list for sidebar: all managed users (except beno@admin.com for non-super)
   // plus any conversation participants not in managedUsers
   const managedUsersList = managedUsers.filter(u => isSuperAdmin || u.email.toLowerCase() !== ADMIN_EMAIL);
@@ -259,8 +259,10 @@ export default function ConciergeDashboardPage() {
     ...managedUsersList.map(u => u.email.toLowerCase()),
     ...convParticipants
   ]);
+  const activeUserList = Array.from(allUserEmails).map(email => {
+    return managedUsersList.find(u => u.email.toLowerCase() === email) || { email, name: email.split('@')[0], role: 'user', vipTier: 'Silver' } as ManagedUser;
+  });
 
-  const guestEmailOf = (convId: string) => convId.split('__').find((p) => p !== ADMIN_EMAIL) || '';
   const adminMsgs = adminMessages.filter((m) => isParticipant(m, ADMIN_EMAIL));
 
   const filteredBookings = activeTab === 'all'
@@ -288,10 +290,10 @@ export default function ConciergeDashboardPage() {
 
             <div className="flex items-center space-x-3">
               <button 
-                onClick={refreshData}
+                onClick={() => {}}
                 className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-5 py-3 rounded-2xl border border-white/20 transition-all active:scale-95 flex items-center space-x-2"
               >
-                <span>🔄 Refresh Realtime Engine</span>
+                <span>🔄 Realtime Active</span>
               </button>
             </div>
           </div>
@@ -347,12 +349,11 @@ export default function ConciergeDashboardPage() {
                 <span className="bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold px-3.5 py-1.5 rounded-full">
                   {convs.length} Active Conversations
                 </span>
-                {convs.length > 0 && (
-                  <button
-                    type="button"
+                {isSuperAdmin && convs.length > 0 && (
+                  <button 
                     onClick={handleDeleteAllConversations}
                     disabled={deletingConv === '__all__'}
-                    className="bg-red-50 text-red-600 border border-red-200 text-xs font-bold px-3.5 py-1.5 rounded-full hover:bg-red-100 transition-all disabled:opacity-50"
+                    className="bg-red-50 hover:bg-red-100 text-red-600 text-[10px] font-bold px-3 py-1.5 rounded-full transition-all border border-red-100 disabled:opacity-40"
                   >
                     {deletingConv === '__all__' ? 'Deleting…' : '🗑 Delete All'}
                   </button>
@@ -386,7 +387,10 @@ export default function ConciergeDashboardPage() {
                     return (
                       <div
                         key={convId}
-                        onClick={() => setActiveConvId(convId)}
+                        onClick={() => {
+                          setActiveConvId(convId);
+                          markConversationAsRead(convId, ADMIN_EMAIL);
+                        }}
                         className={`p-3 cursor-pointer transition-all ${isActive ? 'bg-white shadow-sm border-l-4 border-[#008B9B]' : 'hover:bg-gray-100/70'}`}
                       >
                         <div className="flex items-baseline justify-between gap-2 mb-0.5">
@@ -666,7 +670,7 @@ export default function ConciergeDashboardPage() {
                       <th className="py-3 px-3">Date & Slot</th>
                       <th className="py-3 px-3">Total (USD)</th>
                       <th className="py-3 px-3">Status</th>
-                      <th className="py-3 px-3">Actions</th>
+                      {isSuperAdmin && <th className="py-3 px-3">Actions</th>}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 text-xs font-medium">
@@ -708,6 +712,7 @@ export default function ConciergeDashboardPage() {
                             <option value="Cancelled">Cancelled</option>
                           </select>
                         </td>
+                        {isSuperAdmin && (
                         <td className="py-4 px-3">
                           <button
                             onClick={() => handleDeleteBooking(bk)}
@@ -717,6 +722,7 @@ export default function ConciergeDashboardPage() {
                             {deletingId === bk.id ? 'Deleting…' : '🗑 Delete'}
                           </button>
                         </td>
+                        )}
                       </tr>
                     ))}
                   </tbody>

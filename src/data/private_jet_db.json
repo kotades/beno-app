@@ -5,8 +5,8 @@
       "from": "Miami Intl (MIA)",
       "to": "Paris Le Bourget (LBG)",
       "duration": "6h 45m",
-      "price": 150000,
-      "price_display": "$ 150,000",
+      "price": 249600,
+      "price_display": "$ 249,600",
       "image": "/assets/beno.com-private-jet-resources/01_private_jet_1.jpg",
       "category": "Popular"
     },
@@ -15,8 +15,8 @@
       "from": "Miami Intl (MIA)",
       "to": "London Farnborough (FAB)",
       "duration": "7h 15m",
-      "price": 200000,
-      "price_display": "$ 200,000",
+      "price": 152700,
+      "price_display": "$ 152,700",
       "image": "/assets/beno.com-private-jet-resources/02_private_jet_2.png",
       "category": "Popular"
     },
@@ -25,8 +25,8 @@
       "from": "Miami Intl (MIA)",
       "to": "Malé Maldives (MLE)",
       "duration": "4h 10m",
-      "price": 145000,
-      "price_display": "$ 145,000",
+      "price": 185500,
+      "price_display": "$ 185,500",
       "image": "/assets/beno.com-private-jet-resources/03_private_jet_3.jpg",
       "category": "Popular"
     },
@@ -35,8 +35,8 @@
       "from": "Miami Intl (MIA)",
       "to": "New York Teterboro (TEB)",
       "duration": "14h 20m",
-      "price": 310000,
-      "price_display": "$ 310,000",
+      "price": 165800,
+      "price_display": "$ 165,800",
       "image": "/assets/beno.com-private-jet-resources/04_private_jet_4.jpg",
       "category": "Popular"
     },
@@ -45,8 +45,8 @@
       "from": "Miami Intl (MIA)",
       "to": "Riyadh King Khalid (RUH)",
       "duration": "1h 45m",
-      "price": 70000,
-      "price_display": "$ 70,000",
+      "price": 197700,
+      "price_display": "$ 197,700",
       "image": "/assets/beno.com-private-jet-resources/05_private_jet_5.jpg",
       "category": "Popular"
     },
@@ -55,8 +55,8 @@
       "from": "Miami Intl (MIA)",
       "to": "Geneva Cointrin (GVA)",
       "duration": "6h 30m",
-      "price": 180000,
-      "price_display": "$ 180,000",
+      "price": 130400,
+      "price_display": "$ 130,400",
       "image": "/assets/beno.com-private-jet-resources/01_private_jet_1.jpg",
       "category": "Popular"
     }
@@ -70,7 +70,7 @@
       "range": "7,500 NM",
       "speed": "Mach 0.925 (610 mph)",
       "bed_setup": "6 Flat Beds",
-      "price_per_hour": 38000,
+      "price_per_day": 38000,
       "images": [
         "/assets/beno.com-private-jet-resources/01_private_jet_1.jpg",
         "/assets/beno.com-private-jet-resources/02_private_jet_2.png"
@@ -84,7 +84,7 @@
       "range": "6,000 NM",
       "speed": "Mach 0.89 (590 mph)",
       "bed_setup": "5 Flat Beds",
-      "price_per_hour": 34000,
+      "price_per_day": 34000,
       "images": [
         "/assets/beno.com-private-jet-resources/03_private_jet_3.jpg",
         "/assets/beno.com-private-jet-resources/04_private_jet_4.jpg"
@@ -98,7 +98,7 @@
       "range": "6,450 NM",
       "speed": "Mach 0.90 (595 mph)",
       "bed_setup": "4 Flat Beds",
-      "price_per_hour": 32000,
+      "price_per_day": 32000,
       "images": [
         "/assets/beno.com-private-jet-resources/05_private_jet_5.jpg",
         "/assets/beno.com-private-jet-resources/01_private_jet_1.jpg"
@@ -112,7 +112,7 @@
       "range": "3,900 NM",
       "speed": "Mach 0.80 (528 mph)",
       "bed_setup": "3 Flat Beds",
-      "price_per_hour": 24000,
+      "price_per_day": 24000,
       "images": [
         "/assets/beno.com-private-jet-resources/02_private_jet_2.png",
         "/assets/beno.com-private-jet-resources/03_private_jet_3.jpg"

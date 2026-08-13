@@ -231,7 +231,7 @@ export default function PrivateJetPage() {
                       <h3 className="text-xl font-bold text-gray-900">{jet.name}</h3>
                       <p className="text-xs text-gray-500">{jet.passengers} • {jet.bed_setup}</p>
                     </div>
-                    <span className="text-base font-black text-[#008B9B]">${Number(jet.price_per_hour).toLocaleString()} / hr</span>
+                    <span className="text-base font-black text-[#008B9B]">${Number(jet.price_per_day).toLocaleString()} /day</span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3 text-xs font-semibold text-gray-700 pt-2 border-t border-gray-200">
@@ -246,7 +246,7 @@ export default function PrivateJetPage() {
                   </div>
 
                   <button
-                    onClick={() => setBooking({ serviceName: jet.name, category: 'Private Jet', price: +jet.price_per_hour, serviceId: `jet-${jet.id}` })}
+                    onClick={() => setBooking({ serviceName: jet.name, category: 'Private Jet', price: +jet.price_per_day, serviceId: `jet-${jet.id}` })}
                     className="w-full bg-gray-900 hover:bg-[#008B9B] text-white py-3 rounded-2xl font-bold text-xs text-center transition-all block"
                   >
                     Charter {jet.name}

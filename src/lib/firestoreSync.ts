@@ -128,6 +128,27 @@ export function subscribeToUserConversations(email: string, callback: (messages:
   }
 }
 
+export async function markConversationAsRead(convId: string, myEmail: string): Promise<void> {
+  try {
+    const q = query(collection(db, 'conversation_messages'), where('conversationId', '==', convId));
+    const snap = await getDocs(q);
+    const batch = writeBatch(db);
+    let changed = false;
+    snap.forEach((d) => {
+      const data = d.data() as ConversationMessage;
+      if (data.senderEmail !== myEmail && !data.read) {
+        batch.update(d.ref, { read: true });
+        changed = true;
+      }
+    });
+    if (changed) {
+      await batch.commit();
+    }
+  } catch (e) {
+    console.error('Failed to mark read', e);
+  }
+}
+
 // Admin-only: permanently delete a conversation's messages (all docs in the thread).
 export async function deleteConversation(convId: string): Promise<void> {
   const q = query(collection(db, 'conversation_messages'), where('conversationId', '==', convId));

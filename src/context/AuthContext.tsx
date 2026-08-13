@@ -15,7 +15,7 @@ import {
   uploadBytes,
   getDownloadURL
 } from '@/lib/firebase';
-import { registerOrUpdateUser, getManagedUsers, UserRole } from '@/lib/userManagementStore';
+import { syncUserOnAuth, subscribeToUserDoc, UserRole } from '@/lib/userStoreFirestore';
 
 interface AuthContextType {
   user: User | null;
@@ -27,6 +27,7 @@ interface AuthContextType {
   signUpWithEmail: (e: string, p: string) => Promise<void>;
   logout: () => Promise<void>;
   uploadAvatar: (file: File) => Promise<string>;
+  refreshAdminState: () => void;
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -38,66 +39,72 @@ const AuthContext = createContext<AuthContextType>({
   signInWithEmail: async () => {},
   signUpWithEmail: async () => {},
   logout: async () => {},
-  uploadAvatar: async () => ''
+  uploadAvatar: async () => '',
+  refreshAdminState: () => {}
 });
-
-function computeAdminState(email: string | null | undefined): { isAdmin: boolean; userRole: UserRole } {
-  if (!email) return { isAdmin: false, userRole: 'user' };
-  const isSuper = email.toLowerCase() === 'beno@admin.com';
-  const managed = getManagedUsers().find(u => u.email.toLowerCase() === email.toLowerCase());
-  const role = managed?.role ?? (isSuper ? 'admin' : 'user');
-  return { isAdmin: isSuper || role === 'admin', userRole: role };
-}
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
   const [userRole, setUserRole] = useState<UserRole>('user');
-
-  const refreshAdminState = (email: string | null | undefined) => {
-    const { isAdmin: newIsAdmin, userRole: newRole } = computeAdminState(email);
-    setIsAdmin(newIsAdmin);
-    setUserRole(newRole);
-  };
+  const [dbUserLoading, setDbUserLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    let unsubscribeDoc: (() => void) | undefined;
+
+    const unsubscribeAuth = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
+      
       if (currentUser?.email) {
-        registerOrUpdateUser(currentUser.email, currentUser.displayName || undefined);
+        // Sync user to Firestore
+        await syncUserOnAuth(
+          currentUser.uid, 
+          currentUser.email, 
+          currentUser.displayName || null, 
+          currentUser.photoURL || null
+        );
+
+        // Listen for realtime role updates from their Firestore document
+        unsubscribeDoc = subscribeToUserDoc(currentUser.uid, (dbUser) => {
+          if (dbUser) {
+            const isSuper = currentUser.email?.toLowerCase() === 'beno@admin.com';
+            const role = isSuper ? 'admin' : dbUser.role;
+            setIsAdmin(role === 'admin');
+            setUserRole(role);
+          } else {
+            setIsAdmin(false);
+            setUserRole('user');
+          }
+          setDbUserLoading(false);
+          setLoading(false);
+        });
+      } else {
+        // Not logged in
+        setIsAdmin(false);
+        setUserRole('user');
+        setDbUserLoading(false);
+        setLoading(false);
+        if (unsubscribeDoc) unsubscribeDoc();
       }
-      refreshAdminState(currentUser?.email);
-      setLoading(false);
     });
-    return () => unsubscribe();
+
+    return () => {
+      unsubscribeAuth();
+      if (unsubscribeDoc) unsubscribeDoc();
+    };
   }, []);
 
-  // Listen for localStorage changes (e.g., when admin promotes a user)
-  useEffect(() => {
-    const handleStorage = (e: StorageEvent) => {
-      if (e.key === 'beno_managed_users' && user?.email) {
-        refreshAdminState(user.email);
-      }
-    };
-    const handleCustom = () => {
-      if (user?.email) refreshAdminState(user.email);
-    };
-    window.addEventListener('storage', handleStorage);
-    window.addEventListener('beno-users-changed', handleCustom);
-    return () => {
-      window.removeEventListener('storage', handleStorage);
-      window.removeEventListener('beno-users-changed', handleCustom);
-    };
-  }, [user?.email]);
+  const refreshAdminState = () => {
+    // Left for backwards compatibility if any component calls it. 
+    // State is now entirely driven by real-time Firestore listeners.
+  };
 
   const signInWithGoogle = async () => {
-    // Real Firebase Google Sign-In — no mock fallback
     await signInWithPopup(auth, googleProvider);
   };
 
   const signInWithEmail = async (email: string, pass: string) => {
-    // Real Firebase Auth only. Admin (beno@admin.com) must exist in Firebase Auth.
     await signInWithEmailAndPassword(auth, email, pass);
   };
 
@@ -130,16 +137,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ 
-      user, 
-      loading, 
-      isAdmin, 
-      userRole, 
-      signInWithGoogle, 
-      signInWithEmail, 
-      signUpWithEmail, 
-      logout, 
-      uploadAvatar 
+    <AuthContext.Provider value={{
+      user,
+      loading: loading || (user !== null && dbUserLoading), 
+      isAdmin,
+      userRole,
+      signInWithGoogle,
+      signInWithEmail,
+      signUpWithEmail,
+      logout,
+      uploadAvatar,
+      refreshAdminState
     }}>
       {children}
     </AuthContext.Provider>
