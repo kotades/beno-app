@@ -321,7 +321,7 @@ export default function Header() {
       </header>
 
       {/* FLOATING "CHAT WITH US" BUTTON */}
-      {!isAdmin && (
+            {!isAdmin ? (
       <div className="fixed bottom-6 right-6 z-40">
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
@@ -340,9 +340,8 @@ export default function Header() {
           </div>
         </button>
       </div>
-      )}
+      ) : null}
 
-      {/* LIVE SUPPORT CHAT POPUP WIDGET */}
       {isChatOpen && <LiveSupportWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />}
     </>
   );

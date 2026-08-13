@@ -409,7 +409,7 @@ export default function ConciergeDashboardPage() {
                         </div>
                         <div className="flex justify-between items-center gap-2">
                           <p className="text-[11px] text-gray-500 truncate">{preview}</p>
-                          {hasConv && (
+                          {hasConv && isSuperAdmin && (
                             <button
                               type="button"
                               onClick={(e) => {
