@@ -73,10 +73,10 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { name: 'Arya', meta: '10 Guests | 2 Cabins | 42 Length', price: '1,300', oldPrice: '2,000', discount: '35 % off' },
-                { name: 'Cali', meta: '10 Guests | 3 Cabins | 45 Length', price: '975', oldPrice: '1,500', discount: '35 % off' },
-                { name: 'Jude', meta: '27 Guests | 3 Cabins | 74 Length', price: '3,250', oldPrice: '5,000', discount: '35 % off' },
-                { name: 'Julia', meta: '21 Guests | 3 Cabins | 64 Length', price: '1,950', oldPrice: '3,000', discount: '35 % off' },
+                { name: 'Arya', meta: '10 Guests | 2 Cabins | 42 Length', price: '12,200', oldPrice: '15,300', discount: '20 % off' },
+                { name: 'Cali', meta: '10 Guests | 3 Cabins | 45 Length', price: '9,750', oldPrice: '12,500', discount: '22 % off' },
+                { name: 'Jude', meta: '27 Guests | 3 Cabins | 74 Length', price: '32,500', oldPrice: '40,000', discount: '19 % off' },
+                { name: 'Julia', meta: '21 Guests | 3 Cabins | 64 Length', price: '19,500', oldPrice: '25,000', discount: '22 % off' },
               ].map((yacht, idx) => (
                 <Link href={`/yacht-rental`} key={idx} className="group flex flex-col cursor-pointer border border-transparent hover:shadow-lg rounded-xl transition-all pb-4">
                   <div className="relative h-[220px] w-full rounded-xl overflow-hidden bg-gray-200 shadow-sm mb-3">

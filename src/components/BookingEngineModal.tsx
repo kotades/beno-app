@@ -257,42 +257,69 @@ export default function BookingEngineModal({
           </form>
         )}
 
-        {/* STEP 3: CONFIRMATION SUCCESS */}
+        {/* STEP 3: VIP PENDING PAYMENT WALL */}
         {step === 3 && createdBooking && (
-          <div className="text-center space-y-5 py-4">
-            <div className="w-16 h-16 bg-teal-100 text-[#008B9B] rounded-full flex items-center justify-center mx-auto text-2xl font-black shadow-inner">
-              ✓
+          <div className="text-center space-y-5 py-2">
+            <div className="w-16 h-16 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto text-2xl font-black border border-amber-200 shadow-sm animate-pulse">
+              ⏳
             </div>
 
             <div>
-              <span className="text-xs font-bold text-teal-600 uppercase tracking-wider block">Reservation Guaranteed</span>
-              <h4 className="text-2xl font-black text-gray-900 mt-1">{createdBooking.id}</h4>
-              <p className="text-xs text-gray-500 mt-1">A confirmation summary has been saved to your Beno profile.</p>
+              <span className="inline-block bg-amber-100 text-amber-800 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-2 border border-amber-200">
+                Reservation Logged • Payment Pending
+              </span>
+              <p className="text-xs text-gray-500 font-medium">Ticket Token Reference</p>
+              <div className="mt-1 inline-flex items-center justify-center space-x-2 bg-gray-900 text-teal-300 font-mono font-black text-2xl px-5 py-2.5 rounded-2xl tracking-wider shadow-inner border border-gray-800">
+                <span>{createdBooking.id}</span>
+              </div>
+            </div>
+
+            {/* VIP INSTRUCTION NOTICE */}
+            <div className="bg-amber-50/80 p-4 rounded-2xl border border-amber-200/70 text-left text-xs space-y-2">
+              <div className="flex items-center space-x-2 text-amber-900 font-bold">
+                <span>💬 VIP Concierge Next Step:</span>
+              </div>
+              <p className="text-amber-900/90 leading-relaxed text-[11px]">
+                Your booking for <strong>{createdBooking.serviceName}</strong> ({formatCurrency(createdBooking.totalPrice)}) has been created, but payment is pending verification. 
+                Please copy your Ticket Token (<strong>{createdBooking.id}</strong>) and send it via the live chat below. A BENO representative will verify your reservation and provide direct payment details.
+              </p>
             </div>
 
             <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100 text-left text-xs space-y-2">
               <div className="flex justify-between">
-                <span className="text-gray-400">Guest:</span>
+                <span className="text-gray-400">Guest Name:</span>
                 <span className="font-bold text-gray-900">{createdBooking.guestName}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-400">Date & Slot:</span>
                 <span className="font-bold text-gray-900">{createdBooking.startDate} at {createdBooking.startTime}</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-400">Service:</span>
-                <span className="font-bold text-gray-900 truncate max-w-[200px]">{createdBooking.serviceName}</span>
-              </div>
               <div className="flex justify-between border-t border-gray-200 pt-2">
-                <span className="text-gray-500 font-bold">Total Paid:</span>
+                <span className="text-gray-500 font-bold">Total Amount Due:</span>
                 <span className="font-black text-[#008B9B]">{formatCurrency(createdBooking.totalPrice)}</span>
               </div>
             </div>
 
-            <div className="flex space-x-3">
+            <div className="space-y-2 pt-1">
+              <button
+                type="button"
+                onClick={() => {
+                  const tokenMsg = `Hello BENO Concierge! I have created a booking reservation. My Ticket Token is: ${createdBooking.id} (${createdBooking.serviceName} - ${formatCurrency(createdBooking.totalPrice)}). Please confirm my order and provide payment details.`;
+                  navigator.clipboard.writeText(tokenMsg);
+                  window.dispatchEvent(new CustomEvent('open-live-chat'));
+                  onClose();
+                }}
+                className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-4 rounded-2xl font-bold text-xs text-center flex items-center justify-center space-x-2 transition-all shadow-lg active:scale-95 cursor-pointer"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+                <span>Copy Ticket Token & Chat with Concierge</span>
+              </button>
+
               <a
                 href="/booking/retrieve"
-                className="w-full bg-[#008B9B] hover:bg-[#007684] text-white py-3.5 rounded-2xl font-bold text-xs text-center block transition-all shadow-md"
+                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 rounded-2xl font-bold text-xs text-center block transition-all"
               >
                 View All My Bookings
               </a>

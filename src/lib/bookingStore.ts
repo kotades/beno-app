@@ -65,7 +65,7 @@ export function saveBooking(booking: Omit<BookingItem, 'id' | 'createdAt' | 'sta
   const newBooking: BookingItem = {
     ...booking,
     id: `BENO-BK-${randomNum}`,
-    status: 'Confirmed',
+    status: 'Pending Deposit',
     currency: CURRENCY,
     createdAt: new Date().toISOString().split('T')[0]
   };

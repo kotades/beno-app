@@ -40,6 +40,12 @@ export default function Header() {
   }, [user?.email]);
 
   useEffect(() => {
+    const handleOpenChat = () => setIsChatOpen(true);
+    window.addEventListener('open-live-chat', handleOpenChat);
+    return () => window.removeEventListener('open-live-chat', handleOpenChat);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };

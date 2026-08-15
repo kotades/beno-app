@@ -32,7 +32,8 @@
         "/assets/beno.com-aerials-resources/the-iconic-Wmq23G/14_the-iconic_14.jpg"
       ],
       "url": "https://www.beno.com/aerials/the-iconic/Wmq23G",
-      "resource_folder": "the-iconic-Wmq23G"
+      "resource_folder": "the-iconic-Wmq23G",
+      "original_price_per_day": 41250
     },
     {
       "id": "L8JM3Y",
@@ -74,7 +75,8 @@
         "/assets/beno.com-aerials-resources/the-palm-L8JM3Y/22_the-palm_22.jpg"
       ],
       "url": "https://www.beno.com/aerials/the-palm/L8JM3Y",
-      "resource_folder": "the-palm-L8JM3Y"
+      "resource_folder": "the-palm-L8JM3Y",
+      "original_price_per_day": 39150
     },
     {
       "id": "b3x98g",
@@ -121,7 +123,8 @@
         "/assets/beno.com-aerials-resources/the-vision-b3x98g/24_the-vision_24.jpg"
       ],
       "url": "https://www.beno.com/aerials/the-vision/b3x98g",
-      "resource_folder": "the-vision-b3x98g"
+      "resource_folder": "the-vision-b3x98g",
+      "original_price_per_day": 42500
     },
     {
       "id": "V8Lg3x",
@@ -168,7 +171,8 @@
         "/assets/beno.com-aerials-resources/the-grand-tour-V8Lg3x/24_the-grand-tour_24.jpg"
       ],
       "url": "https://www.beno.com/aerials/the-grand-tour/V8Lg3x",
-      "resource_folder": "the-grand-tour-V8Lg3x"
+      "resource_folder": "the-grand-tour-V8Lg3x",
+      "original_price_per_day": 46750
     },
     {
       "id": "4652",
@@ -204,7 +208,8 @@
         "/assets/beno.com-aerials-resources/helicopter-tour-requirements-4652/16_helicopter-tour-requirements_16.webp"
       ],
       "url": "https://www.beno.com/blogs/aerials/helicopter-tour-requirements/4652",
-      "resource_folder": "helicopter-tour-requirements-4652"
+      "resource_folder": "helicopter-tour-requirements-4652",
+      "original_price_per_day": 34650
     },
     {
       "id": "4648",
@@ -239,7 +244,8 @@
         "/assets/beno.com-aerials-resources/winter-vs-summer-helicopter-ride-dubai-4648/15_winter-vs-summer-helicopter-ride-dubai_15.webp"
       ],
       "url": "https://www.beno.com/blogs/aerials/winter-vs-summer-helicopter-ride-dubai/4648",
-      "resource_folder": "winter-vs-summer-helicopter-ride-dubai-4648"
+      "resource_folder": "winter-vs-summer-helicopter-ride-dubai-4648",
+      "original_price_per_day": 38650
     }
   ]
 }
